@@ -1,0 +1,2 @@
+espressif/esp32-camera
+f37e65608f709bd94846dee01d947f02ae07c0b0

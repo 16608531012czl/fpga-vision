@@ -1,0 +1,204 @@
+{
+  "host_validation_date": "2026-10-17",
+  "board": "PYNQ-Z2",
+  "ip": "192.168.2.99",
+  "runtime": "PYNQ 2.4 / Python 3.6.5",
+  "archive_sha256": "c7ddadc44507a0f0e9efa046e55a44ce244882627668a1c4b8720a2932679c37",
+  "operator_observations_source": "Explicit user confirmations in this chat",
+  "stages": {
+    "static": {
+      "stage": "static",
+      "outcome": "interrupted",
+      "display_observed": {
+        "confirmed_by": "user",
+        "blue_green_red_and_text": true,
+        "stable": true
+      },
+      "measured_unique_capture_fps": null,
+      "unique_camera_frames": 0,
+      "counter_deltas": {
+        "capture_id": 0,
+        "dma_errors": 0,
+        "camera_vsync": 0,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 1482
+      },
+      "cleanup_errors": [],
+      "warnings": []
+    },
+    "keys": {
+      "stage": "keys",
+      "outcome": "interrupted",
+      "display_observed": null,
+      "measured_unique_capture_fps": null,
+      "unique_camera_frames": 0,
+      "counter_deltas": {
+        "capture_id": 0,
+        "dma_errors": 0,
+        "camera_vsync": 0,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 0
+      },
+      "cleanup_errors": [],
+      "warnings": [],
+      "events": [
+        "auto",
+        "down",
+        "freeze",
+        "left",
+        "mode",
+        "right",
+        "split",
+        "up",
+        "zoom"
+      ]
+    },
+    "sensors": {
+      "stage": "sensors",
+      "outcome": "completed",
+      "display_observed": null,
+      "measured_unique_capture_fps": null,
+      "unique_camera_frames": 0,
+      "counter_deltas": {
+        "capture_id": 0,
+        "dma_errors": 0,
+        "camera_vsync": 0,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 0
+      },
+      "cleanup_errors": [],
+      "warnings": [],
+      "lux_range": {
+        "min": 1.6666666666666667,
+        "max": 156.66666666666669,
+        "last": 154.16666666666669
+      },
+      "cover_uncover_completed": true
+    },
+    "colorbars": {
+      "stage": "colorbars",
+      "outcome": "interrupted",
+      "display_observed": {
+        "confirmed_by": "user",
+        "complete_stable_colorbars": true,
+        "wrong_lines_or_flicker": false
+      },
+      "measured_unique_capture_fps": 14.999671728447646,
+      "unique_camera_frames": 282,
+      "counter_deltas": {
+        "capture_id": 282,
+        "dma_errors": 0,
+        "camera_vsync": 283,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 1133
+      },
+      "cleanup_errors": [],
+      "warnings": []
+    },
+    "live_no_af": {
+      "stage": "live",
+      "outcome": "interrupted",
+      "display_observed": {
+        "confirmed_by": "user",
+        "split_raw_enhanced": true,
+        "zoom_1_2_4_and_roi": true,
+        "mode_freeze_split_auto_controls": true
+      },
+      "measured_unique_capture_fps": 12.142280095477222,
+      "unique_camera_frames": 1854,
+      "counter_deltas": {
+        "capture_id": 1854,
+        "dma_errors": 0,
+        "camera_vsync": 2291,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 9168
+      },
+      "cleanup_errors": [],
+      "warnings": [],
+      "event_types": [
+        "auto",
+        "down",
+        "freeze",
+        "left",
+        "mode",
+        "right",
+        "split",
+        "up",
+        "zoom"
+      ],
+      "sample_duration_s": 152.10592464400003
+    },
+    "live_af": {
+      "stage": "live",
+      "outcome": "interrupted",
+      "display_observed": {
+        "confirmed_by": "user",
+        "live_image": true,
+        "text_clear": true,
+        "refocus_after_distance_change": true
+      },
+      "measured_unique_capture_fps": 11.262208777979371,
+      "unique_camera_frames": 827,
+      "counter_deltas": {
+        "capture_id": 827,
+        "dma_errors": 0,
+        "camera_vsync": 1103,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 4415
+      },
+      "cleanup_errors": [],
+      "warnings": [],
+      "event_types": [],
+      "sample_duration_s": 73.29509630999996,
+      "autofocus": {
+        "status": 16,
+        "command_ack": 0,
+        "clock_3004": 255,
+        "clock_3005": 247,
+        "firmware_focus_reported": true,
+        "optical_focus_observed": true,
+        "firmware_sha256": "439245623bc99f3b0d8c44d47baed3cc17cad01b9191509c89bb8d92a98949c9",
+        "firmware_bytes": 4077,
+        "verified_readback_bytes": 4077,
+        "full_readback_sha256": "439245623bc99f3b0d8c44d47baed3cc17cad01b9191509c89bb8d92a98949c9",
+        "full_readback_verified": true,
+        "upload_block_size": 32,
+        "startup_seconds": 47.282078516999945,
+        "firmware_ready": true,
+        "command_acknowledged": true,
+        "continuous": true
+      }
+    }
+  },
+  "current_demo_pid": 2932,
+  "long_duration_stability": "not yet tested",
+  "distance_sensor": "not connected or tested; disabled",
+  "camera_profile_tested": "1280x720, requested 15fps; 30fps profile not tested",
+  "initialization_note": "Malformed-frame count was 16 before each capture stage and increased by 0 during the measured tests. Initialization counts are not counted as runtime failures.",
+  "current_demo_status": "stopped_by_user",
+  "continuous_run_closed": {
+    "pid": 2932,
+    "project_running": false,
+    "outcome": "interrupted",
+    "cleanup_errors": [],
+    "counter_deltas": {
+      "capture_id": 35019,
+      "dma_errors": 0,
+      "camera_vsync": 40381,
+      "overflow_frames": 0,
+      "malformed_frames": 0,
+      "display_sof": 161607
+    },
+    "frames": 35018,
+    "fps": 13.0077498722121,
+    "host_stop_date": "2026-10-17",
+    "elapsed_capture_seconds": 2692.010558629,
+    "latest_sample_t": 2691.3649686450003
+  }
+}

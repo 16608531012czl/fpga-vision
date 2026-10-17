@@ -1,0 +1,2 @@
+adafruit/Adafruit_CircuitPython_VL53L0X
+63c8ab2833fc5b7a257ac9601a748d9538abb0da
