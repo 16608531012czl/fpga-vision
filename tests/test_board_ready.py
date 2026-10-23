@@ -89,7 +89,10 @@ class BoardReady(unittest.TestCase):
 
     def test_cli_stages_and_explicit_diagnostic_fallback(self):
         live=app.parse_args(['--io-confirmed'])
-        self.assertEqual((live.stage,live.af,live.camera_fps,live.seconds),('live','continuous',15,0))
+        self.assertEqual((live.stage,live.af,live.camera_fps,live.seconds),('live','continuous',20,0))
+        self.assertEqual((live.mode,live.tone_profile),('gray','stable'))
+        compare=app.parse_args(['--io-confirmed','--mode','color','--tone-profile','legacy'])
+        self.assertEqual((compare.mode,compare.tone_profile),('color','legacy'))
         bars=app.parse_args(['--colorbars','--io-confirmed'])
         self.assertEqual((bars.stage,bars.af),('colorbars','off'))
         live=app.parse_args(['--io-confirmed','--no-af','--no-light','--no-distance'])
@@ -100,15 +103,16 @@ class BoardReady(unittest.TestCase):
 
     def run_stage(self,stage,**kwargs):
         with tempfile.TemporaryDirectory() as directory:
-            args=app.parse_args(['--stage',stage,'--io-confirmed','--seconds','1','--report',str(Path(directory)/'report.json')])
+            args=app.parse_args(['--pipeline','cpu','--stage',stage,'--io-confirmed','--seconds','1','--report',str(Path(directory)/'report.json')])
             for k,v in kwargs.items():setattr(args,k,v)
             dev=Mock();dev.counters.return_value={'capture_id':0,'dma_errors':0}
+            dev.prepare_display.side_effect=lambda:np.empty((720,1280,4),np.uint8)
             dev.mmio.read.return_value=0x1f
             dev.finish.return_value=(0,1,np.zeros((720,1280,4),np.uint8))
-            camera=Mock();camera.initialize.return_value={}
+            camera=Mock();camera.initialize.return_value={};camera.image_quality.return_value={};camera.stable_exposure.return_value={}
             if kwargs.get('af_error'):
                 camera.autofocus.side_effect=IOError('AF unavailable')
-            with patch.object(app,'verify_payload',return_value={'abi':0x56410300}),patch.object(app,'Device',return_value=dev) as ctor, \
+            with patch.object(app,'verify_payload',return_value={'abi':0x56410400}),patch.object(app,'Device',return_value=dev) as ctor, \
                  patch.object(app,'OV5640',return_value=camera) as camera_ctor,patch.object(app,'active',side_effect=[True,False]), \
                  patch.object(app.time,'sleep'),patch('builtins.print'):
                 outcome=app.run(args)
@@ -144,18 +148,41 @@ class BoardReady(unittest.TestCase):
         self.assertEqual(report['autofocus']['outcome'],'error')
         self.assertTrue(report['warnings']);dev.display.assert_called_once()
 
+    def test_color_lowlight_run_records_estimates_and_selected_mode(self):
+        with tempfile.TemporaryDirectory() as directory:
+            args=app.parse_args(['--pipeline','cpu','--io-confirmed','--no-af','--no-sensors','--mode','color',
+                                 '--seconds','1','--report',str(Path(directory)/'report.json')])
+            dev=Mock();dev.mmio.read.return_value=0
+            dev.prepare_display.side_effect=lambda:np.empty((720,1280,4),np.uint8)
+            dev.counters.return_value={'capture_id':0}
+            dev.finish.return_value=(0,1,np.full((48,64,4),40,np.uint8))
+            camera=Mock();camera.initialize.return_value={};camera.image_quality.return_value={};camera.stable_exposure.return_value={}
+            with patch.object(app,'verify_payload',return_value={'abi':0x56410400}), \
+                 patch.object(app,'Device',return_value=dev),patch.object(app,'OV5640',return_value=camera), \
+                 patch.object(app,'active',side_effect=[True]*15+[False]),patch('builtins.print'):
+                self.assertEqual(app.run(args),0)
+            report=json.loads(Path(args.report).read_text())
+            sample=report['samples'][0]
+            self.assertEqual(sample['config'] & 7,4)
+            self.assertEqual(sample['tone']['profile'],'stable')
+            self.assertEqual(sample['tone']['mean'],40)
+            self.assertGreater(sample['tone']['lut_mean_estimate'],40)
+            self.assertIn('not HDMI',sample['tone']['estimate_scope'])
+
     def test_manual_to_auto_restores_gamma_even_when_scene_is_unchanged(self):
         with tempfile.TemporaryDirectory() as directory:
-            args=app.parse_args(['--io-confirmed','--no-af','--no-sensors','--seconds','1',
+            args=app.parse_args(['--pipeline','cpu','--io-confirmed','--no-af','--no-sensors','--seconds','1',
                                  '--report',str(Path(directory)/'report.json')])
             dev=Mock();dev.mmio.read.return_value=0;dev.counters.return_value={'capture_id':0}
+            dev.prepare_display.side_effect=lambda:np.empty((720,1280,4),np.uint8)
             frame=np.zeros((720,1280,4),np.uint8)
             dev.finish.side_effect=[(0,1,frame),(1,2,frame),(0,3,frame)]
             dev.gamma.side_effect=[False,True,True]
             policy=Mock();policy.lut=(np.arange(256)//2).astype(np.uint8);policy.update.return_value=None
+            policy.status.return_value={'mean':None}
             controls=Mock();controls.poll.side_effect=[['auto'],[],['auto']]
-            camera=Mock();camera.initialize.return_value={}
-            with patch.object(app,'verify_payload',return_value={'abi':0x56410300}), \
+            camera=Mock();camera.initialize.return_value={};camera.image_quality.return_value={};camera.stable_exposure.return_value={}
+            with patch.object(app,'verify_payload',return_value={'abi':0x56410400}), \
                  patch.object(app,'Device',return_value=dev),patch.object(app,'OV5640',return_value=camera), \
                  patch.object(app,'AdaptivePolicy',return_value=policy),patch.object(app,'Controls',return_value=controls), \
                  patch.object(app,'active',side_effect=[True,True,True,False]),patch('builtins.print'):
@@ -174,13 +201,24 @@ class BoardReady(unittest.TestCase):
         self.assertFalse(report['sensor_readings_observed']['distance_mm']);self.assertTrue(report['warnings'])
         self.assertFalse(ctor.call_args.kwargs['display']);sensor.close.assert_called_once()
 
+    def test_live_sensor_failure_keeps_image_policy_and_marks_lux_error(self):
+        sensor=Mock();sensor.snapshot.return_value={'lux':None,'distance_mm':None,
+                                                   'errors':{'lux':'SCL held low'}}
+        with patch.object(app,'SensorWorker',return_value=sensor),patch.object(app.cv2,'putText') as text:
+            sensor.start.return_value=sensor
+            code,report,dev,ctor,camera=self.run_stage('live',no_distance=True,af='off')
+        self.assertEqual(code,0);dev.display.assert_called_once()
+        self.assertFalse(report['sensor_readings_observed']['lux'])
+        self.assertIn('image statistics',report['warnings'][0])
+        self.assertTrue(any('LUX ERR' in call.args[1] for call in text.call_args_list))
+
     def test_release_integrity_detects_modified_script_and_wrong_bit_pair(self):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory);(root/'board').mkdir()
             for name,data in [('run_board.py',b'print(1)'),('board/v.bit',b'bit'),('board/v.hwh',b'hwh')]:
                 (root/name).write_bytes(data)
             hashes={name:hashlib.sha256((root/name).read_bytes()).hexdigest() for name in ('run_board.py','board/v.bit','board/v.hwh')}
-            (root/'board/build_manifest.json').write_text(json.dumps({'project':'visual_aid_v3','abi':0x56410300,'payload_sha256':hashes}))
+            (root/'board/build_manifest.json').write_text(json.dumps({'project':'visual_aid_v3','abi':0x56410400,'payload_sha256':hashes}))
             verify_payload(root,root/'board/v.bit')
             with self.assertRaisesRegex(ValueError,'pair'):
                 verify_payload(root,root/'board/other.bit')

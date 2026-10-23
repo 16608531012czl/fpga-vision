@@ -22,6 +22,8 @@ module dvp_capture #(parameter WIDTH=1280,HEIGHT=720,FIFO_ADDR=12)(
  reg frame_open=0;
  reg [7:0] hi=0;
  reg [15:0] x=0,y=0;
+ // First bad line travels through the existing async FIFO with the EOF token.
+ reg [25:0] bad_geometry=0;
  reg [31:0] frames_p=0,overflow_p=0,malformed_p=0;
  reg [31:0] fg=0,og=0,mg=0;
  // Register Gray codes before crossing; combinational binary-to-Gray can glitch.
@@ -41,19 +43,22 @@ module dvp_capture #(parameter WIDTH=1280,HEIGHT=720,FIFO_ADDR=12)(
  wire good_end=!dropping && y==HEIGHT && x==0 && !half_byte;
  wire [15:0] rgb={hi,data_q};
  wire [23:0] bgr={{rgb[15:11],rgb[15:13]},{rgb[10:5],rgb[10:9]},{rgb[4:0],rgb[4:2]}};
- wire [27:0] packet=end_emit?{1'b1,good_end,26'd0}:{2'b0,(x==WIDTH-1),(x==0&&y==0),bgr};
+ wire [25:0] geometry=good_end?{3'd0,11'(HEIGHT),12'(WIDTH)}:
+                              (bad_geometry!=0?bad_geometry:{3'd4,y[10:0],x[11:0]});
+ wire [27:0] packet=end_emit?{1'b1,good_end,geometry}:{2'b0,(x==WIDTH-1),(x==0&&y==0),bgr};
  async_fifo #(.WIDTH(28),.ADDR(FIFO_ADDR)) fifo(
   .wr_clk(pclk),.wr_resetn(crst[1]),.wr_data(packet),.wr_en((emit||end_emit)&&!full),.full(full),
   .rd_clk(aclk),.rd_resetn(aresetn),.rd_data(stream_data),.rd_en(stream_valid&&stream_ready),.empty(empty));
  assign stream_valid=!empty;
  always @(posedge pclk) begin
-  if(!crst[1]) begin vs_d<=0;href_d<=0;half_byte<=0;dropping<=1;frame_open<=0;x<=0;y<=0;hi<=0;frames_p<=0;overflow_p<=0;malformed_p<=0;end
+  if(!crst[1]) begin vs_d<=0;href_d<=0;half_byte<=0;dropping<=1;frame_open<=0;x<=0;y<=0;hi<=0;frames_p<=0;overflow_p<=0;malformed_p<=0;bad_geometry<=0;end
   else begin
    vs_d<=vsync_q;href_d<=href_q;
    if(vsync_q) begin
     half_byte<=0;x<=0;y<=0;dropping<=0;
     if(!vs_d) begin
      frames_p<=frames_p+1;frame_open<=1;
+     bad_geometry<=0;
      if(frame_open&&!dropping&&!good_end)malformed_p<=malformed_p+1;
      if(frame_open&&full&&!dropping)overflow_p<=overflow_p+1;
     end
@@ -62,13 +67,15 @@ module dvp_capture #(parameter WIDTH=1280,HEIGHT=720,FIFO_ADDR=12)(
     else begin
      half_byte<=0;x<=x+1;
      if(!dropping) begin
-      if(x>=WIDTH||y>=HEIGHT) begin dropping<=1;malformed_p<=malformed_p+1;end
-      else if(full) begin dropping<=1;overflow_p<=overflow_p+1;end
+      if(x>=WIDTH||y>=HEIGHT) begin dropping<=1;malformed_p<=malformed_p+1;bad_geometry<={3'd3,y[10:0],x[11:0]};end
+      else if(full) begin dropping<=1;overflow_p<=overflow_p+1;bad_geometry<={3'd5,y[10:0],x[11:0]};end
      end
     end
    end else if(href_d) begin
     half_byte<=0;x<=0;y<=y+1;
-    if(!dropping&&(half_byte||x!=WIDTH)) begin dropping<=1;malformed_p<=malformed_p+1;end
+    if(!dropping&&(half_byte||x!=WIDTH)) begin
+     dropping<=1;malformed_p<=malformed_p+1;bad_geometry<={(half_byte?3'd2:3'd1),y[10:0],x[11:0]};
+    end
    end
   end
  end

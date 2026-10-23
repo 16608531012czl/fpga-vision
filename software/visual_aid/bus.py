@@ -42,7 +42,14 @@ class I2CBus:
 
     def stop(self):
         self.gpio.set(self.scl, 0); self.gpio.set(self.sda, 0); self.delay()
-        self.clock_high(); self.gpio.set(self.sda, 1); self.delay()
+        try:
+            self.clock_high()
+        finally:
+            # A failed STOP must not leave SDA actively low. Values of 1
+            # release these open-drain pads; they never drive a high level.
+            self.gpio.set(self.sda, 1)
+            self.gpio.set(self.scl, 1)
+        self.delay()
 
     def bit(self, value):
         self.gpio.set(self.sda, value); self.delay(); self.clock_high()

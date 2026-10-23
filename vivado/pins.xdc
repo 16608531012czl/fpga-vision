@@ -6,8 +6,10 @@ set_property -dict {PACKAGE_PIN B20 IOSTANDARD LVCMOS33} [get_ports {cam_scl}]
 set_property -dict {PACKAGE_PIN B19 IOSTANDARD LVCMOS33} [get_ports {cam_sda}]
 set_property -dict {PACKAGE_PIN A20 IOSTANDARD LVCMOS33} [get_ports {cam_resetn}]
 set_property -dict {PACKAGE_PIN Y9 IOSTANDARD LVCMOS33} [get_ports {cam_pwdn}]
-set_property -dict {PACKAGE_PIN P15 IOSTANDARD LVCMOS33} [get_ports {sensor_scl}]
-set_property -dict {PACKAGE_PIN P16 IOSTANDARD LVCMOS33} [get_ports {sensor_sda}]
+# PMOD B physical pins 3/4, the pair with board pull-ups suitable for I2C.
+# Original Arduino dedicated SCL/SDA P15/P16 are not used by this variant.
+set_property -dict {PACKAGE_PIN T11 IOSTANDARD LVCMOS33} [get_ports {sensor_scl}]
+set_property -dict {PACKAGE_PIN T10 IOSTANDARD LVCMOS33} [get_ports {sensor_sda}]
 set_property -dict {PACKAGE_PIN L16 IOSTANDARD TMDS_33} [get_ports {hdmi_out_clk_p}]
 set_property -dict {PACKAGE_PIN L17 IOSTANDARD TMDS_33} [get_ports {hdmi_out_clk_n}]
 set_property -dict {PACKAGE_PIN R19 IOSTANDARD LVCMOS33} [get_ports {hdmi_out_hpd[0]}]
@@ -22,6 +24,12 @@ set_property -dict {PACKAGE_PIN F20 IOSTANDARD LVCMOS33} [get_ports {cam_data[7]
 set_property -dict {PACKAGE_PIN V13 IOSTANDARD LVCMOS33} [get_ports {joy_n[0]}]
 set_property -dict {PACKAGE_PIN V15 IOSTANDARD LVCMOS33} [get_ports {joy_n[1]}]
 set_property -dict {PACKAGE_PIN T15 IOSTANDARD LVCMOS33} [get_ports {joy_n[2]}]
+# The supplied EC11 has a 10k series resistor on each A/B output and its own
+# supply pull-up. An FPGA pull-up after that series resistor raises contact-low
+# voltage. Rely on the module pull-ups; do not load these inputs internally.
+set_property -dict {PACKAGE_PIN V17 IOSTANDARD LVCMOS33 PULLUP false} [get_ports enc_a]
+set_property -dict {PACKAGE_PIN V18 IOSTANDARD LVCMOS33 PULLUP false} [get_ports enc_b]
+set_property -dict {PACKAGE_PIN T16 IOSTANDARD LVCMOS33 PULLUP true} [get_ports enc_key_n]
 set_property -dict {PACKAGE_PIN R16 IOSTANDARD LVCMOS33} [get_ports {joy_n[3]}]
 set_property -dict {PACKAGE_PIN U17 IOSTANDARD LVCMOS33} [get_ports {joy_n[4]}]
 set_property -dict {PACKAGE_PIN D19 IOSTANDARD LVCMOS33} [get_ports {buttons[0]}]

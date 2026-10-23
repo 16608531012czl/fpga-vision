@@ -7,8 +7,11 @@ module tb_reading;
  wire rin,vout,uout,lout;wire [23:0] dout;
  reg [31:0] cfg=0;reg we=0,commit=0;reg [7:0] index=0,ld=0;
  wire pending,bank;wire [31:0] count;
- reading_enhance #(.WIDTH(WIDTH)) dut(clk,resetn,din,vin,rin,uin,lin,dout,vout,ready,uout,lout,cfg,we,index,ld,commit,pending,bank,count);
+ reg [31:0] quality_word=0;
+ wire gain_pending;
+ reading_enhance #(.WIDTH(WIDTH)) dut(clk,resetn,din,vin,rin,uin,lin,dout,vout,ready,uout,lout,cfg,we,index,ld,commit,pending,bank,count,quality_word,1'b0,1'b0,6'd0,10'd256,gain_pending);
  reg [23:0] input_mem[0:N-1],expected_mem[0:N-1];reg [31:0] configs[0:FRAMES-1];reg [7:0] lut[0:255];
+ reg [31:0] qualities[0:FRAMES-1];
  integer i,j,f,got=0,cycles=0;reg [31:0] rng=32'h712f1a45;
  reg stalled=0;reg [25:0] held;
  always @(negedge clk)begin rng<={rng[30:0],rng[31]^rng[21]^rng[1]^rng[0]};ready=resetn&&(rng[3:0]!=0);end
@@ -25,16 +28,17 @@ module tb_reading;
  end
  initial begin
   $readmemh("input.mem",input_mem);$readmemh("expected.mem",expected_mem);$readmemh("config.mem",configs);$readmemh("gamma.mem",lut);
+  $readmemh("quality.mem",qualities);
   repeat(6)@(negedge clk);resetn=1;
   for(i=0;i<256;i=i+1)begin @(negedge clk);we=1;index=i;ld=lut[i];end
   @(negedge clk);we=0;commit=1;@(negedge clk);commit=0;
   for(f=0;f<FRAMES;f=f+1)begin
-   cfg=configs[f];
+   cfg=configs[f];quality_word=qualities[f];
    for(j=0;j<WIDTH*HEIGHT;j=j+1)begin
     @(negedge clk);din=input_mem[f*WIDTH*HEIGHT+j];vin=1;uin=(j==0);lin=(j%WIDTH==WIDTH-1);
     @(posedge clk);while(!rin)@(posedge clk);
     @(negedge clk);vin=0;uin=0;lin=0;
-    if(j==5)cfg=32'hdeadbeef; // must not take effect before next SOF
+    if(j==1)begin cfg=32'hdeadbeef;quality_word=32'hffffffff;end // Change before SOF reaches post-processing; tagged config must survive.
     if(j%17==0)repeat(2)@(negedge clk);
    end
   end

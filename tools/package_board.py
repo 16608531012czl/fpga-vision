@@ -12,7 +12,7 @@ import xml.etree.ElementTree as ET
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-SUITE = ['reading','capture','registers','gamma','fifo','abort']
+SUITE = ['reading','capture','registers','gamma','fifo','abort','encoder','canvas','kernels']
 
 
 def require(ok, message):
@@ -92,6 +92,18 @@ def publish():
     inputs=read_json('reports/implementation_inputs.json')
     require(inputs['sha256']==hardware_sources(),'Hardware sources/constraints changed during build; rerun implementation')
     simulation=check_simulation();software=check_software();protected=check_protected()
+    native=read_json('reports/native_validation.json')
+    require(native['passed'] and native['source_sha256']==digest(ROOT/'software/native/compose.c')
+            and native['binary_sha256']==digest(ROOT/'software/native/libcompose.so'),
+            'Native resize binary must pass on-board pixel and guard-region checks')
+    streaming=read_json('reports/continuous_stream.json')
+    require(streaming['passed'] and streaming['sha256']=={
+        p.relative_to(ROOT).as_posix():digest(p) for p in (ROOT/'rtl').glob('*.sv')},
+        'Continuous streaming evidence missing or stale')
+    pipeline=read_json('reports/pipeline_stream.json')
+    require(pipeline['passed'] and pipeline['sha256']=={
+        p.relative_to(ROOT).as_posix():digest(p) for p in (ROOT/'rtl').glob('*.sv')},
+        'Combined PL image pipeline evidence missing or stale')
     timing=read_json('reports/system_timing_values.json')
     require(timing['setup_ns']>=0 and timing['hold_ns']>=0 and timing['drc_errors']==0,'Timing/DRC failed')
     require(timing['bidirectional_pads']==4 and timing['enhancement_present'],'Missing enhanced logic or bidirectional pads')
@@ -126,12 +138,26 @@ def publish():
             shutil.copy2(ROOT/'build'/(name+suffix),board/(name+suffix))
     files=[p for p in (ROOT/'software').rglob('*') if p.is_file()
            and '__pycache__' not in p.parts and 'logs' not in p.relative_to(ROOT/'software').parts
-           and p.suffix in ('.py','.bin','.json','.bit','.hwh') and p!=board/'build_manifest.json']
-    manifest={'project':'visual_aid_v3','abi':0x56410300,'built_at':datetime.datetime.now().astimezone().isoformat(),
+           and p.suffix in ('.py','.c','.so','.bin','.json','.bit','.hwh') and p!=board/'build_manifest.json']
+    pinmap=read_json('docs/pins.json')
+    sensor_wiring={'scl_package_pin':pinmap['sensor_scl'],'sda_package_pin':pinmap['sensor_sda'],
+                   'gpio_release_bits':[2,3],'io_voltage':3.3}
+    if (pinmap['sensor_scl'],pinmap['sensor_sda'])==('T11','T10'):
+        sensor_wiring.update(connector='PMOD B',scl_physical_pin=3,sda_physical_pin=4)
+    manifest={'project':'visual_aid_v3','abi':0x56410400,'built_at':datetime.datetime.now().astimezone().isoformat(),
               'vivado':'2018.3','pynq_target':'2.4','resolution':[1280,720],'timing':timing,
-              'full_system_implementation':'passed','hardware_validation':'not_run_user_requested_host_only',
+              'full_system_implementation':'passed','hardware_validation':'not_yet_tested_on_board',
               'measured_board_camera_fps':None,'metadata':metadata,'simulation':simulation,'software_tests':software,
-              'protected_projects':protected,'hardware_source_sha256':inputs['sha256'],
+              'sensor_wiring':sensor_wiring,
+              'capture_diagnostic_register':'0x64',
+              'pl_features':{'signature_register':'0x7c','signature':'0x504c0002','canvas_axi_bits':64,
+                             'independent_capture_render':True,'canvas_source_register':'0xc0','canvas_start_register':'0xc4',
+                             'local_mapping':'8x6 bounded tile means with bilinear gains',
+                             'binary_windows':[15,31],'chroma_filter':'spatial gated 3x3',
+                             'default_live_pipeline':'pl','combined_pipeline_pixels':pipeline['pixels']},
+              'native_composition':native,
+              'protected_projects':protected,'continuous_stream_pixels':streaming['pixel_count'],
+              'hardware_source_sha256':inputs['sha256'],
               'variants':{'default':{'bit':'board/visual_aid_v3.bit','hwh':'board/visual_aid_v3.hwh','camera_weak_pullups':True},
                           'external_pullup':{'bit':'board/visual_aid_v3_external_pullup.bit',
                                              'hwh':'board/visual_aid_v3_external_pullup.hwh','camera_weak_pullups':False}},
@@ -141,34 +167,65 @@ def publish():
     from visual_aid.integrity import verify_payload
     verify_payload(ROOT/'software',board/'visual_aid_v3.bit')
     delivery=ROOT/'delivery';delivery.mkdir(exist_ok=True)
-    archive=delivery/'visual_aid_v3_board.zip'
+    archive=delivery/'visual_aid_v4_ec11_board.zip'
     with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED,compresslevel=6) as z:
         for p in files+[board/'build_manifest.json']:
-            z.write(p,'visual_aid_v3_enhanced/'+p.relative_to(ROOT/'software').as_posix())
+            z.write(p,'visual_aid_v4_ec11/'+p.relative_to(ROOT/'software').as_posix())
         for p in (ROOT/'docs').rglob('*'):
-            if p.is_file():z.write(p,'visual_aid_v3_enhanced/docs/'+p.relative_to(ROOT/'docs').as_posix())
+            if p.is_file():z.write(p,'visual_aid_v4_ec11/docs/'+p.relative_to(ROOT/'docs').as_posix())
         for license_name in ('PYNQ_LICENSE','PYNQ_THIRD_PARTY_LIC','ADAFRUIT_VL53L0X_LICENSE','ESP32_CAMERA_LICENSE','af_firmware_source.txt'):
             source=ROOT/'vendor'/license_name
-            if source.is_file():z.write(source,'visual_aid_v3_enhanced/licenses/'+license_name)
+            if source.is_file():z.write(source,'visual_aid_v4_ec11/licenses/'+license_name)
         for name in ('LICENSE','THIRD_PARTY.md'):
-            z.write(ROOT/name,'visual_aid_v3_enhanced/'+name)
-        z.write(ROOT/'docs/board_bringup_zh.md','visual_aid_v3_enhanced/README_board_zh.md')
+            z.write(ROOT/name,'visual_aid_v4_ec11/'+name)
+        z.write(ROOT/'docs/upgrade_ec11_zh.md','visual_aid_v4_ec11/README_board_zh.md')
         for name in ('system_timing.rpt','system_drc.rpt','system_utilization.rpt','system_clocks.rpt',
                      'system_cdc.rpt','system_cdc_details.rpt','check_timing.rpt','system_bus_skew.rpt',
-                     'system_timing_values.json','protected_projects_check.json'):
-            z.write(ROOT/'reports'/name,'visual_aid_v3_enhanced/host_validation/'+name)
+                     'system_timing_values.json','protected_projects_check.json','continuous_stream.json','software_tests.json'):
+            z.write(ROOT/'reports'/name,'visual_aid_v4_ec11/host_validation/'+name)
     with zipfile.ZipFile(archive) as z:
         require(z.testzip() is None,'Corrupt board archive')
         for name,expected in manifest['payload_sha256'].items():
-            require(hashlib.sha256(z.read('visual_aid_v3_enhanced/'+name)).hexdigest()==expected,'Archive hash mismatch: '+name)
-    (delivery/'visual_aid_v3_board.zip.sha256').write_text(digest(archive)+'  '+archive.name+'\n',encoding='ascii')
+            require(hashlib.sha256(z.read('visual_aid_v4_ec11/'+name)).hexdigest()==expected,'Archive hash mismatch: '+name)
+    archive.with_suffix('.zip.sha256').write_text(digest(archive)+'  '+archive.name+'\n',encoding='ascii')
     print('PASS board package:',archive)
     print('PASS setup={}ns hold={}ns software_tests={} payload_files={}; BOARD NOT TESTED'.format(
         timing['setup_ns'],timing['hold_ns'],software['tests'],len(files)))
 
 
+def refresh_docs():
+    """Refresh non-runtime documentation without changing a tested release ID."""
+    archive=ROOT/'delivery/visual_aid_v4_ec11_board.zip'
+    temp=archive.with_suffix('.docs.tmp')
+    prefix='visual_aid_v4_ec11/'
+    with zipfile.ZipFile(archive) as old:
+        manifest=json.loads(old.read(prefix+'board/build_manifest.json'))
+        for name,h in manifest['payload_sha256'].items():
+            require(hashlib.sha256(old.read(prefix+name)).hexdigest()==h,'Runtime archive changed')
+        with zipfile.ZipFile(temp,'w',zipfile.ZIP_DEFLATED,compresslevel=6) as new:
+            for item in old.infolist():
+                if not item.filename.startswith(prefix+'docs/') and item.filename!=prefix+'README_board_zh.md':
+                    new.writestr(item,old.read(item.filename))
+            for path in (ROOT/'docs').rglob('*'):
+                if path.is_file():new.write(path,prefix+'docs/'+path.relative_to(ROOT/'docs').as_posix())
+            new.write(ROOT/'docs/upgrade_ec11_zh.md',prefix+'README_board_zh.md')
+    with zipfile.ZipFile(temp) as check:
+        require(check.testzip() is None,'Documentation archive corrupted')
+        for name,h in manifest['payload_sha256'].items():
+            require(hashlib.sha256(check.read(prefix+name)).hexdigest()==h,'Runtime changed during docs update')
+    temp.replace(archive)
+    archive.with_suffix('.zip.sha256').write_text(digest(archive)+'  '+archive.name+'\n',encoding='ascii')
+    (ROOT/'reports/documentation_refresh.json').write_text(json.dumps({
+        'release':manifest['built_at'],'runtime_payload_unchanged':True,
+        'board_archive_sha256':digest(archive)},indent=2),encoding='utf-8')
+    print('PASS documentation refreshed; tested runtime and release unchanged')
+
+
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--snapshot',action='store_true')
+    parser.add_argument('--docs-only',action='store_true')
     args=parser.parse_args()
     if args.snapshot:snapshot()
+    elif args.docs_only:refresh_docs()
     else:publish()
+

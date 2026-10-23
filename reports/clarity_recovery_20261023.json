@@ -1,0 +1,21 @@
+{
+  "source": "User observations in this conversation on 2026-10-23",
+  "restored_release": "2026-10-23T15:35:38.326342+08:00",
+  "restored_service_report": "live_active_20261023_181045.json",
+  "original_pane_clear": true,
+  "enhanced_pane_clear": false,
+  "user_dn1_ct0_feedback": "still blurry; wants clarity similar to original",
+  "optical_focus_fault_not_established": true,
+  "next_detail_preset": {"denoise": 0, "sharpness": 4, "noise": 1, "contrast": 0},
+  "detail_live_report": "live_20261023_183001.json",
+  "detail_release": "2026-10-23T18:29:23.747940+08:00",
+  "detail_clear_near_original": true,
+  "detail_brightness_stable": false,
+  "detail_flicker_feedback": "left has slight brightness variation; enhancement makes it more obvious",
+  "stable_live_report": "live_20261023_183807.json",
+  "stable_release": "2026-10-23T18:37:39.532825+08:00",
+  "new_release_physical_acceptance": "User confirms markedly reduced or absent dark brightness flicker with clarity retained",
+  "stable_capture_fps": 19.971348966184074,
+  "stable_render_fps": 19.971347947331424,
+  "stable_error_deltas": {"dma_errors":0,"overflow_frames":0,"malformed_frames":0}
+}

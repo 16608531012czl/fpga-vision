@@ -1,5 +1,11 @@
 # 增强版上板操作：PYNQ-Z2 / PYNQ 2.4
 
+本独立副本已于2026-10-22升级EC11和边缘引导锐化，请优先阅读 [本版安装与验收](upgrade_ec11_zh.md)。
+下文旧版安装目录和历史实测不代表本版验收结果。
+
+2026-10-20 暗光软件更新使用独立包/目录 `visual_aid_v3_lowlight_20261020`，
+请优先按 [暗光更新步骤](lowlight_20261020_zh.md) 安装和比较。下文旧包的历史验证不代表本次暗光策略已经上板。
+
 本包包含独立增强版 bit/HWH、板端程序、OV5640 对焦固件和配套校验清单。
 电脑端验收见 `host_validation` 与 `board/build_manifest.json`。
 2026-10-17 已在本台 PYNQ-Z2 完成基础实板验证，显示、按键、BH1750、实景增强与连续自动对焦均通过；
@@ -30,7 +36,7 @@ cd /home/xilinx/jupyter_notebooks/visual_aid_v3_enhanced
 
 断电后按 `docs/wiring_zh.md` 接线。摄像头使用板载 24MHz 晶振，不另外连接 XCLK。
 五向模块只接 COM、UP、DWN、LFT、RHT、MID 六根线，SET/RST 不接；COM 接 GND。
-保留板载 BTN0..3，不增加外置功能键、编码器或 PWM 调光模块。
+保留板载 BTN0..3；本次EC11扩展接线按 `upgrade_ec11_zh.md`，其他旧版操作仍可参考本文。
 摄像头、开发板和外设共地；补光灯独立供电、手动调光。
 
 提供两组同版 bit/HWH：

@@ -4,7 +4,8 @@ module tb_gamma;
  reg resetn=0;reg [23:0] din=0;reg vin=0,uin=0,lin=0,ready=0;
  wire rin,vout,uout,lout;wire [23:0] dout;reg [31:0] cfg=1;
  reg we=0,commit=0;reg [7:0] index=0,ld=0;wire pending,bank;wire [31:0] count;
- reading_enhance #(.WIDTH(32)) dut(clk,resetn,din,vin,rin,uin,lin,dout,vout,ready,uout,lout,cfg,we,index,ld,commit,pending,bank,count);
+ wire gain_pending;
+ reading_enhance #(.WIDTH(32)) dut(clk,resetn,din,vin,rin,uin,lin,dout,vout,ready,uout,lout,cfg,we,index,ld,commit,pending,bank,count,32'd0,1'b0,1'b0,6'd0,10'd256,gain_pending);
  integer cycle=0,got=0,j,f,k,guard_before;reg [7:0] expected,pixel;reg block_output=0;
  always @(negedge clk)begin cycle=cycle+1;ready=resetn&&!block_output&&(cycle%9>2);end
  always @(posedge clk)if(vout&&ready)begin

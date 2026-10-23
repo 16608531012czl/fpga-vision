@@ -1,7 +1,7 @@
 {
   "project": "visual_aid_v3",
-  "abi": 1447101184,
-  "built_at": "2026-10-16T21:35:28.114926+08:00",
+  "abi": 1447101440,
+  "built_at": "2026-10-23T18:37:39.532825+08:00",
   "vivado": "2018.3",
   "pynq_target": "2.4",
   "resolution": [
@@ -9,15 +9,15 @@
     720
   ],
   "timing": {
-    "setup_ns": 0.372,
-    "hold_ns": 0.004,
+    "setup_ns": 0.28,
+    "hold_ns": 0.032,
     "drc_errors": 0,
     "bidirectional_pads": 4,
     "enhancement_present": true,
     "gray_groups": 5
   },
   "full_system_implementation": "passed",
-  "hardware_validation": "not_run_user_requested_host_only",
+  "hardware_validation": "not_yet_tested_on_board",
   "measured_board_camera_fps": null,
   "metadata": {
     "control_ip": "assist_core/s_axi",
@@ -27,31 +27,123 @@
   },
   "simulation": {
     "quick": {
-      "timestamp": "2026-10-16T21:21:19",
+      "timestamp": "2026-10-23T18:21:58",
       "tests": [
         "reading",
         "capture",
         "registers",
         "gamma",
         "fifo",
-        "abort"
+        "abort",
+        "encoder",
+        "canvas",
+        "kernels"
       ]
     },
     "full": {
-      "timestamp": "2026-10-16T21:22:02",
+      "timestamp": "2026-10-23T18:27:16",
       "tests": [
         "reading",
         "capture",
         "registers",
         "gamma",
         "fifo",
-        "abort"
+        "abort",
+        "encoder",
+        "canvas",
+        "kernels"
       ]
     }
   },
   "software_tests": {
-    "tests": 42,
-    "timestamp": "2026-10-16T21:24:35"
+    "tests": 90,
+    "timestamp": "2026-10-23T18:37:38"
+  },
+  "sensor_wiring": {
+    "scl_package_pin": "T11",
+    "sda_package_pin": "T10",
+    "gpio_release_bits": [
+      2,
+      3
+    ],
+    "io_voltage": 3.3,
+    "connector": "PMOD B",
+    "scl_physical_pin": 3,
+    "sda_physical_pin": 4
+  },
+  "capture_diagnostic_register": "0x64",
+  "pl_features": {
+    "signature_register": "0x7c",
+    "signature": "0x504c0002",
+    "canvas_axi_bits": 64,
+    "independent_capture_render": true,
+    "canvas_source_register": "0xc0",
+    "canvas_start_register": "0xc4",
+    "local_mapping": "8x6 bounded tile means with bilinear gains",
+    "binary_windows": [
+      15,
+      31
+    ],
+    "chroma_filter": "spatial gated 3x3",
+    "default_live_pipeline": "pl",
+    "combined_pipeline_pixels": 18432
+  },
+  "native_composition": {
+    "passed": true,
+    "cases": [
+      [
+        1,
+        1
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        17,
+        9
+      ],
+      [
+        640,
+        360
+      ]
+    ],
+    "gamma_guard_checks": true,
+    "source_sha256": "16bdb8d7d702f9d3ea58f437427618c0129a597f79855c530515e230b4972d82",
+    "binary_sha256": "d61129ed5a14cfe7bccb752f87ae06fb0175c17f60a3582e5e4f80491f42ebf6",
+    "compiler": "gcc (Ubuntu/Linaro 7.3.0-16ubuntu3) 7.3.0",
+    "chroma_guard_cases": [
+      [
+        1,
+        1
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        17,
+        9
+      ],
+      [
+        640,
+        360
+      ]
+    ],
+    "chroma_quality": {
+      "chroma_std_before": 7.743410559497773,
+      "chroma_std_after": 5.407149728241354,
+      "temporal_std_before": 7.5299759443903245,
+      "temporal_std_after": 5.1143291073217885,
+      "luma_max_error": 0,
+      "text_stroke_unchanged": true,
+      "scope": "seeded synthetic dark patch, not a physical camera noise measurement",
+      "native_640x360_median_ms": 9.62673750018439
+    }
   },
   "protected_projects": {
     "original_files": 1481,
@@ -59,29 +151,42 @@
     "raw_protected_files": 98,
     "raw_baseline_unchanged": true
   },
+  "continuous_stream_pixels": 15360,
   "hardware_source_sha256": {
-    "rtl/assist_regs.sv": "39bacf7ff769f49b16f919b82280d5e17e5bb6078c111ce49879fb8714cb8143",
+    "rtl/assist_regs.sv": "d12e905396d32618e57dd7c5b92a36a4027fcd254075c829e4165f9331b3b422",
     "rtl/async_fifo.sv": "d10ba177db60fa6967d9c01f398599f13a03996d9211336c49130f2fa0d1e0ca",
-    "rtl/dvp_capture.sv": "81cd308c54986c80a9710a7b6d673512659c426cdf4213abb29e861620e5ad40",
+    "rtl/canvas_writer.sv": "3913c99449a00d2fad7ae78d6b3e1eb74001bed8d1f3d840b288bcfca5238867",
+    "rtl/chroma_filter.sv": "d0ab6606129697a27753d85616517ffd34ca8c38472d7de2b85adb2713fdc1c1",
+    "rtl/color_reconstruct.sv": "72d417b54d1adb0ed5a8b43d9ea511d86cccb106808a0dd232cd3281215ef881",
+    "rtl/display_slot_decode.sv": "09b3950127cb2daff1c750b9b916ccbdd09f20cef806378f6352d7789771967f",
+    "rtl/dvp_capture.sv": "925f54dbc8b16f70d541d8de499c8ff3613cef42a3252b128d909ad3079fa5ae",
+    "rtl/encoder_input.sv": "70c497f112114caa73d26b059f2f8b73c43e8d25eecf4ba621a559a7bbe02067",
+    "rtl/frame_tiles.sv": "195ecc62aaccede1201261560296ddd6b23b29a2f41df13161333c535fd0cb40",
     "rtl/frame_writer.sv": "a96f162b4d2c3f06a90f46d9047aeea8a40f17b088065af6e0ccaf9b115b2b22",
-    "rtl/reading_enhance.sv": "c70c06299187d0884376704d2a960dd8508de9b6f2e24e26e1edc40dfb51bab0",
-    "rtl/visual_aid_core.sv": "33faa3993f8063389089f7ed3b937ae12c05ecf1fe419fff98e098ddf93ab184",
+    "rtl/local_tone_map.sv": "56368e046f1d1cee07827f8e85f0ba2f47bd1f15230bf4c28282db368fe21a4d",
+    "rtl/reading_enhance.sv": "75a6a0e44b890c594b8f7761c3082895c87cb72882f52ef5ceb558cb82c32635",
+    "rtl/status_font.sv": "f047cad1119c521d5fcfd57f7856abde47397a4e7cb0c9aac0712ae819021386",
+    "rtl/status_overlay.sv": "03e445ee22ec839451c057ad7487743c689dbbcb8be174dba277efeab6284733",
+    "rtl/visual_aid_core.sv": "96089fe1fa4657c3d3dea98f6bdd265d65c1e339681e2ab9340d980d23d61bf8",
     "sim/run.tcl": "6218ffa4f2392f3c61113605d4ab2cd023186e11f1da826b920e510a9a797efb",
     "sim/tb_abort.sv": "596703f8908adfe798df467be97d56208af74c8716a2230de0cc5739c0b05499",
-    "sim/tb_capture.sv": "404998fcc1852f739b828d074f7d82275f1ff22c6bdd25f460dcb9a6e837a625",
+    "sim/tb_canvas.sv": "fc925dba5eab874aa544328a0048a8a1f59c39d5a24943b820dbd37e8732d489",
+    "sim/tb_capture.sv": "1c11abe965369b9c83caf715ae0174fb719aabc8506dd1ed1834753c320ab601",
+    "sim/tb_encoder.sv": "c7f2d05c210461e88255170f65314430060dea70520123e8dc1b2a76a09807b0",
     "sim/tb_fifo.sv": "550fa4e1efbb9e25a7297c2d7620a65ff3558c358e9ab9e3207d51c6d3538c0b",
-    "sim/tb_gamma.sv": "c793af534f945cea863391f8ae728ecf5d0a09265c7b57029fdc396a6b4962aa",
-    "sim/tb_reading.sv": "628e564131a4b4426f6c11bcb972a8ac277cc979c4d26116e9afee97cc814337",
-    "sim/tb_registers.sv": "9990e91be6da388b0fb2e1ecc7b4bd0e598c2428b0a0d9af9dcc20b0e282b891",
-    "vivado/cdc.xdc": "04ad9c5b6a65e98a10fb21309f6a87ee0c70c25a33a798e345277abd48802d6c",
+    "sim/tb_gamma.sv": "cd78009616058e3464c1ba67db55cddc50f5bf717a36589d00366843bfd39d68",
+    "sim/tb_kernels.sv": "43225879925a0a9d8abfd171d5e139de2becf38396572ad3188c94cb1ca71a8e",
+    "sim/tb_reading.sv": "a7e618ac33c15ac286c9f02b1c880fd4542dd6b12b36dbccc248fbce38d07304",
+    "sim/tb_registers.sv": "29000691ab6079bc52aa020236936a55185f175ded9aee34f6bc5a5ed13b89ba",
+    "vivado/cdc.xdc": "1f92ec8c0505f29f6eb38b0f67faf829be2766340153e4f225078ce39023c193",
     "vivado/clock_tree.tcl": "068b860d998247b9842bdf4ea7ac8e17c77ffc681a9097416173a0f7c270f40b",
     "vivado/create_sim.tcl": "1d9543003f591dce59dfe46f814eda825ceffe71d60a48e6262a2d0f232664d7",
-    "vivado/create_system.tcl": "ab4333f8aaabe67881ff80e9d62ed9974a9b0f9736522507b6554f4b781c98a4",
+    "vivado/create_system.tcl": "04b2bd1f27dd4225f00c01d0b780a89441d33ca2a6b6a2a3a1c8cbfc1f51b344",
     "vivado/finalize_system.tcl": "5539168c1d43008dfebc5c068edfd0cc88574e346edcb4c19f09a8dee830e91a",
-    "vivado/implement_system.tcl": "6b4307b06fe0181084f823d9293f5310cb4aae529dde850b0e1baad4587fa531",
-    "vivado/pins.xdc": "8a11a36bc81770ced6a288c1979f0bf1df496ebd108f9ead1ca3f40196aac1dc",
+    "vivado/implement_system.tcl": "39b85ffcaab94604aa0b5da6dff5abc8ec16d5ad731860a746d6bd176bc1fef1",
+    "vivado/pins.xdc": "2f36d1f6495e2720bd99b64b3fe77c060edfc1190bdc6cf709fa0fcd44c4e045",
     "vivado/synth_core.tcl": "b84206a307274eebba53c2bf2bd36058ac26ceca4fcdedf4577cc89e889c6c52",
-    "vivado/validate_system.tcl": "2d8ad8f9f79a3a5fb1e0a9817bf353ac7a9dbc8ee9d231d37522badcc84c7412",
+    "vivado/validate_system.tcl": "af6075ce68921da73151ca551833552f698bcdd70c27f54791a8e186afabd5ad",
     "vendor/ADAFRUIT_VL53L0X_LICENSE": "24a87cbc79258666c6d72a3729bf11a14a6f01b896a3ed66374e3816c308b08e",
     "vendor/adafruit_vl53l0x_original.py": "fc355da4fe4263b42229a7cf933c3d22aa1748abb6c566d2c02818aaa42d6f15",
     "vendor/af_firmware_source.txt": "b85806bba1cac9bd31aa83c708a8b9b38fa3e88699872049b91841fda66d55dc",
@@ -195,23 +300,32 @@
     }
   },
   "payload_sha256": {
-    "preflight.py": "4c931a37e2f89720543713c88ef3df7eb693aaf8a6b4999f475b69f26d5d97e7",
+    "preflight.py": "6d7087e03949ff8fa550b0eafeada202501a449155118deab9e537dc81f1639f",
     "preview.py": "0467f095a6660300d1d1d8fb2abc962bee70db82f076c9f7a36b206074bfa566",
-    "run_board.py": "cfbd9c1950358dd95b24c3f5ffc075675dcef43de8109de1427b8c54fe931d75",
+    "run_board.py": "0760b242343c84774b96144ff73e9d90fe9cf1d8a07e57ba427c4406b0024b60",
     "assets/ov5640_720p.json": "a88348addb38ab4f8476de2d97f7bb0cdef4d30ecf1ebec34f80f274b5ca5898",
     "assets/ov5640_af.bin": "439245623bc99f3b0d8c44d47baed3cc17cad01b9191509c89bb8d92a98949c9",
-    "board/visual_aid_v3.bit": "289a5872c5374b83bf87e6040a25cf9091eec0ad0d85f0e19902d512de9b7897",
-    "board/visual_aid_v3.hwh": "7c2a15e20ba2ddb037ee25efddb596d43849b668bada07762b9706e6a2306f9e",
-    "board/visual_aid_v3_external_pullup.bit": "92e709e0e35eaf146a03571a01a9b2b30898c5d65edb7362c3c6f8dd8d0d5e1a",
-    "board/visual_aid_v3_external_pullup.hwh": "7c2a15e20ba2ddb037ee25efddb596d43849b668bada07762b9706e6a2306f9e",
-    "visual_aid/bus.py": "9cbea959d3623a10d60f2a23a11b710c0a4c26997d30b964b0edfb4f33ac4085",
-    "visual_aid/camera.py": "6b028e3daf70beaad4e423e4ae4e5bc4a8abd1ef5de557ad9dca1795a4021fd1",
-    "visual_aid/controls.py": "9e0ade20b2dddffcc281ffd38bbb0121555c4ba298be96a666c6fc8d373c5bd2",
-    "visual_aid/device.py": "6a48fb78d51c4b06310c8454aca321adfa16074475738210d7b29c031ff71e0c",
+    "board/visual_aid_v3.bit": "5f2d76f1ba59eabc13743f9e49c62e179daa763ac28b6a876acd53cd14e80b96",
+    "board/visual_aid_v3.hwh": "45fcd9888bc97d4fc96e810593a9e566eecbe4e1475df04fbe49f9dde89911a9",
+    "board/visual_aid_v3_external_pullup.bit": "9d5cef085fb7bcf0816289080a16bf970d6ba87466d062e44216551305abd2b0",
+    "board/visual_aid_v3_external_pullup.hwh": "45fcd9888bc97d4fc96e810593a9e566eecbe4e1475df04fbe49f9dde89911a9",
+    "native/compose.c": "16bdb8d7d702f9d3ea58f437427618c0129a597f79855c530515e230b4972d82",
+    "native/libcompose.so": "d61129ed5a14cfe7bccb752f87ae06fb0175c17f60a3582e5e4f80491f42ebf6",
+    "visual_aid/bus.py": "e46315aa0f20a3cdcb736866d3004c42bd91835d65e1547598b2ae190a8bbd48",
+    "visual_aid/camera.py": "0c7763bf85f7ccba4c70ff5a70e72679e81aa3b948ca4dee19a08b257b64c7ad",
+    "visual_aid/chroma.py": "291df24a23acb3fa2da603d2b61017ed569c54e3bf8ba465081cdd9bbf72813b",
+    "visual_aid/controls.py": "4c87cf498186216bd3d909310a610ac9a5de21ed5a720d1b14b1ceb3471c6a55",
+    "visual_aid/device.py": "595e434719c9612093a230e32f7597a3069c0905c0138667d472bddc6af0d484",
+    "visual_aid/encoder.py": "c04a8b1542b3c012614bbb8a84fb3a0bcb4d4afe74ac990431ff74ecdad6ea91",
+    "visual_aid/fastcompose.py": "d8dd9c01bec5d3d35a3ed67786e8741a1259ef03414c20147194830af7626d79",
     "visual_aid/i2c_device.py": "a0e1bc933fa83f9627c8903dfd5e78aea72fb3415dd558e0aa2a3dc11316521d",
-    "visual_aid/image.py": "a37116d94b0e47a4a90dba7971233b6924ee8b024e2c21710b92e33978f183d2",
-    "visual_aid/integrity.py": "42f112eb1cd23f3b7aa701b9cff9a2deb76f188804916256e2213669d413d7f7",
+    "visual_aid/image.py": "753f9b01ea8bfece1990f54db7c16e9b9bbc14b736d57637bf23d4ad1e287774",
+    "visual_aid/integrity.py": "ee055d89936674e728ca87d9a660040e8f231f2851d11e99cb9e6dfe3930eee7",
+    "visual_aid/local.py": "cb4289944aaa64d391da90e5692cfff475e074e100631ca72a41ae83a0eb9fc2",
+    "visual_aid/pl_runtime.py": "44736d253633108c3ea7eaec6c7920af58d4dff19440fcdfbd2132710eb65256",
+    "visual_aid/scanout.py": "5862e3fd67332d8547e89cdf3ca431ae69bb228e5d952e6bfd59022ead925c0d",
     "visual_aid/sensors.py": "6ca088e03f3528c621bf7bb5476506c0161059e6b175a7ce8d99d9d5a673b814",
+    "visual_aid/startup.py": "4a9838a749bb0591d377a7e662519da16085b5deb9f0bd68c0000ff88b627b2f",
     "visual_aid/vl53l0x_vendor.py": "d7a9d105c768ea3023e073915a6f2efb46202463baeca01b8ffe9d296f9c88c6",
     "visual_aid/__init__.py": "a376d8cdc63c8dbc96b2a2ec75d610fb2ca55ac419994cd1ca6e3f98cd677f24"
   }

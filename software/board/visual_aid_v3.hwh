@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Oct 16 21:20:58 2026" VIVADOVERSION="2018.3">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Oct 23 18:22:05 2026" VIVADOVERSION="2018.3">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="visual_aid" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -32,6 +32,21 @@
     <PORT DIR="I" LEFT="4" NAME="joy_n" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_joy_n">
       <CONNECTIONS>
         <CONNECTION INSTANCE="assist_core" PORT="joy_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="enc_a" SIGIS="undef" SIGNAME="External_Ports_enc_a">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="assist_core" PORT="enc_a"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="enc_b" SIGIS="undef" SIGNAME="External_Ports_enc_b">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="assist_core" PORT="enc_b"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="enc_key_n" SIGIS="undef" SIGNAME="External_Ports_enc_key_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="assist_core" PORT="enc_key_n"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="IO" NAME="cam_scl" SIGIS="undef" SIGNAME="External_Ports_cam_scl">
@@ -306,6 +321,21 @@
             <CONNECTION INSTANCE="External_Ports" PORT="joy_n"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" NAME="enc_a" SIGIS="undef" SIGNAME="External_Ports_enc_a">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="enc_a"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enc_b" SIGIS="undef" SIGNAME="External_Ports_enc_b">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="enc_b"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="enc_key_n" SIGIS="undef" SIGNAME="External_Ports_enc_key_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="enc_key_n"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="IO" NAME="cam_scl" SIGIS="undef" SIGNAME="External_Ports_cam_scl">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="cam_scl"/>
@@ -334,6 +364,11 @@
         <PORT DIR="O" NAME="cam_pwdn" SIGIS="undef" SIGNAME="assist_core_cam_pwdn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="cam_pwdn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="5" NAME="display_slot" RIGHT="0" SIGIS="undef" SIGNAME="display_vdma_mm2s_frame_ptr_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="display_vdma" PORT="mm2s_frame_ptr_out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="7" NAME="s_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_s_axi_awaddr">
@@ -566,6 +601,161 @@
             <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="stream_in_24_TLAST"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" LEFT="31" NAME="m_canvas_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="m_canvas_awlen" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_awlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_awlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="m_canvas_awsize" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_awsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_awsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="m_canvas_awburst" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_awburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_awburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="m_canvas_awcache" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_awcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_awcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="m_canvas_awprot" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_awprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_canvas_awlock" SIGIS="undef" SIGNAME="assist_core_m_canvas_awlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_awlock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_canvas_awvalid" SIGIS="undef" SIGNAME="assist_core_m_canvas_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_canvas_awready" SIGIS="undef" SIGNAME="assist_core_m_canvas_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="m_canvas_wdata" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="m_canvas_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_canvas_wlast" SIGIS="undef" SIGNAME="assist_core_m_canvas_wlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_wlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_canvas_wvalid" SIGIS="undef" SIGNAME="assist_core_m_canvas_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_canvas_wready" SIGIS="undef" SIGNAME="assist_core_m_canvas_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="m_canvas_bresp" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_canvas_bvalid" SIGIS="undef" SIGNAME="assist_core_m_canvas_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_canvas_bready" SIGIS="undef" SIGNAME="assist_core_m_canvas_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="m_canvas_araddr" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="m_canvas_arlen" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_arlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_arlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="m_canvas_arsize" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_arsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_arsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="m_canvas_arburst" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_arburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_arburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="m_canvas_arcache" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_arcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_arcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="m_canvas_arprot" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_canvas_arlock" SIGIS="undef" SIGNAME="assist_core_m_canvas_arlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_arlock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_canvas_arvalid" SIGIS="undef" SIGNAME="assist_core_m_canvas_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_canvas_arready" SIGIS="undef" SIGNAME="assist_core_m_canvas_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="m_canvas_rdata" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="m_canvas_rresp" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_canvas_rlast" SIGIS="undef" SIGNAME="assist_core_m_canvas_rlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_rlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_canvas_rvalid" SIGIS="undef" SIGNAME="assist_core_m_canvas_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_canvas_rready" SIGIS="undef" SIGNAME="assist_core_m_canvas_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_AXI_rready"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="control_bus_M00_AXI" DATAWIDTH="32" NAME="s_axi" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
@@ -718,9 +908,76 @@
             <PORTMAP LOGICAL="TREADY" PHYSICAL="m_axis_tready"/>
           </PORTMAPS>
         </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="assist_core_m_canvas" DATAWIDTH="64" NAME="m_canvas" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
+          <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
+          <PARAMETER NAME="DATA_WIDTH" VALUE="64"/>
+          <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+          <PARAMETER NAME="HAS_BURST" VALUE="1"/>
+          <PARAMETER NAME="HAS_LOCK" VALUE="1"/>
+          <PARAMETER NAME="HAS_PROT" VALUE="1"/>
+          <PARAMETER NAME="HAS_CACHE" VALUE="1"/>
+          <PARAMETER NAME="HAS_QOS" VALUE="0"/>
+          <PARAMETER NAME="HAS_REGION" VALUE="0"/>
+          <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
+          <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
+          <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="1"/>
+          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="2"/>
+          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
+          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="visual_aid_ps7_0_0_FCLK_CLK0"/>
+          <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
+          <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
+          <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="m_canvas_awaddr"/>
+            <PORTMAP LOGICAL="AWLEN" PHYSICAL="m_canvas_awlen"/>
+            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="m_canvas_awsize"/>
+            <PORTMAP LOGICAL="AWBURST" PHYSICAL="m_canvas_awburst"/>
+            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="m_canvas_awlock"/>
+            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="m_canvas_awcache"/>
+            <PORTMAP LOGICAL="AWPROT" PHYSICAL="m_canvas_awprot"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="m_canvas_awvalid"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="m_canvas_awready"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="m_canvas_wdata"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="m_canvas_wstrb"/>
+            <PORTMAP LOGICAL="WLAST" PHYSICAL="m_canvas_wlast"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="m_canvas_wvalid"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="m_canvas_wready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="m_canvas_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="m_canvas_bvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="m_canvas_bready"/>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="m_canvas_araddr"/>
+            <PORTMAP LOGICAL="ARLEN" PHYSICAL="m_canvas_arlen"/>
+            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="m_canvas_arsize"/>
+            <PORTMAP LOGICAL="ARBURST" PHYSICAL="m_canvas_arburst"/>
+            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="m_canvas_arlock"/>
+            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="m_canvas_arcache"/>
+            <PORTMAP LOGICAL="ARPROT" PHYSICAL="m_canvas_arprot"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="m_canvas_arvalid"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="m_canvas_arready"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="m_canvas_rdata"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="m_canvas_rresp"/>
+            <PORTMAP LOGICAL="RLAST" PHYSICAL="m_canvas_rlast"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="m_canvas_rvalid"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="m_canvas_rready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
       </BUSINTERFACES>
       <MEMORYMAP>
         <MEMRANGE ADDRESSBLOCK="HP0_DDR_LOWOCM" BASENAME="C_BASEADDR" BASEVALUE="0x00000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x1FFFFFFF" INSTANCE="ps7_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="m_axi" MEMTYPE="MEMORY" SLAVEBUSINTERFACE="S_AXI_HP0"/>
+        <MEMRANGE ADDRESSBLOCK="HP0_DDR_LOWOCM" BASENAME="C_BASEADDR" BASEVALUE="0x00000000" HIGHNAME="C_HIGHADDR" HIGHVALUE="0x1FFFFFFF" INSTANCE="ps7_0" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="m_canvas" MEMTYPE="MEMORY" SLAVEBUSINTERFACE="S_AXI_HP0"/>
       </MEMORYMAP>
       <PERIPHERALS>
         <PERIPHERAL INSTANCE="ps7_0"/>
@@ -1140,350 +1397,6 @@
             <CONNECTION INSTANCE="reset_100m" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M03_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M03_AXI_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_AWADDR"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M03_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_awvalid" SIGIS="undef" SIGNAME="control_bus_M03_AXI_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_AWVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M03_AXI_awready" SIGIS="undef" SIGNAME="control_bus_M03_AXI_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_AWREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M03_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M03_AXI_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_WDATA"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M03_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M03_AXI_wstrb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_WSTRB"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M03_AXI_wvalid" SIGIS="undef" SIGNAME="control_bus_M03_AXI_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_WVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M03_AXI_wready" SIGIS="undef" SIGNAME="control_bus_M03_AXI_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_WREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M03_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M03_AXI_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_BRESP"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M03_AXI_bvalid" SIGIS="undef" SIGNAME="control_bus_M03_AXI_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_BVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M03_AXI_bready" SIGIS="undef" SIGNAME="control_bus_M03_AXI_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_BREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M03_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M03_AXI_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_ARADDR"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M03_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M03_AXI_arvalid" SIGIS="undef" SIGNAME="control_bus_M03_AXI_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_ARVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M03_AXI_arready" SIGIS="undef" SIGNAME="control_bus_M03_AXI_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_ARREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M03_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M03_AXI_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_RDATA"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M03_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M03_AXI_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_RRESP"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M03_AXI_rvalid" SIGIS="undef" SIGNAME="control_bus_M03_AXI_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_RVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M03_AXI_rready" SIGIS="undef" SIGNAME="control_bus_M03_AXI_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_RREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M04_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M04_AXI_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_awaddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M04_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_awvalid" SIGIS="undef" SIGNAME="control_bus_M04_AXI_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_awvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M04_AXI_awready" SIGIS="undef" SIGNAME="control_bus_M04_AXI_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_awready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M04_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M04_AXI_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_wdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M04_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M04_AXI_wstrb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_wstrb"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M04_AXI_wvalid" SIGIS="undef" SIGNAME="control_bus_M04_AXI_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_wvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M04_AXI_wready" SIGIS="undef" SIGNAME="control_bus_M04_AXI_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_wready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M04_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M04_AXI_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_bresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M04_AXI_bvalid" SIGIS="undef" SIGNAME="control_bus_M04_AXI_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_bvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M04_AXI_bready" SIGIS="undef" SIGNAME="control_bus_M04_AXI_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_bready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M04_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M04_AXI_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M04_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_arvalid" SIGIS="undef" SIGNAME="control_bus_M04_AXI_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M04_AXI_arready" SIGIS="undef" SIGNAME="control_bus_M04_AXI_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M04_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M04_AXI_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M04_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M04_AXI_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M04_AXI_rvalid" SIGIS="undef" SIGNAME="control_bus_M04_AXI_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M04_AXI_rready" SIGIS="undef" SIGNAME="control_bus_M04_AXI_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_rready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M02_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M02_AXI_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_awaddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M02_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M02_AXI_awvalid" SIGIS="undef" SIGNAME="control_bus_M02_AXI_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_awvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M02_AXI_awready" SIGIS="undef" SIGNAME="control_bus_M02_AXI_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_awready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M02_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M02_AXI_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_wdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M02_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M02_AXI_wstrb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_wstrb"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M02_AXI_wvalid" SIGIS="undef" SIGNAME="control_bus_M02_AXI_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_wvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M02_AXI_wready" SIGIS="undef" SIGNAME="control_bus_M02_AXI_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_wready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M02_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M02_AXI_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_bresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M02_AXI_bvalid" SIGIS="undef" SIGNAME="control_bus_M02_AXI_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_bvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M02_AXI_bready" SIGIS="undef" SIGNAME="control_bus_M02_AXI_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_bready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M02_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M02_AXI_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M02_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M02_AXI_arvalid" SIGIS="undef" SIGNAME="control_bus_M02_AXI_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M02_AXI_arready" SIGIS="undef" SIGNAME="control_bus_M02_AXI_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M02_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M02_AXI_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M02_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M02_AXI_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M02_AXI_rvalid" SIGIS="undef" SIGNAME="control_bus_M02_AXI_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M02_AXI_rready" SIGIS="undef" SIGNAME="control_bus_M02_AXI_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_rready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M01_AXI_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_awaddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M01_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_awvalid" SIGIS="undef" SIGNAME="control_bus_M01_AXI_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_awvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M01_AXI_awready" SIGIS="undef" SIGNAME="control_bus_M01_AXI_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_awready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M01_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M01_AXI_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_wdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M01_AXI_wstrb" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_wvalid" SIGIS="undef" SIGNAME="control_bus_M01_AXI_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_wvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M01_AXI_wready" SIGIS="undef" SIGNAME="control_bus_M01_AXI_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_wready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M01_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M01_AXI_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_bresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M01_AXI_bvalid" SIGIS="undef" SIGNAME="control_bus_M01_AXI_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_bvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M01_AXI_bready" SIGIS="undef" SIGNAME="control_bus_M01_AXI_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_bready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M01_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M01_AXI_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M01_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_arvalid" SIGIS="undef" SIGNAME="control_bus_M01_AXI_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M01_AXI_arready" SIGIS="undef" SIGNAME="control_bus_M01_AXI_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M01_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M01_AXI_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M01_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M01_AXI_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M01_AXI_rvalid" SIGIS="undef" SIGNAME="control_bus_M01_AXI_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M01_AXI_rready" SIGIS="undef" SIGNAME="control_bus_M01_AXI_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_rready"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" LEFT="11" NAME="S00_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_S00_AXI_awid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0" PORT="M_AXI_GP0_AWID"/>
@@ -1674,188 +1587,6 @@
             <CONNECTION INSTANCE="ps7_0" PORT="M_AXI_GP0_RREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M06_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M06_AXI_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_awaddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="M06_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M06_AXI_awprot">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_awprot"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M06_AXI_awvalid" SIGIS="undef" SIGNAME="control_bus_M06_AXI_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_awvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M06_AXI_awready" SIGIS="undef" SIGNAME="control_bus_M06_AXI_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_awready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M06_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M06_AXI_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_wdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M06_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M06_AXI_wstrb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_wstrb"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M06_AXI_wvalid" SIGIS="undef" SIGNAME="control_bus_M06_AXI_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_wvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M06_AXI_wready" SIGIS="undef" SIGNAME="control_bus_M06_AXI_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_wready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M06_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M06_AXI_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_bresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M06_AXI_bvalid" SIGIS="undef" SIGNAME="control_bus_M06_AXI_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_bvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M06_AXI_bready" SIGIS="undef" SIGNAME="control_bus_M06_AXI_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_bready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M06_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M06_AXI_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="M06_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M06_AXI_arprot">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_arprot"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M06_AXI_arvalid" SIGIS="undef" SIGNAME="control_bus_M06_AXI_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M06_AXI_arready" SIGIS="undef" SIGNAME="control_bus_M06_AXI_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M06_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M06_AXI_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M06_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M06_AXI_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M06_AXI_rvalid" SIGIS="undef" SIGNAME="control_bus_M06_AXI_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M06_AXI_rready" SIGIS="undef" SIGNAME="control_bus_M06_AXI_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_rready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M05_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M05_AXI_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_AWADDR"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M05_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M05_AXI_awvalid" SIGIS="undef" SIGNAME="control_bus_M05_AXI_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_AWVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M05_AXI_awready" SIGIS="undef" SIGNAME="control_bus_M05_AXI_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_AWREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M05_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M05_AXI_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_WDATA"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M05_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M05_AXI_wstrb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_WSTRB"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M05_AXI_wvalid" SIGIS="undef" SIGNAME="control_bus_M05_AXI_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_WVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M05_AXI_wready" SIGIS="undef" SIGNAME="control_bus_M05_AXI_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_WREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M05_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M05_AXI_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_BRESP"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M05_AXI_bvalid" SIGIS="undef" SIGNAME="control_bus_M05_AXI_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_BVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M05_AXI_bready" SIGIS="undef" SIGNAME="control_bus_M05_AXI_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_BREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M05_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M05_AXI_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_ARADDR"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M05_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M05_AXI_arvalid" SIGIS="undef" SIGNAME="control_bus_M05_AXI_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_ARVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M05_AXI_arready" SIGIS="undef" SIGNAME="control_bus_M05_AXI_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_ARREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M05_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M05_AXI_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_RDATA"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M05_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M05_AXI_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_RRESP"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M05_AXI_rvalid" SIGIS="undef" SIGNAME="control_bus_M05_AXI_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_RVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M05_AXI_rready" SIGIS="undef" SIGNAME="control_bus_M05_AXI_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_RREADY"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="O" LEFT="31" NAME="M00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_s_axi_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="assist_core" PORT="s_axi_awaddr"/>
@@ -1949,6 +1680,532 @@
         <PORT DIR="O" NAME="M00_AXI_rready" SIGIS="undef" SIGNAME="assist_core_s_axi_rready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="assist_core" PORT="s_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M01_AXI_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M01_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_awvalid" SIGIS="undef" SIGNAME="control_bus_M01_AXI_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M01_AXI_awready" SIGIS="undef" SIGNAME="control_bus_M01_AXI_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M01_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M01_AXI_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M01_AXI_wstrb" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_wvalid" SIGIS="undef" SIGNAME="control_bus_M01_AXI_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M01_AXI_wready" SIGIS="undef" SIGNAME="control_bus_M01_AXI_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M01_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M01_AXI_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M01_AXI_bvalid" SIGIS="undef" SIGNAME="control_bus_M01_AXI_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M01_AXI_bready" SIGIS="undef" SIGNAME="control_bus_M01_AXI_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M01_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M01_AXI_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M01_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_arvalid" SIGIS="undef" SIGNAME="control_bus_M01_AXI_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M01_AXI_arready" SIGIS="undef" SIGNAME="control_bus_M01_AXI_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M01_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M01_AXI_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M01_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M01_AXI_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M01_AXI_rvalid" SIGIS="undef" SIGNAME="control_bus_M01_AXI_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M01_AXI_rready" SIGIS="undef" SIGNAME="control_bus_M01_AXI_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="display_vdma" PORT="s_axi_lite_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M02_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M02_AXI_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M02_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M02_AXI_awvalid" SIGIS="undef" SIGNAME="control_bus_M02_AXI_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M02_AXI_awready" SIGIS="undef" SIGNAME="control_bus_M02_AXI_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M02_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M02_AXI_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M02_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M02_AXI_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M02_AXI_wvalid" SIGIS="undef" SIGNAME="control_bus_M02_AXI_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M02_AXI_wready" SIGIS="undef" SIGNAME="control_bus_M02_AXI_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M02_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M02_AXI_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M02_AXI_bvalid" SIGIS="undef" SIGNAME="control_bus_M02_AXI_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M02_AXI_bready" SIGIS="undef" SIGNAME="control_bus_M02_AXI_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M02_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M02_AXI_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M02_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M02_AXI_arvalid" SIGIS="undef" SIGNAME="control_bus_M02_AXI_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M02_AXI_arready" SIGIS="undef" SIGNAME="control_bus_M02_AXI_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M02_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M02_AXI_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M02_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M02_AXI_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M02_AXI_rvalid" SIGIS="undef" SIGNAME="control_bus_M02_AXI_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M02_AXI_rready" SIGIS="undef" SIGNAME="control_bus_M02_AXI_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_hdmi_out_hpd_video" PORT="s_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M03_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M03_AXI_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_AWADDR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M03_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M03_AXI_awvalid" SIGIS="undef" SIGNAME="control_bus_M03_AXI_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_AWVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M03_AXI_awready" SIGIS="undef" SIGNAME="control_bus_M03_AXI_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_AWREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M03_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M03_AXI_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_WDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M03_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M03_AXI_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_WSTRB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M03_AXI_wvalid" SIGIS="undef" SIGNAME="control_bus_M03_AXI_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_WVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M03_AXI_wready" SIGIS="undef" SIGNAME="control_bus_M03_AXI_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_WREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M03_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M03_AXI_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_BRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M03_AXI_bvalid" SIGIS="undef" SIGNAME="control_bus_M03_AXI_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_BVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M03_AXI_bready" SIGIS="undef" SIGNAME="control_bus_M03_AXI_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_BREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M03_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M03_AXI_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_ARADDR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M03_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M03_AXI_arvalid" SIGIS="undef" SIGNAME="control_bus_M03_AXI_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_ARVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M03_AXI_arready" SIGIS="undef" SIGNAME="control_bus_M03_AXI_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_ARREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M03_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M03_AXI_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_RDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M03_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M03_AXI_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_RRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M03_AXI_rvalid" SIGIS="undef" SIGNAME="control_bus_M03_AXI_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_RVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M03_AXI_rready" SIGIS="undef" SIGNAME="control_bus_M03_AXI_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="s_axi_AXILiteS_RREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M04_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M04_AXI_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M04_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M04_AXI_awvalid" SIGIS="undef" SIGNAME="control_bus_M04_AXI_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M04_AXI_awready" SIGIS="undef" SIGNAME="control_bus_M04_AXI_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M04_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M04_AXI_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M04_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M04_AXI_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M04_AXI_wvalid" SIGIS="undef" SIGNAME="control_bus_M04_AXI_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M04_AXI_wready" SIGIS="undef" SIGNAME="control_bus_M04_AXI_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M04_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M04_AXI_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M04_AXI_bvalid" SIGIS="undef" SIGNAME="control_bus_M04_AXI_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M04_AXI_bready" SIGIS="undef" SIGNAME="control_bus_M04_AXI_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M04_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M04_AXI_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M04_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M04_AXI_arvalid" SIGIS="undef" SIGNAME="control_bus_M04_AXI_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M04_AXI_arready" SIGIS="undef" SIGNAME="control_bus_M04_AXI_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M04_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M04_AXI_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M04_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M04_AXI_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M04_AXI_rvalid" SIGIS="undef" SIGNAME="control_bus_M04_AXI_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M04_AXI_rready" SIGIS="undef" SIGNAME="control_bus_M04_AXI_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_vtc_out" PORT="s_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M05_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M05_AXI_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_AWADDR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M05_AXI_awvalid" SIGIS="undef" SIGNAME="control_bus_M05_AXI_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_AWVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M05_AXI_awready" SIGIS="undef" SIGNAME="control_bus_M05_AXI_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_AWREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M05_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M05_AXI_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_WDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M05_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M05_AXI_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_WSTRB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_wvalid" SIGIS="undef" SIGNAME="control_bus_M05_AXI_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_WVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M05_AXI_wready" SIGIS="undef" SIGNAME="control_bus_M05_AXI_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_WREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M05_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M05_AXI_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_BRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M05_AXI_bvalid" SIGIS="undef" SIGNAME="control_bus_M05_AXI_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_BVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_bready" SIGIS="undef" SIGNAME="control_bus_M05_AXI_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_BREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M05_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M05_AXI_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_ARADDR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M05_AXI_arvalid" SIGIS="undef" SIGNAME="control_bus_M05_AXI_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_ARVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M05_AXI_arready" SIGIS="undef" SIGNAME="control_bus_M05_AXI_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_ARREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M05_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M05_AXI_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_RDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M05_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M05_AXI_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_RRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M05_AXI_rvalid" SIGIS="undef" SIGNAME="control_bus_M05_AXI_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_RVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_rready" SIGIS="undef" SIGNAME="control_bus_M05_AXI_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="s_axi_AXILiteS_RREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M06_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M06_AXI_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M06_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M06_AXI_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_awprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M06_AXI_awvalid" SIGIS="undef" SIGNAME="control_bus_M06_AXI_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M06_AXI_awready" SIGIS="undef" SIGNAME="control_bus_M06_AXI_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M06_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M06_AXI_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M06_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M06_AXI_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M06_AXI_wvalid" SIGIS="undef" SIGNAME="control_bus_M06_AXI_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M06_AXI_wready" SIGIS="undef" SIGNAME="control_bus_M06_AXI_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M06_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M06_AXI_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M06_AXI_bvalid" SIGIS="undef" SIGNAME="control_bus_M06_AXI_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M06_AXI_bready" SIGIS="undef" SIGNAME="control_bus_M06_AXI_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M06_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M06_AXI_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M06_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M06_AXI_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M06_AXI_arvalid" SIGIS="undef" SIGNAME="control_bus_M06_AXI_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M06_AXI_arready" SIGIS="undef" SIGNAME="control_bus_M06_AXI_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M06_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M06_AXI_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M06_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_bus_M06_AXI_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M06_AXI_rvalid" SIGIS="undef" SIGNAME="control_bus_M06_AXI_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M06_AXI_rready" SIGIS="undef" SIGNAME="control_bus_M06_AXI_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hdmi_out_frontend_axi_dynclk" PORT="s00_axi_rready"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -3885,7 +4142,11 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="5" NAME="mm2s_frame_ptr_in" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="5" NAME="mm2s_frame_ptr_out" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="5" NAME="mm2s_frame_ptr_out" RIGHT="0" SIGIS="undef" SIGNAME="display_vdma_mm2s_frame_ptr_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="display_slot"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="31" NAME="m_axi_mm2s_araddr" RIGHT="0" SIGIS="undef" SIGNAME="display_vdma_m_axi_mm2s_araddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="memory_bus" PORT="S01_AXI_araddr"/>
@@ -5523,7 +5784,7 @@
     </MODULE>
     <MODULE COREREVISION="7" FULLNAME="/hdmi_out/frontend/rgb2dvi_0" HWVERSION="1.2" INSTANCE="hdmi_out_frontend_rgb2dvi_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rgb2dvi" VLNV="digilentinc.com:ip:rgb2dvi:1.2">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="c:/Users/CHENZHELONG/Desktop/FPGAvision/visual_aid_v3/vendor/ip/rgb2dvi_v1_2/docs/rgb2dvi_v1_2.pdf"/>
+        <DOCUMENT SOURCE="c:/fpga/visual_aid_v4_ec11_20261022/vendor/ip/rgb2dvi_v1_2/docs/rgb2dvi_v1_2.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="kGenerateSerialClk" VALUE="false"/>
@@ -6537,7 +6798,7 @@
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_interconnect;v=v2_1;d=pg059-axi-interconnect.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
-        <PARAMETER NAME="NUM_SI" VALUE="2"/>
+        <PARAMETER NAME="NUM_SI" VALUE="3"/>
         <PARAMETER NAME="NUM_MI" VALUE="1"/>
         <PARAMETER NAME="STRATEGY" VALUE="0"/>
         <PARAMETER NAME="ENABLE_ADVANCED_OPTIONS" VALUE="0"/>
@@ -6895,6 +7156,16 @@
             <CONNECTION INSTANCE="reset_100m" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" NAME="S02_ACLK" SIGIS="clk" SIGNAME="ps7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ps7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S02_ARESETN" SIGIS="rst" SIGNAME="reset_100m_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="reset_100m" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="31" NAME="S00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_axi_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="assist_core" PORT="m_axi_awaddr"/>
@@ -7071,7 +7342,7 @@
             <CONNECTION INSTANCE="display_vdma" PORT="m_axi_mm2s_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="M00_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="memory_bus_M00_AXI_awid">
+        <PORT DIR="O" LEFT="1" NAME="M00_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="memory_bus_M00_AXI_awid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0" PORT="S_AXI_HP0_AWID"/>
           </CONNECTIONS>
@@ -7126,7 +7397,7 @@
             <CONNECTION INSTANCE="ps7_0" PORT="S_AXI_HP0_AWREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="M00_AXI_wid" RIGHT="0" SIGIS="undef" SIGNAME="memory_bus_M00_AXI_wid">
+        <PORT DIR="O" LEFT="1" NAME="M00_AXI_wid" RIGHT="0" SIGIS="undef" SIGNAME="memory_bus_M00_AXI_wid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0" PORT="S_AXI_HP0_WID"/>
           </CONNECTIONS>
@@ -7176,7 +7447,7 @@
             <CONNECTION INSTANCE="ps7_0" PORT="S_AXI_HP0_BREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="M00_AXI_arid" RIGHT="0" SIGIS="undef" SIGNAME="memory_bus_M00_AXI_arid">
+        <PORT DIR="O" LEFT="1" NAME="M00_AXI_arid" RIGHT="0" SIGIS="undef" SIGNAME="memory_bus_M00_AXI_arid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0" PORT="S_AXI_HP0_ARID"/>
           </CONNECTIONS>
@@ -7259,6 +7530,167 @@
         <PORT DIR="O" NAME="M00_AXI_rready" SIGIS="undef" SIGNAME="memory_bus_M00_AXI_rready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0" PORT="S_AXI_HP0_RREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S02_AXI_awid" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="S02_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="S02_AXI_awlen" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_awlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_awlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="S02_AXI_awsize" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_awsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_awsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="S02_AXI_awburst" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_awburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_awburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S02_AXI_awlock" SIGIS="undef" SIGNAME="assist_core_m_canvas_awlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_awlock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="S02_AXI_awcache" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_awcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_awcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="S02_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_awprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S02_AXI_awqos" SIGIS="undef"/>
+        <PORT DIR="I" NAME="S02_AXI_awvalid" SIGIS="undef" SIGNAME="assist_core_m_canvas_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S02_AXI_awready" SIGIS="undef" SIGNAME="assist_core_m_canvas_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="S02_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="S02_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S02_AXI_wlast" SIGIS="undef" SIGNAME="assist_core_m_canvas_wlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_wlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S02_AXI_wvalid" SIGIS="undef" SIGNAME="assist_core_m_canvas_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S02_AXI_wready" SIGIS="undef" SIGNAME="assist_core_m_canvas_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S02_AXI_bid" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="S02_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S02_AXI_bvalid" SIGIS="undef" SIGNAME="assist_core_m_canvas_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S02_AXI_bready" SIGIS="undef" SIGNAME="assist_core_m_canvas_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S02_AXI_arid" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="S02_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="S02_AXI_arlen" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_arlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_arlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="S02_AXI_arsize" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_arsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_arsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="S02_AXI_arburst" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_arburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_arburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S02_AXI_arlock" SIGIS="undef" SIGNAME="assist_core_m_canvas_arlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_arlock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="S02_AXI_arcache" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_arcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_arcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="S02_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S02_AXI_arqos" SIGIS="undef"/>
+        <PORT DIR="I" NAME="S02_AXI_arvalid" SIGIS="undef" SIGNAME="assist_core_m_canvas_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S02_AXI_arready" SIGIS="undef" SIGNAME="assist_core_m_canvas_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S02_AXI_rid" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="63" NAME="S02_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="S02_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="assist_core_m_canvas_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S02_AXI_rlast" SIGIS="undef" SIGNAME="assist_core_m_canvas_rlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_rlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S02_AXI_rvalid" SIGIS="undef" SIGNAME="assist_core_m_canvas_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S02_AXI_rready" SIGIS="undef" SIGNAME="assist_core_m_canvas_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="assist_core" PORT="m_canvas_rready"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -7367,6 +7799,47 @@
             <PORTMAP LOGICAL="RLAST" PHYSICAL="S01_AXI_rlast"/>
             <PORTMAP LOGICAL="RVALID" PHYSICAL="S01_AXI_rvalid"/>
             <PORTMAP LOGICAL="RREADY" PHYSICAL="S01_AXI_rready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="assist_core_m_canvas" DATAWIDTH="64" NAME="S02_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="AWID" PHYSICAL="S02_AXI_awid"/>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="S02_AXI_awaddr"/>
+            <PORTMAP LOGICAL="AWLEN" PHYSICAL="S02_AXI_awlen"/>
+            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="S02_AXI_awsize"/>
+            <PORTMAP LOGICAL="AWBURST" PHYSICAL="S02_AXI_awburst"/>
+            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="S02_AXI_awlock"/>
+            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="S02_AXI_awcache"/>
+            <PORTMAP LOGICAL="AWPROT" PHYSICAL="S02_AXI_awprot"/>
+            <PORTMAP LOGICAL="AWQOS" PHYSICAL="S02_AXI_awqos"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="S02_AXI_awvalid"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="S02_AXI_awready"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="S02_AXI_wdata"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="S02_AXI_wstrb"/>
+            <PORTMAP LOGICAL="WLAST" PHYSICAL="S02_AXI_wlast"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="S02_AXI_wvalid"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="S02_AXI_wready"/>
+            <PORTMAP LOGICAL="BID" PHYSICAL="S02_AXI_bid"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="S02_AXI_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="S02_AXI_bvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="S02_AXI_bready"/>
+            <PORTMAP LOGICAL="ARID" PHYSICAL="S02_AXI_arid"/>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="S02_AXI_araddr"/>
+            <PORTMAP LOGICAL="ARLEN" PHYSICAL="S02_AXI_arlen"/>
+            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="S02_AXI_arsize"/>
+            <PORTMAP LOGICAL="ARBURST" PHYSICAL="S02_AXI_arburst"/>
+            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="S02_AXI_arlock"/>
+            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="S02_AXI_arcache"/>
+            <PORTMAP LOGICAL="ARPROT" PHYSICAL="S02_AXI_arprot"/>
+            <PORTMAP LOGICAL="ARQOS" PHYSICAL="S02_AXI_arqos"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="S02_AXI_arvalid"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="S02_AXI_arready"/>
+            <PORTMAP LOGICAL="RID" PHYSICAL="S02_AXI_rid"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="S02_AXI_rdata"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="S02_AXI_rresp"/>
+            <PORTMAP LOGICAL="RLAST" PHYSICAL="S02_AXI_rlast"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="S02_AXI_rvalid"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="S02_AXI_rready"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
@@ -8779,6 +9252,7 @@
             <CONNECTION INSTANCE="hdmi_out_frontend_v_axi4s_vid_out_0" PORT="aclk"/>
             <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="ap_clk"/>
             <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="control"/>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_ACLK"/>
             <CONNECTION INSTANCE="assist_core" PORT="aclk"/>
           </CONNECTIONS>
         </PORT>
@@ -9203,6 +9677,7 @@
             <CONNECTION INSTANCE="hdmi_out_color_convert" PORT="ap_rst_n_control"/>
             <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="ap_rst_n"/>
             <CONNECTION INSTANCE="hdmi_out_pixel_unpack" PORT="ap_rst_n_control"/>
+            <CONNECTION INSTANCE="memory_bus" PORT="S02_ARESETN"/>
             <CONNECTION INSTANCE="assist_core" PORT="aresetn"/>
           </CONNECTIONS>
         </PORT>

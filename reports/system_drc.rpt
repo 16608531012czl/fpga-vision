@@ -1,14 +1,14 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
----------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Fri Oct 16 21:25:38 2026
+| Date         : Fri Oct 23 18:28:07 2026
 | Host         : FPGA-PC running 64-bit major release  (build 9200)
-| Command      : report_drc -file C:/Users/CHENZHELONG/Desktop/FPGAvision/visual_aid_v3/reports/system_drc.rpt
+| Command      : report_drc -file C:/fpga/visual_aid_v4_ec11_20261022/reports/system_drc.rpt
 | Design       : visual_aid_wrapper
 | Device       : xc7z020clg400-1
 | Speed File   : -1
 | Design State : Fully Routed
----------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 
 Report DRC
 
@@ -24,18 +24,19 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 62
+             Violations found: 112
 +-----------+----------+-------------------------------------------------+------------+
 | Rule      | Severity | Description                                     | Violations |
 +-----------+----------+-------------------------------------------------+------------+
 | CHECK-3   | Warning  | Report rule limit reached                       | 2          |
-| DPIP-1    | Warning  | Input pipelining                                | 8          |
-| DPOP-2    | Warning  | MREG Output pipelining                          | 7          |
+| DPIP-1    | Warning  | Input pipelining                                | 25         |
+| DPOP-1    | Warning  | PREG Output pipelining                          | 8          |
+| DPOP-2    | Warning  | MREG Output pipelining                          | 32         |
 | REQP-1839 | Warning  | RAMB36 async control check                      | 20         |
 | REQP-1840 | Warning  | RAMB18 async control check                      | 20         |
 | RTSTAT-10 | Warning  | No routable loads                               | 1          |
 | REQP-20   | Advisory | enum_AREG_0_connects_CEA1_GND_connects_CEA2_GND | 1          |
-| REQP-24   | Advisory | enum_BREG_0_connects_CEB1_GND_connects_CEB2_GND | 1          |
+| REQP-29   | Advisory | enum_CREG_0_connects_CEC_GND                    | 1          |
 | REQP-165  | Advisory | writefirst                                      | 1          |
 | REQP-181  | Advisory | writefirst                                      | 1          |
 +-----------+----------+-------------------------------------------------+------------+
@@ -54,75 +55,325 @@ Related violations: <none>
 
 DPIP-1#1 Warning
 Input pipelining  
-DSP visual_aid_i/assist_core/inst/enhancement/product225_3_reg input visual_aid_i/assist_core/inst/enhancement/product225_3_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP visual_aid_i/assist_core/inst/color_noise/gray0_return1 input visual_aid_i/assist_core/inst/color_noise/gray0_return1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#2 Warning
 Input pipelining  
-DSP visual_aid_i/assist_core/inst/enhancement/product9_3_reg input visual_aid_i/assist_core/inst/enhancement/product9_3_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP visual_aid_i/assist_core/inst/color_noise/gray0_return2 input visual_aid_i/assist_core/inst/color_noise/gray0_return2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#3 Warning
 Input pipelining  
-DSP visual_aid_i/hdmi_out/color_convert/inst/ret_V_11_reg_1016_reg input visual_aid_i/hdmi_out/color_convert/inst/ret_V_11_reg_1016_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP visual_aid_i/assist_core/inst/color_noise/gray0_return2__0 input visual_aid_i/assist_core/inst/color_noise/gray0_return2__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#4 Warning
 Input pipelining  
-DSP visual_aid_i/hdmi_out/color_convert/inst/ret_V_12_reg_1031_reg input visual_aid_i/hdmi_out/color_convert/inst/ret_V_12_reg_1031_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP visual_aid_i/assist_core/inst/color_noise/p_0_out input visual_aid_i/assist_core/inst/color_noise/p_0_out/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#5 Warning
 Input pipelining  
-DSP visual_aid_i/hdmi_out/color_convert/inst/ret_V_6_reg_1006_reg input visual_aid_i/hdmi_out/color_convert/inst/ret_V_6_reg_1006_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP visual_aid_i/assist_core/inst/color_noise/p_0_out__0 input visual_aid_i/assist_core/inst/color_noise/p_0_out__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#6 Warning
 Input pipelining  
-DSP visual_aid_i/hdmi_out/color_convert/inst/ret_V_7_reg_1021_reg input visual_aid_i/hdmi_out/color_convert/inst/ret_V_7_reg_1021_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP visual_aid_i/assist_core/inst/color_noise/p_0_out__1 input visual_aid_i/assist_core/inst/color_noise/p_0_out__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#7 Warning
 Input pipelining  
-DSP visual_aid_i/hdmi_out/color_convert/inst/ret_V_9_reg_1026_reg input visual_aid_i/hdmi_out/color_convert/inst/ret_V_9_reg_1026_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP visual_aid_i/assist_core/inst/enhancement/local_tone/horizontal01 input visual_aid_i/assist_core/inst/enhancement/local_tone/horizontal01/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#8 Warning
 Input pipelining  
+DSP visual_aid_i/assist_core/inst/enhancement/local_tone/horizontal11 input visual_aid_i/assist_core/inst/enhancement/local_tone/horizontal11/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#9 Warning
+Input pipelining  
+DSP visual_aid_i/assist_core/inst/enhancement/local_tone/interpolated41 input visual_aid_i/assist_core/inst/enhancement/local_tone/interpolated41/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#10 Warning
+Input pipelining  
+DSP visual_aid_i/assist_core/inst/enhancement/local_tone/interpolated41 input visual_aid_i/assist_core/inst/enhancement/local_tone/interpolated41/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#11 Warning
+Input pipelining  
+DSP visual_aid_i/assist_core/inst/enhancement/local_tone/interpolated4_reg input visual_aid_i/assist_core/inst/enhancement/local_tone/interpolated4_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#12 Warning
+Input pipelining  
+DSP visual_aid_i/assist_core/inst/enhancement/local_tone/interpolated4_reg input visual_aid_i/assist_core/inst/enhancement/local_tone/interpolated4_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#13 Warning
+Input pipelining  
+DSP visual_aid_i/assist_core/inst/enhancement/local_tone/scaled6_reg input visual_aid_i/assist_core/inst/enhancement/local_tone/scaled6_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#14 Warning
+Input pipelining  
+DSP visual_aid_i/assist_core/inst/enhancement/local_tone/scaled6_reg input visual_aid_i/assist_core/inst/enhancement/local_tone/scaled6_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#15 Warning
+Input pipelining  
+DSP visual_aid_i/assist_core/inst/enhancement/product225_3_reg input visual_aid_i/assist_core/inst/enhancement/product225_3_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#16 Warning
+Input pipelining  
+DSP visual_aid_i/assist_core/inst/enhancement/product225_3_reg input visual_aid_i/assist_core/inst/enhancement/product225_3_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#17 Warning
+Input pipelining  
+DSP visual_aid_i/assist_core/inst/enhancement/product225_3_reg input visual_aid_i/assist_core/inst/enhancement/product225_3_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#18 Warning
+Input pipelining  
+DSP visual_aid_i/assist_core/inst/statistics/sample_count_reg input visual_aid_i/assist_core/inst/statistics/sample_count_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#19 Warning
+Input pipelining  
+DSP visual_aid_i/assist_core/inst/statistics/sample_count_reg input visual_aid_i/assist_core/inst/statistics/sample_count_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#20 Warning
+Input pipelining  
+DSP visual_aid_i/hdmi_out/color_convert/inst/ret_V_11_reg_1016_reg input visual_aid_i/hdmi_out/color_convert/inst/ret_V_11_reg_1016_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#21 Warning
+Input pipelining  
+DSP visual_aid_i/hdmi_out/color_convert/inst/ret_V_12_reg_1031_reg input visual_aid_i/hdmi_out/color_convert/inst/ret_V_12_reg_1031_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#22 Warning
+Input pipelining  
+DSP visual_aid_i/hdmi_out/color_convert/inst/ret_V_6_reg_1006_reg input visual_aid_i/hdmi_out/color_convert/inst/ret_V_6_reg_1006_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#23 Warning
+Input pipelining  
+DSP visual_aid_i/hdmi_out/color_convert/inst/ret_V_7_reg_1021_reg input visual_aid_i/hdmi_out/color_convert/inst/ret_V_7_reg_1021_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#24 Warning
+Input pipelining  
+DSP visual_aid_i/hdmi_out/color_convert/inst/ret_V_9_reg_1026_reg input visual_aid_i/hdmi_out/color_convert/inst/ret_V_9_reg_1026_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#25 Warning
+Input pipelining  
 DSP visual_aid_i/hdmi_out/color_convert/inst/ret_V_reg_1011_reg input visual_aid_i/hdmi_out/color_convert/inst/ret_V_reg_1011_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-1#1 Warning
+PREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/color_noise/gray0_return1 output visual_aid_i/assist_core/inst/color_noise/gray0_return1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#2 Warning
+PREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/color_noise/gray0_return2 output visual_aid_i/assist_core/inst/color_noise/gray0_return2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#3 Warning
+PREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/color_noise/gray0_return2__0 output visual_aid_i/assist_core/inst/color_noise/gray0_return2__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#4 Warning
+PREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/color_noise/p_0_out output visual_aid_i/assist_core/inst/color_noise/p_0_out/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#5 Warning
+PREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/color_noise/p_0_out__0 output visual_aid_i/assist_core/inst/color_noise/p_0_out__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#6 Warning
+PREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/color_noise/p_0_out__1 output visual_aid_i/assist_core/inst/color_noise/p_0_out__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#7 Warning
+PREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/enhancement/local_tone/interpolated41 output visual_aid_i/assist_core/inst/enhancement/local_tone/interpolated41/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#8 Warning
+PREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/enhancement/old151 output visual_aid_i/assist_core/inst/enhancement/old151/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-2#1 Warning
 MREG Output pipelining  
-DSP visual_aid_i/assist_core/inst/enhancement/product9_3_reg multiplier stage visual_aid_i/assist_core/inst/enhancement/product9_3_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP visual_aid_i/assist_core/inst/canvas/row_offset1 multiplier stage visual_aid_i/assist_core/inst/canvas/row_offset1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#2 Warning
 MREG Output pipelining  
-DSP visual_aid_i/hdmi_out/color_convert/inst/r_V_12_reg_986_reg multiplier stage visual_aid_i/hdmi_out/color_convert/inst/r_V_12_reg_986_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP visual_aid_i/assist_core/inst/color_noise/bb2_reg multiplier stage visual_aid_i/assist_core/inst/color_noise/bb2_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#3 Warning
 MREG Output pipelining  
-DSP visual_aid_i/hdmi_out/color_convert/inst/r_V_16_reg_996_reg multiplier stage visual_aid_i/hdmi_out/color_convert/inst/r_V_16_reg_996_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP visual_aid_i/assist_core/inst/color_noise/db5_reg multiplier stage visual_aid_i/assist_core/inst/color_noise/db5_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#4 Warning
 MREG Output pipelining  
-DSP visual_aid_i/hdmi_out/color_convert/inst/r_V_19_reg_1001_reg multiplier stage visual_aid_i/hdmi_out/color_convert/inst/r_V_19_reg_1001_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP visual_aid_i/assist_core/inst/color_noise/dg5_reg multiplier stage visual_aid_i/assist_core/inst/color_noise/dg5_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#5 Warning
 MREG Output pipelining  
-DSP visual_aid_i/hdmi_out/color_convert/inst/ret_V_11_reg_1016_reg multiplier stage visual_aid_i/hdmi_out/color_convert/inst/ret_V_11_reg_1016_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP visual_aid_i/assist_core/inst/color_noise/dr5_reg multiplier stage visual_aid_i/assist_core/inst/color_noise/dr5_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#6 Warning
 MREG Output pipelining  
-DSP visual_aid_i/hdmi_out/color_convert/inst/ret_V_6_reg_1006_reg multiplier stage visual_aid_i/hdmi_out/color_convert/inst/ret_V_6_reg_1006_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP visual_aid_i/assist_core/inst/color_noise/gg2_reg multiplier stage visual_aid_i/assist_core/inst/color_noise/gg2_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#7 Warning
+MREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/color_noise/gray0_return1 multiplier stage visual_aid_i/assist_core/inst/color_noise/gray0_return1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#8 Warning
+MREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/color_noise/gray0_return2 multiplier stage visual_aid_i/assist_core/inst/color_noise/gray0_return2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#9 Warning
+MREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/color_noise/gray0_return2__0 multiplier stage visual_aid_i/assist_core/inst/color_noise/gray0_return2__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#10 Warning
+MREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/color_noise/p_0_out multiplier stage visual_aid_i/assist_core/inst/color_noise/p_0_out/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#11 Warning
+MREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/color_noise/p_0_out__0 multiplier stage visual_aid_i/assist_core/inst/color_noise/p_0_out__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#12 Warning
+MREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/color_noise/p_0_out__1 multiplier stage visual_aid_i/assist_core/inst/color_noise/p_0_out__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#13 Warning
+MREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/color_noise/rr2_reg multiplier stage visual_aid_i/assist_core/inst/color_noise/rr2_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#14 Warning
+MREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/enhancement/local_tone/horizontal0_reg multiplier stage visual_aid_i/assist_core/inst/enhancement/local_tone/horizontal0_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#15 Warning
+MREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/enhancement/local_tone/horizontal1_reg multiplier stage visual_aid_i/assist_core/inst/enhancement/local_tone/horizontal1_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#16 Warning
+MREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/enhancement/local_tone/interpolated41 multiplier stage visual_aid_i/assist_core/inst/enhancement/local_tone/interpolated41/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#17 Warning
+MREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/enhancement/local_tone/interpolated4_reg multiplier stage visual_aid_i/assist_core/inst/enhancement/local_tone/interpolated4_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#18 Warning
+MREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/enhancement/local_tone/product5_reg multiplier stage visual_aid_i/assist_core/inst/enhancement/local_tone/product5_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#19 Warning
+MREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/enhancement/local_tone/scaled6_reg multiplier stage visual_aid_i/assist_core/inst/enhancement/local_tone/scaled6_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#20 Warning
+MREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/enhancement/old151 multiplier stage visual_aid_i/assist_core/inst/enhancement/old151/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#21 Warning
+MREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/enhancement/product225_3_reg multiplier stage visual_aid_i/assist_core/inst/enhancement/product225_3_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#22 Warning
+MREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/enhancement/product4b_reg multiplier stage visual_aid_i/assist_core/inst/enhancement/product4b_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#23 Warning
+MREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/enhancement/product9_3_reg multiplier stage visual_aid_i/assist_core/inst/enhancement/product9_3_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#24 Warning
+MREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/enhancement/reconstruction/pb1_reg multiplier stage visual_aid_i/assist_core/inst/enhancement/reconstruction/pb1_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#25 Warning
+MREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/enhancement/reconstruction/pg1_reg multiplier stage visual_aid_i/assist_core/inst/enhancement/reconstruction/pg1_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#26 Warning
+MREG Output pipelining  
+DSP visual_aid_i/assist_core/inst/enhancement/reconstruction/pr1_reg multiplier stage visual_aid_i/assist_core/inst/enhancement/reconstruction/pr1_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#27 Warning
+MREG Output pipelining  
+DSP visual_aid_i/hdmi_out/color_convert/inst/r_V_12_reg_986_reg multiplier stage visual_aid_i/hdmi_out/color_convert/inst/r_V_12_reg_986_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#28 Warning
+MREG Output pipelining  
+DSP visual_aid_i/hdmi_out/color_convert/inst/r_V_16_reg_996_reg multiplier stage visual_aid_i/hdmi_out/color_convert/inst/r_V_16_reg_996_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#29 Warning
+MREG Output pipelining  
+DSP visual_aid_i/hdmi_out/color_convert/inst/r_V_19_reg_1001_reg multiplier stage visual_aid_i/hdmi_out/color_convert/inst/r_V_19_reg_1001_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#30 Warning
+MREG Output pipelining  
+DSP visual_aid_i/hdmi_out/color_convert/inst/ret_V_11_reg_1016_reg multiplier stage visual_aid_i/hdmi_out/color_convert/inst/ret_V_11_reg_1016_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#31 Warning
+MREG Output pipelining  
+DSP visual_aid_i/hdmi_out/color_convert/inst/ret_V_6_reg_1006_reg multiplier stage visual_aid_i/hdmi_out/color_convert/inst/ret_V_6_reg_1006_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#32 Warning
 MREG Output pipelining  
 DSP visual_aid_i/hdmi_out/color_convert/inst/ret_V_reg_1011_reg multiplier stage visual_aid_i/hdmi_out/color_convert/inst/ret_V_reg_1011_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
@@ -334,12 +585,12 @@ Related violations: <none>
 
 REQP-20#1 Advisory
 enum_AREG_0_connects_CEA1_GND_connects_CEA2_GND  
-visual_aid_i/assist_core/inst/enhancement/product9_3_reg: When DSP48E1 attribute AREG is set to 0, the CEA1 and CEA2 pins should be tied to GND to save power.
+visual_aid_i/assist_core/inst/enhancement/product225_3_reg: When DSP48E1 attribute AREG is set to 0, the CEA1 and CEA2 pins should be tied to GND to save power.
 Related violations: <none>
 
-REQP-24#1 Advisory
-enum_BREG_0_connects_CEB1_GND_connects_CEB2_GND  
-visual_aid_i/assist_core/inst/enhancement/product225_3_reg: When DSP48E1 attribute BREG is set to 0, the CEB1 and CEB2 pins should be tied to GND to save power.
+REQP-29#1 Advisory
+enum_CREG_0_connects_CEC_GND  
+visual_aid_i/assist_core/inst/enhancement/product225_3_reg: When the DSP48E1 CREG attribute is set to 0, the CEC input pin should be tied to GND to save power.
 Related violations: <none>
 
 REQP-165#1 Advisory

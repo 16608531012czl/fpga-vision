@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "source": "real XSim, continuous source and random output stalls",
+  "pixel_count": 15360,
+  "sha256": {
+    "rtl/assist_regs.sv": "d12e905396d32618e57dd7c5b92a36a4027fcd254075c829e4165f9331b3b422",
+    "rtl/async_fifo.sv": "d10ba177db60fa6967d9c01f398599f13a03996d9211336c49130f2fa0d1e0ca",
+    "rtl/canvas_writer.sv": "3913c99449a00d2fad7ae78d6b3e1eb74001bed8d1f3d840b288bcfca5238867",
+    "rtl/chroma_filter.sv": "d0ab6606129697a27753d85616517ffd34ca8c38472d7de2b85adb2713fdc1c1",
+    "rtl/color_reconstruct.sv": "72d417b54d1adb0ed5a8b43d9ea511d86cccb106808a0dd232cd3281215ef881",
+    "rtl/display_slot_decode.sv": "09b3950127cb2daff1c750b9b916ccbdd09f20cef806378f6352d7789771967f",
+    "rtl/dvp_capture.sv": "925f54dbc8b16f70d541d8de499c8ff3613cef42a3252b128d909ad3079fa5ae",
+    "rtl/encoder_input.sv": "70c497f112114caa73d26b059f2f8b73c43e8d25eecf4ba621a559a7bbe02067",
+    "rtl/frame_tiles.sv": "195ecc62aaccede1201261560296ddd6b23b29a2f41df13161333c535fd0cb40",
+    "rtl/frame_writer.sv": "a96f162b4d2c3f06a90f46d9047aeea8a40f17b088065af6e0ccaf9b115b2b22",
+    "rtl/local_tone_map.sv": "56368e046f1d1cee07827f8e85f0ba2f47bd1f15230bf4c28282db368fe21a4d",
+    "rtl/reading_enhance.sv": "75a6a0e44b890c594b8f7761c3082895c87cb72882f52ef5ceb558cb82c32635",
+    "rtl/status_font.sv": "f047cad1119c521d5fcfd57f7856abde47397a4e7cb0c9aac0712ae819021386",
+    "rtl/status_overlay.sv": "03e445ee22ec839451c057ad7487743c689dbbcb8be174dba277efeab6284733",
+    "rtl/visual_aid_core.sv": "96089fe1fa4657c3d3dea98f6bdd265d65c1e339681e2ab9340d980d23d61bf8"
+  },
+  "board_fps_measured": false
+}

@@ -24,6 +24,10 @@ def main():
             from pynq import Overlay, Xlnk, DefaultIP
             from pynq.lib.video import VideoMode, PixelFormat
             result['pynq'] = getattr(pynq, '__version__', 'unknown')
+            from visual_aid.fastcompose import available
+            result['native_composition_available']=available()
+            if manifest.get('native_composition') and not available():
+                raise RuntimeError('Validated ARM composition library could not be loaded')
         result['outcome'] = 'passed'
     except Exception as exc:
         result.update(outcome='error', error=type(exc).__name__+': '+str(exc))

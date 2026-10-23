@@ -25,7 +25,7 @@ connect_bd_net [get_bd_pins one/dout] [get_bd_pins reset_100m/dcm_locked]
 set ctrl [create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 control_bus]
 set_property CONFIG.NUM_MI 7 $ctrl
 set mem [create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 memory_bus]
-set_property -dict [list CONFIG.NUM_SI 2 CONFIG.NUM_MI 1] $mem
+set_property -dict [list CONFIG.NUM_SI 3 CONFIG.NUM_MI 1] $mem
 set dma [create_bd_cell -type ip -vlnv xilinx.com:ip:axi_vdma:6.3 display_vdma]
 set_property -dict [list CONFIG.c_include_s2mm 0 CONFIG.c_include_mm2s 1 CONFIG.c_num_fstores 4 CONFIG.c_m_axis_mm2s_tdata_width 32 CONFIG.c_m_axi_mm2s_data_width 64 CONFIG.c_mm2s_linebuffer_depth 4096 CONFIG.c_include_mm2s_dre 1] $dma
 create_hier_cell_hdmi_out / hdmi_out
@@ -34,6 +34,8 @@ connect_bd_intf_net [get_bd_intf_pins ps7_0/M_AXI_GP0] [get_bd_intf_pins control
 connect_bd_intf_net [get_bd_intf_pins memory_bus/M00_AXI] [get_bd_intf_pins ps7_0/S_AXI_HP0]
 connect_bd_intf_net [get_bd_intf_pins assist_core/m_axi] [get_bd_intf_pins memory_bus/S00_AXI]
 connect_bd_intf_net [get_bd_intf_pins display_vdma/M_AXI_MM2S] [get_bd_intf_pins memory_bus/S01_AXI]
+connect_bd_intf_net [get_bd_intf_pins assist_core/m_canvas] [get_bd_intf_pins memory_bus/S02_AXI]
+connect_bd_net [get_bd_pins display_vdma/mm2s_frame_ptr_out] [get_bd_pins assist_core/display_slot]
 set slaves [list assist_core/s_axi display_vdma/S_AXI_LITE hdmi_out/S00_AXILite hdmi_out/S01_AXILite hdmi_out/S02_AXILite hdmi_out/S03_AXILite hdmi_out/S04_AXILite]
 set n 0
 foreach slave $slaves {connect_bd_intf_net [get_bd_intf_pins control_bus/M0${n}_AXI] [get_bd_intf_pins $slave];incr n}
@@ -55,7 +57,7 @@ set_property -dict [list CONFIG.CONST_WIDTH 15 CONFIG.CONST_VAL 0] $zero
 connect_bd_net [get_bd_pins display_vdma/mm2s_introut] [get_bd_pins irq_concat/In0]
 connect_bd_net [get_bd_pins irq_zero/dout] [get_bd_pins irq_concat/In1]
 connect_bd_net [get_bd_pins irq_concat/dout] [get_bd_pins ps7_0/IRQ_F2P]
-foreach pin {cam_pclk cam_vsync cam_href cam_data buttons joy_n cam_scl cam_sda sensor_scl sensor_sda cam_resetn cam_pwdn} {
+foreach pin {cam_pclk cam_vsync cam_href cam_data buttons joy_n enc_a enc_b enc_key_n cam_scl cam_sda sensor_scl sensor_sda cam_resetn cam_pwdn} {
  set before [get_bd_ports]
  make_bd_pins_external [get_bd_pins assist_core/$pin]
  foreach p [get_bd_ports] {if {[lsearch -exact $before $p]<0} {set_property name $pin $p}}

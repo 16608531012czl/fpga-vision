@@ -8,7 +8,7 @@ def verify_payload(root, bitfile=None):
     root = Path(root).resolve()
     manifest_path = root/'board/build_manifest.json'
     manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
-    if manifest.get('project') != 'visual_aid_v3' or manifest.get('abi') != 0x56410300:
+    if manifest.get('project') != 'visual_aid_v3' or manifest.get('abi') != 0x56410400:
         raise ValueError('Wrong enhanced-project manifest')
     hashes = manifest.get('payload_sha256', {})
     if not hashes:

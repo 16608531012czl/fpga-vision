@@ -1,0 +1,83 @@
+{
+  "source": "user feedback in this chat, 2026-10-22",
+  "runs": {
+    "live_20261022_153222.json": {
+      "display_observed": true,
+      "rotation_changed_parameters": false,
+      "user_statement": "\u6709\u753b\u9762\uff0c\u65cb\u8f6c\u4e0d\u80fd\u8c03\u6570\u503c"
+    },
+    "live_20261022_162350.json": {
+      "display_observed": true,
+      "rotation_changed_parameters": true,
+      "visible_image_change_observed": true,
+      "user_statement": "\u6570\u503c\u53d8\u5316\uff0c\u753b\u9762\u4e5f\u80fd\u660e\u663e\u6539\u53d8",
+      "limit": "Brightness changed in event log; sharpness stayed 4 and no EC11 press was recorded in this run"
+    },
+    "live_20261022_162716.json": {
+      "display_observed": true,
+      "parameter_selection_observed": true,
+      "sharpness_adjustment_observed": true,
+      "user_statement": "EDIT \u5207\u5230 SHARPNESS\uff0cSH \u6570\u503c\u80fd\u8c03"
+    },
+    "live_20261022_172658.json": {
+      "display_observed": true,
+      "rotation_changed_parameters": true,
+      "user_statement": "\u753b\u9762\u6b63\u5e38\uff0c\u65cb\u94ae\u80fd\u8c03\u53c2\u6570",
+      "limit": "60-second no-AF diagnostic; rotation events captured, no short/long press event captured"
+    },
+    "live_20261023_144332.json": {
+      "display_observed": true,
+      "rotation_changed_parameters": true,
+      "optical_focus_observed": true,
+      "near_far_refocus_observed": true,
+      "source": "user feedback in this chat, 2026-10-23",
+      "user_statement": "\u8fdc\u8fd1\u90fd\u80fd\u91cd\u65b0\u6e05\u6670\uff0c\u65cb\u94ae\u6b63\u5e38",
+      "limit": "User observed near/far refocusing; optical sharpness and refocus time were not instrumented."
+    },
+    "live_20261023_153640.json": {
+      "display_observed": true,
+      "color_noise_reduction_observed": true,
+      "enhanced_color_desaturation_observed": true,
+      "source": "user feedback in this chat, 2026-10-23",
+      "user_statement": "\u5f69\u70b9\u51cf\u8f7b\u4e86\u4f46\u662f\u5728\u589e\u5f3a\u540e\u7684\u6a21\u5f0f\u4e0b\u770b\u7269\u54c1\u662f\u4f1a\u6bd4\u539f\u7248\u989c\u8272\u504f\u7070\u8fd9\u6837\u662f\u5426\u6b63\u5e38",
+      "limit": "User observed less color speckling and reduced saturation. No instrumented color accuracy, SNR, optical sharpness or motion-ghosting acceptance."
+    },
+    "live_20261023_183001.json": {
+      "display_observed": true,
+      "original_pane_clear": true,
+      "enhanced_clarity_near_original": true,
+      "dark_brightness_stable": false,
+      "color_quality_feedback": "User confirmed clarity close to original, but slight input brightness flicker is amplified on enhanced pane",
+      "observation_scope": "detail / lowlight, before stable exposure and tone update"
+    },
+    "live_20261023_183807.json": {
+      "display_observed": true,
+      "enhanced_clarity_near_original": true,
+      "dark_brightness_flicker": "markedly reduced or disappeared",
+      "color_quality_feedback": "用户确认：暗部跳动明显减轻或消失，文字仍清晰；前一轮已确认清晰度接近原图",
+      "observation_scope": "detail / stable, 2026-10-23T18:37:39.532825+08:00"
+    }
+  },
+  "wiring_actions": [
+    "User confirmed S2 initially on AR9",
+    "User swapped S1 to AR9 and S2 to AR8 for isolation test",
+    "User completed both-direction rotation and short press after swap",
+    "User restored S1 AR8, S2 AR9, KEY AR10 and repeated all encoder operations",
+    "User identified possibly disconnected GY-302 VCC and then confirmed four wires connected",
+    "Spare AR11/AR12 wiring was tried, then user requested original SCL/SDA wiring restored",
+    "KEY to AR12 cross-check was proposed but not performed",
+    "User confirmed PMOD B empty and sensor SCL/SDA disconnected before pad test",
+    "User powered off, connected sensor SCL to PMOD B physical pin 3 and SDA to physical pin 4, then powered on",
+    "User confirmed the GY-302 header is soldered",
+    "EC11 wiring remains S1 AR8, S2 AR9, KEY AR10"
+  ],
+  "optical_sharpening_quality": "not yet evaluated",
+  "end_to_end_response_latency_ms": null,
+  "invalid_runs": {
+    "sensors_20261022_171948.json": {
+      "reason": "boot_leds.service loaded base.bin after the custom overlay; final counters refer to a different address map",
+      "evidence": "health_20261022_172208.json kernel log",
+      "ignore_counter_deltas": true
+    }
+  }
+}

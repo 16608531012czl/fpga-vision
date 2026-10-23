@@ -1,13 +1,13 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Fri Oct 16 21:30:03 2026
+| Date         : Fri Oct 23 18:28:55 2026
 | Host         : FPGA-PC running 64-bit major release  (build 9200)
-| Command      : check_timing -verbose -file C:/Users/CHENZHELONG/Desktop/FPGAvision/visual_aid_v3/reports/check_timing.rpt
+| Command      : check_timing -verbose -file C:/fpga/visual_aid_v4_ec11_20261022/reports/check_timing.rpt
 | Design       : visual_aid_wrapper
 | Device       : 7z020-clg400
 | Speed File   : -1  PRODUCTION 1.11 2014-09-11
-----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
 
 
 check_timing report
@@ -53,7 +53,7 @@ Table of Contents
 --------------------------
  There are 0 input ports with no input delay specified.
 
- There are 13 input ports with no input delay but user has a false path constraint. (MEDIUM)
+ There are 16 input ports with no input delay but user has a false path constraint. (MEDIUM)
 
 buttons[0]
 buttons[1]
@@ -61,6 +61,9 @@ buttons[2]
 buttons[3]
 cam_scl
 cam_sda
+enc_a
+enc_b
+enc_key_n
 joy_n[0]
 joy_n[1]
 joy_n[2]

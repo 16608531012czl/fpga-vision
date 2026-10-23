@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "cases": [
+    [
+      1,
+      1
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      17,
+      9
+    ],
+    [
+      640,
+      360
+    ]
+  ],
+  "gamma_guard_checks": true,
+  "source_sha256": "16bdb8d7d702f9d3ea58f437427618c0129a597f79855c530515e230b4972d82",
+  "binary_sha256": "d61129ed5a14cfe7bccb752f87ae06fb0175c17f60a3582e5e4f80491f42ebf6",
+  "compiler": "gcc (Ubuntu/Linaro 7.3.0-16ubuntu3) 7.3.0",
+  "chroma_guard_cases": [
+    [
+      1,
+      1
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      17,
+      9
+    ],
+    [
+      640,
+      360
+    ]
+  ],
+  "chroma_quality": {
+    "chroma_std_before": 7.743410559497773,
+    "chroma_std_after": 5.407149728241354,
+    "temporal_std_before": 7.5299759443903245,
+    "temporal_std_after": 5.1143291073217885,
+    "luma_max_error": 0,
+    "text_stroke_unchanged": true,
+    "scope": "seeded synthetic dark patch, not a physical camera noise measurement",
+    "native_640x360_median_ms": 9.62673750018439
+  }
+}

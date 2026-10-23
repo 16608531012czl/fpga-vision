@@ -152,7 +152,7 @@ class CameraAndBus(unittest.TestCase):
 
 class Ownership(unittest.TestCase):
     def test_output_only_vdma_never_instantiates_missing_s2mm(self):
-        mmio=Mock();mmio.read.side_effect=lambda a:0x56410300 if a==0 else 0
+        mmio=Mock();mmio.read.side_effect=lambda a:0x56410400 if a==0 else 0
         output=Mock()
         core_desc={'phys_addr':0x43c00000,'addr_range':65536}
         dma_desc={'interrupts':{'mm2s_introut':{'controller':'','index':0}}}
@@ -170,7 +170,8 @@ class Ownership(unittest.TestCase):
         video=types.ModuleType('pynq.lib.video');video.VideoMode=Mock();video.PixelFormat=Mock()
         video.PIXEL_BGR=types.SimpleNamespace(in_color=[1]*12,out_color=[1]*12)
         dma=types.ModuleType('pynq.lib.video.dma');dma.AxiVDMA=OutputOnly
-        with patch('visual_aid.device.Path.is_file',return_value=True), patch.dict(sys.modules,{
+        with patch('visual_aid.device.Path.is_file',return_value=True), \
+             patch('visual_aid.device.wait_for_boot_overlay'), patch.dict(sys.modules,{
                 'pynq':pynq,'pynq.lib':types.ModuleType('pynq.lib'),'pynq.lib.video':video,'pynq.lib.video.dma':dma}):
             device=Device(__file__)
             self.assertIs(output._vdma,raw_dma)
