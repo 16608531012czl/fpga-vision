@@ -1,0 +1,551 @@
+[
+  {
+    "outcome": "interrupted",
+    "unique_camera_frames": 1407,
+    "measured_unique_capture_fps": 19.90000817416189,
+    "measured_pl_render_fps": 19.900667974426145,
+    "cleanup_errors": [],
+    "error": null,
+    "report": "jupyter_20190221_102522.json",
+    "counter_deltas": {
+      "capture_id": 1407,
+      "dma_errors": 0,
+      "camera_vsync": 1416,
+      "overflow_frames": 0,
+      "malformed_frames": 0,
+      "display_sof": 4247
+    },
+    "warnings": [],
+    "events": [
+      {
+        "t": 3.5829629209999894,
+        "encoder_event": "rotate",
+        "value": -2,
+        "parameters": {
+          "brightness": -2,
+          "sharpness": 4,
+          "denoise": 0,
+          "contrast": 0,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 8,
+          "local_tone": 1,
+          "window31": 1,
+          "binary_c": 8,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 3.682950908000066,
+        "encoder_event": "rotate",
+        "value": -1,
+        "parameters": {
+          "brightness": -3,
+          "sharpness": 4,
+          "denoise": 0,
+          "contrast": 0,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 8,
+          "local_tone": 1,
+          "window31": 1,
+          "binary_c": 8,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 3.9326695199999904,
+        "encoder_event": "rotate",
+        "value": -1,
+        "parameters": {
+          "brightness": -4,
+          "sharpness": 4,
+          "denoise": 0,
+          "contrast": 0,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 8,
+          "local_tone": 1,
+          "window31": 1,
+          "binary_c": 8,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 4.032662963000007,
+        "encoder_event": "rotate",
+        "value": 1,
+        "parameters": {
+          "brightness": -3,
+          "sharpness": 4,
+          "denoise": 0,
+          "contrast": 0,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 8,
+          "local_tone": 1,
+          "window31": 1,
+          "binary_c": 8,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 4.082546105000006,
+        "encoder_event": "rotate",
+        "value": 1,
+        "parameters": {
+          "brightness": -2,
+          "sharpness": 4,
+          "denoise": 0,
+          "contrast": 0,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 8,
+          "local_tone": 1,
+          "window31": 1,
+          "binary_c": 8,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 4.132453723000026,
+        "encoder_event": "rotate",
+        "value": 1,
+        "parameters": {
+          "brightness": -1,
+          "sharpness": 4,
+          "denoise": 0,
+          "contrast": 0,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 8,
+          "local_tone": 1,
+          "window31": 1,
+          "binary_c": 8,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 4.232537089000061,
+        "encoder_event": "rotate",
+        "value": 1,
+        "parameters": {
+          "brightness": 0,
+          "sharpness": 4,
+          "denoise": 0,
+          "contrast": 0,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 8,
+          "local_tone": 1,
+          "window31": 1,
+          "binary_c": 8,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 4.332310864000078,
+        "encoder_event": "rotate",
+        "value": 1,
+        "parameters": {
+          "brightness": 1,
+          "sharpness": 4,
+          "denoise": 0,
+          "contrast": 0,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 8,
+          "local_tone": 1,
+          "window31": 1,
+          "binary_c": 8,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 4.482200854999974,
+        "encoder_event": "rotate",
+        "value": 1,
+        "parameters": {
+          "brightness": 2,
+          "sharpness": 4,
+          "denoise": 0,
+          "contrast": 0,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 8,
+          "local_tone": 1,
+          "window31": 1,
+          "binary_c": 8,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 4.682226470000046,
+        "encoder_event": "rotate",
+        "value": 1,
+        "parameters": {
+          "brightness": 3,
+          "sharpness": 4,
+          "denoise": 0,
+          "contrast": 0,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 8,
+          "local_tone": 1,
+          "window31": 1,
+          "binary_c": 8,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 4.732182512999998,
+        "encoder_event": "rotate",
+        "value": 2,
+        "parameters": {
+          "brightness": 5,
+          "sharpness": 4,
+          "denoise": 0,
+          "contrast": 0,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 8,
+          "local_tone": 1,
+          "window31": 1,
+          "binary_c": 8,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 5.031910250999999,
+        "encoder_event": "rotate",
+        "value": 1,
+        "parameters": {
+          "brightness": 6,
+          "sharpness": 4,
+          "denoise": 0,
+          "contrast": 0,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 8,
+          "local_tone": 1,
+          "window31": 1,
+          "binary_c": 8,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 5.581547948999969,
+        "encoder_event": "rotate",
+        "value": -1,
+        "parameters": {
+          "brightness": 5,
+          "sharpness": 4,
+          "denoise": 0,
+          "contrast": 0,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 8,
+          "local_tone": 1,
+          "window31": 1,
+          "binary_c": 8,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 5.781445659000042,
+        "encoder_event": "rotate",
+        "value": -1,
+        "parameters": {
+          "brightness": 4,
+          "sharpness": 4,
+          "denoise": 0,
+          "contrast": 0,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 8,
+          "local_tone": 1,
+          "window31": 1,
+          "binary_c": 8,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 6.031254289000003,
+        "encoder_event": "rotate",
+        "value": -1,
+        "parameters": {
+          "brightness": 3,
+          "sharpness": 4,
+          "denoise": 0,
+          "contrast": 0,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 8,
+          "local_tone": 1,
+          "window31": 1,
+          "binary_c": 8,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 6.33102808000001,
+        "encoder_event": "rotate",
+        "value": -1,
+        "parameters": {
+          "brightness": 2,
+          "sharpness": 4,
+          "denoise": 0,
+          "contrast": 0,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 8,
+          "local_tone": 1,
+          "window31": 1,
+          "binary_c": 8,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 6.680915604999996,
+        "encoder_event": "rotate",
+        "value": -1,
+        "parameters": {
+          "brightness": 1,
+          "sharpness": 4,
+          "denoise": 0,
+          "contrast": 0,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 8,
+          "local_tone": 1,
+          "window31": 1,
+          "binary_c": 8,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 7.580404712000018,
+        "encoder_event": "rotate",
+        "value": -1,
+        "parameters": {
+          "brightness": 0,
+          "sharpness": 4,
+          "denoise": 0,
+          "contrast": 0,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 8,
+          "local_tone": 1,
+          "window31": 1,
+          "binary_c": 8,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 8.629498420999994,
+        "encoder_event": "rotate",
+        "value": -1,
+        "parameters": {
+          "brightness": -1,
+          "sharpness": 4,
+          "denoise": 0,
+          "contrast": 0,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 8,
+          "local_tone": 1,
+          "window31": 1,
+          "binary_c": 8,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 9.62897018600006,
+        "encoder_event": "rotate",
+        "value": -1,
+        "parameters": {
+          "brightness": -2,
+          "sharpness": 4,
+          "denoise": 0,
+          "contrast": 0,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 8,
+          "local_tone": 1,
+          "window31": 1,
+          "binary_c": 8,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 10.67833860899998,
+        "encoder_event": "rotate",
+        "value": -1,
+        "parameters": {
+          "brightness": -3,
+          "sharpness": 4,
+          "denoise": 0,
+          "contrast": 0,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 8,
+          "local_tone": 1,
+          "window31": 1,
+          "binary_c": 8,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 11.627687831999992,
+        "encoder_event": "rotate",
+        "value": -1,
+        "parameters": {
+          "brightness": -4,
+          "sharpness": 4,
+          "denoise": 0,
+          "contrast": 0,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 8,
+          "local_tone": 1,
+          "window31": 1,
+          "binary_c": 8,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 13.026667352999993,
+        "encoder_event": "rotate",
+        "value": -1,
+        "parameters": {
+          "brightness": -5,
+          "sharpness": 4,
+          "denoise": 0,
+          "contrast": 0,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 8,
+          "local_tone": 1,
+          "window31": 1,
+          "binary_c": 8,
+          "selected": "brightness"
+        }
+      }
+    ],
+    "sensor_readings_observed": {
+      "lux": true,
+      "distance_mm": false
+    },
+    "last_parameters": {
+      "brightness": -5,
+      "sharpness": 4,
+      "denoise": 0,
+      "contrast": 0,
+      "algorithm": 3,
+      "noise": 1,
+      "edge_view": false,
+      "color": 8,
+      "local_tone": 1,
+      "window31": 1,
+      "binary_c": 8,
+      "selected": "brightness"
+    }
+  },
+  {
+    "outcome": "completed",
+    "unique_camera_frames": 594,
+    "measured_unique_capture_fps": 19.779748534776044,
+    "measured_pl_render_fps": 19.21321704453191,
+    "cleanup_errors": [],
+    "error": null,
+    "report": "jupyter_20190221_102257.json",
+    "counter_deltas": {
+      "capture_id": 595,
+      "dma_errors": 0,
+      "camera_vsync": 604,
+      "overflow_frames": 0,
+      "malformed_frames": 0,
+      "display_sof": 1810
+    },
+    "warnings": [],
+    "events": [],
+    "sensor_readings_observed": {
+      "lux": true,
+      "distance_mm": false
+    },
+    "last_parameters": {
+      "brightness": 0,
+      "sharpness": 4,
+      "denoise": 0,
+      "contrast": 0,
+      "algorithm": 3,
+      "noise": 1,
+      "edge_view": false,
+      "color": 8,
+      "local_tone": 1,
+      "window31": 1,
+      "binary_c": 8,
+      "selected": "brightness"
+    }
+  },
+  {
+    "outcome": "completed",
+    "unique_camera_frames": 598,
+    "measured_unique_capture_fps": 19.946277589347005,
+    "measured_pl_render_fps": 19.96049396461749,
+    "cleanup_errors": [],
+    "error": null,
+    "report": "jupyter_20190221_101942.json",
+    "counter_deltas": {
+      "capture_id": 599,
+      "dma_errors": 0,
+      "camera_vsync": 603,
+      "overflow_frames": 0,
+      "malformed_frames": 0,
+      "display_sof": 1808
+    },
+    "warnings": [],
+    "events": [],
+    "sensor_readings_observed": {
+      "lux": true,
+      "distance_mm": false
+    },
+    "last_parameters": {
+      "brightness": 0,
+      "sharpness": 4,
+      "denoise": 0,
+      "contrast": 0,
+      "algorithm": 3,
+      "noise": 1,
+      "edge_view": false,
+      "color": 8,
+      "local_tone": 1,
+      "window31": 1,
+      "binary_c": 8,
+      "selected": "brightness"
+    }
+  }
+]

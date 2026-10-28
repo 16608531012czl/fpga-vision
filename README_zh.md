@@ -1,3 +1,20 @@
+# FPGA Vision · 网页上位机与 OV5640 视觉辅助器
+
+当前版本：**2026-10-28，上位机控制 + AUTO/MANUAL 显式切换 + EC11 同步 + 实板验收**。
+
+- **[上位机使用、安装与源码说明](web_control/README_zh.md)**
+- **[下载上位机配套上板包](web_control/delivery/FPGAvision_Control_board.zip)** · [SHA-256](web_control/delivery/FPGAvision_Control_board.zip.sha256)
+- [实板验收记录](web_control/delivery/board_validation/ACCEPTANCE_zh.md)
+
+电脑浏览器通过局域网控制 PYNQ-Z2：模式、亮度、锐化、降噪、放大、冻结、对比、AUTO/MANUAL、定时启停；EC11 与网页参数同步。真实图像仍输出到 HDMI。
+
+112 项主机检查通过；完整实板测试 11 组命令确认，最大确认 93ms；现场交互平均约 19.90 FPS，三轮 DMA/溢出/坏帧均为 0。用户确认画面正常、旋钮同步。未做严格 A/B 性能或长期稳定性测试，详见验收记录。
+
+![实板 MANUAL 状态](web_control/delivery/board_validation/manual_mode.png)
+
+`web_control/` 是独立配套运行目录，包含可重建的软件指纹、源码、测试和板端包；下方保留基础 FPGA 工程及 Jupyter 入口。请选择一套完整包部署，避免混用。上位机采用相同 bit/HWH，本次没有重综合硬件。
+
+---
 # FPGA Vision · OV5640 视觉辅助器
 
 当前版本：**2026-10-28，Arduino 光照 + 清晰模式 + 流畅状态栏 + Jupyter 自定义时长**。

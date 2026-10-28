@@ -1,0 +1,3458 @@
+{
+  "outcome": "completed",
+  "stage": "live",
+  "display_observed": null,
+  "camera_capture_verified": true,
+  "unique_camera_frames": 594,
+  "hdmi_refresh_is_not_camera_fps": true,
+  "tone_profile": "stable",
+  "samples": [
+    {
+      "t": 0.752345513000023,
+      "capture_id": 15,
+      "render_source_id": 15,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 85.83333333333334,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 429.004125612
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 15,
+        "dma_errors": 0,
+        "camera_vsync": 20,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 3277
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.791666666666664,
+        "smoothed_mean": 52.665045318518864,
+        "p60": 52.4,
+        "dark_fraction": 0.7291666666666666,
+        "lux": 85.83333333333334,
+        "target_gamma": 0.3816425223214286,
+        "lut_mean_estimate": 108.52083333333333,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 12,
+        "mean": 52.73197916666667,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.006750592041847,
+      "scanout": {
+        "active": 1,
+        "desired": 1,
+        "hardware_slot": 1
+      },
+      "timing_ms": {
+        "capture_wait": 48.504390999994484,
+        "compose": 1.1847499999930733,
+        "policy": 0.10336299999380572,
+        "display": 0.14462799998682385
+      }
+    },
+    {
+      "t": 1.5017574900000454,
+      "capture_id": 30,
+      "render_source_id": 30,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 85.83333333333334,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 429.810581125
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 30,
+        "dma_errors": 0,
+        "camera_vsync": 35,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 3323
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.770833333333336,
+        "smoothed_mean": 52.70516718585283,
+        "p60": 52.4,
+        "dark_fraction": 0.7291666666666666,
+        "lux": 85.83333333333334,
+        "target_gamma": 0.3816425223214286,
+        "lut_mean_estimate": 109.02083333333333,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 30,
+        "mean": 52.71923285590278,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.012172604107747,
+      "scanout": {
+        "active": 0,
+        "desired": 0,
+        "hardware_slot": 0
+      },
+      "timing_ms": {
+        "capture_wait": 48.60946800005195,
+        "compose": 1.3402429999587184,
+        "policy": 10.167094999985693,
+        "display": 2.3104960000068786
+      }
+    },
+    {
+      "t": 2.3010472949999894,
+      "capture_id": 45,
+      "render_source_id": 45,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413355,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 81.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 430.631662462
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 45,
+        "dma_errors": 0,
+        "camera_vsync": 51,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 3370
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.708333333333336,
+        "smoothed_mean": 52.71104837492754,
+        "p60": 52.4,
+        "dark_fraction": 0.7291666666666666,
+        "lux": 83.33333333333334,
+        "target_gamma": 0.37919196428571433,
+        "lut_mean_estimate": 109.10416666666667,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 41,
+        "mean": 52.67437174479167,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 19.015092335832215,
+      "scanout": {
+        "active": 1,
+        "desired": 1,
+        "hardware_slot": 1
+      },
+      "timing_ms": {
+        "capture_wait": 48.21765199994843,
+        "compose": 1.2330030000384795,
+        "policy": 0.11384599997654732,
+        "display": 0.15154200002598373
+      }
+    },
+    {
+      "t": 3.050750411000024,
+      "capture_id": 60,
+      "render_source_id": 60,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 85.83333333333334,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 431.457279747
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 60,
+        "dma_errors": 0,
+        "camera_vsync": 66,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 3415
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.729166666666664,
+        "smoothed_mean": 52.735831066001246,
+        "p60": 52.4,
+        "dark_fraction": 0.7291666666666666,
+        "lux": 85.0,
+        "target_gamma": 0.38082566964285713,
+        "lut_mean_estimate": 109.5,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 58,
+        "mean": 52.682455512152785,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 19.01910720370809,
+      "scanout": {
+        "active": 0,
+        "desired": 0,
+        "hardware_slot": 0
+      },
+      "timing_ms": {
+        "capture_wait": 44.84931400003234,
+        "compose": 1.390317000016239,
+        "policy": 0.12108299995361449,
+        "display": 0.16107999999803724
+      }
+    },
+    {
+      "t": 3.8003531909999992,
+      "capture_id": 75,
+      "render_source_id": 75,
+      "roi": [
+        320,
+        180,
+        640,
+        360
+      ],
+      "zoom": 2,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 85.83333333333334,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 431.991922174
+      },
+      "parameters": {
+        "brightness": 3,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 75,
+        "dma_errors": 0,
+        "camera_vsync": 81,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 3461
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 36.9375,
+        "smoothed_mean": 48.652751193283414,
+        "p60": 41.8,
+        "dark_fraction": 0.9583333333333334,
+        "lux": 85.83333333333334,
+        "target_gamma": 0.35866002156225607,
+        "lut_mean_estimate": 98.625,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 70,
+        "mean": 36.89185329861111,
+        "roi": [
+          320,
+          180,
+          640,
+          360
+        ]
+      },
+      "rolling_unique_capture_fps": 20.010232272292694,
+      "scanout": {
+        "active": 1,
+        "desired": 1,
+        "hardware_slot": 1
+      },
+      "timing_ms": {
+        "capture_wait": 48.7745439999685,
+        "compose": 1.9481200000086574,
+        "policy": 3.0671939999820097,
+        "display": 0.1807570000096348
+      }
+    },
+    {
+      "t": 4.549886892000018,
+      "capture_id": 90,
+      "render_source_id": 81,
+      "roi": [
+        320,
+        180,
+        640,
+        360
+      ],
+      "zoom": 2,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": true,
+      "automatic": true,
+      "sensors": {
+        "lux": 85.83333333333334,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 432.800989111
+      },
+      "parameters": {
+        "brightness": 3,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 90,
+        "dma_errors": 0,
+        "camera_vsync": 96,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 3505
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 36.875,
+        "smoothed_mean": 47.01374161218353,
+        "p60": 41.8,
+        "dark_fraction": 0.9583333333333334,
+        "lux": 85.83333333333334,
+        "target_gamma": 0.35,
+        "lut_mean_estimate": 98.79166666666667,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 88,
+        "mean": 36.86240885416667,
+        "roi": [
+          320,
+          180,
+          640,
+          360
+        ]
+      },
+      "rolling_unique_capture_fps": 20.01314649584078,
+      "scanout": {
+        "active": 0,
+        "desired": 0,
+        "hardware_slot": 0
+      },
+      "timing_ms": {
+        "capture_wait": 48.68913899997551,
+        "compose": 1.2166550000074494,
+        "policy": 0.12130099997875732,
+        "display": 0.15506800002640375
+      }
+    },
+    {
+      "t": 5.449046059000011,
+      "capture_id": 105,
+      "render_source_id": 105,
+      "roi": [
+        320,
+        180,
+        640,
+        360
+      ],
+      "zoom": 2,
+      "config": 3894413348,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 85.83333333333334,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 433.888429005
+      },
+      "parameters": {
+        "brightness": 3,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 105,
+        "dma_errors": 0,
+        "camera_vsync": 114,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 3560
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 36.875,
+        "smoothed_mean": 41.97636871672324,
+        "p60": 41.8,
+        "dark_fraction": 0.9583333333333334,
+        "lux": 85.83333333333334,
+        "target_gamma": 0.35,
+        "lut_mean_estimate": 99.875,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 103,
+        "mean": 36.901202256944444,
+        "roi": [
+          320,
+          180,
+          640,
+          360
+        ]
+      },
+      "rolling_unique_capture_fps": 17.011318106253423,
+      "scanout": {
+        "active": 0,
+        "desired": 0,
+        "hardware_slot": 0
+      },
+      "timing_ms": {
+        "capture_wait": 48.33235299997796,
+        "compose": 1.2664340000014818,
+        "policy": 0.10767100002340158,
+        "display": 2.3276709999890954
+      }
+    },
+    {
+      "t": 6.198508326000024,
+      "capture_id": 120,
+      "render_source_id": 120,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 85.83333333333334,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 434.427994466
+      },
+      "parameters": {
+        "brightness": 3,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 120,
+        "dma_errors": 0,
+        "camera_vsync": 129,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 3605
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 36.958333333333336,
+        "smoothed_mean": 40.68647750390713,
+        "p60": 41.8,
+        "dark_fraction": 0.9583333333333334,
+        "lux": 85.83333333333334,
+        "target_gamma": 0.35,
+        "lut_mean_estimate": 100.3125,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 115,
+        "mean": 36.89677951388888,
+        "roi": [
+          320,
+          180,
+          640,
+          360
+        ]
+      },
+      "rolling_unique_capture_fps": 20.01566361784563,
+      "scanout": {
+        "active": 1,
+        "desired": 1,
+        "hardware_slot": 1
+      },
+      "timing_ms": {
+        "capture_wait": 48.196211999993466,
+        "compose": 1.2021630000162986,
+        "policy": 0.10883699997066287,
+        "display": 2.340895000031651
+      }
+    },
+    {
+      "t": 6.948140393000017,
+      "capture_id": 135,
+      "render_source_id": 135,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 85.83333333333334,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 435.256516911
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 135,
+        "dma_errors": 0,
+        "camera_vsync": 144,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 3650
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.791666666666664,
+        "smoothed_mean": 44.872026751757325,
+        "p60": 52.4,
+        "dark_fraction": 0.7291666666666666,
+        "lux": 85.83333333333334,
+        "target_gamma": 0.35,
+        "lut_mean_estimate": 112.625,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 132,
+        "mean": 52.752478298611116,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.01305980235699,
+      "scanout": {
+        "active": 0,
+        "desired": 0,
+        "hardware_slot": 0
+      },
+      "timing_ms": {
+        "capture_wait": 46.31154499998047,
+        "compose": 1.2742459999799394,
+        "policy": 2.4344210000322164,
+        "display": 0.17761599997356825
+      }
+    },
+    {
+      "t": 7.697535438000045,
+      "capture_id": 150,
+      "render_source_id": 150,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 436.060433303
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 150,
+        "dma_errors": 0,
+        "camera_vsync": 159,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 3695
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.770833333333336,
+        "smoothed_mean": 47.73386125936221,
+        "p60": 52.4,
+        "dark_fraction": 0.7291666666666666,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.35392386503452244,
+        "lut_mean_estimate": 112.91666666666667,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 150,
+        "mean": 52.755407986111116,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.013221935203592,
+      "scanout": {
+        "active": 1,
+        "desired": 1,
+        "hardware_slot": 1
+      },
+      "timing_ms": {
+        "capture_wait": 48.2826460000183,
+        "compose": 1.2546209999868552,
+        "policy": 10.106673999985105,
+        "display": 0.17064899998331384
+      }
+    },
+    {
+      "t": 8.44702209799999,
+      "capture_id": 165,
+      "render_source_id": 165,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 436.865972798
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 165,
+        "dma_errors": 0,
+        "camera_vsync": 174,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 3740
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.8125,
+        "smoothed_mean": 48.954185977823805,
+        "p60": 52.4,
+        "dark_fraction": 0.7291666666666666,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3609325984212588,
+        "lut_mean_estimate": 112.6875,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 161,
+        "mean": 52.809213324652774,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.01440745126163,
+      "scanout": {
+        "active": 0,
+        "desired": 0,
+        "hardware_slot": 0
+      },
+      "timing_ms": {
+        "capture_wait": 48.11608299996806,
+        "compose": 1.3264120000258117,
+        "policy": 2.449501999990389,
+        "display": 0.17783399999871108
+      }
+    },
+    {
+      "t": 9.196608497,
+      "capture_id": 180,
+      "render_source_id": 180,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 437.402663326
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 180,
+        "dma_errors": 0,
+        "camera_vsync": 189,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 3784
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.770833333333336,
+        "smoothed_mean": 50.337496001106274,
+        "p60": 52.4,
+        "dark_fraction": 0.7291666666666666,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 112.45833333333333,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 179,
+        "mean": 52.74511610243055,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.015724994059163,
+      "scanout": {
+        "active": 1,
+        "desired": 1,
+        "hardware_slot": 1
+      },
+      "timing_ms": {
+        "capture_wait": 37.88689499998554,
+        "compose": 1.2808860000177447,
+        "policy": 0.18717199998263823,
+        "display": 0.1528340000049866
+      }
+    },
+    {
+      "t": 9.946215465000023,
+      "capture_id": 195,
+      "render_source_id": 195,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 438.217071429
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 195,
+        "dma_errors": 0,
+        "camera_vsync": 204,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 3829
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.729166666666664,
+        "smoothed_mean": 50.96186964522805,
+        "p60": 52.4,
+        "dark_fraction": 0.7291666666666666,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 112.25,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 191,
+        "mean": 52.68109375,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.01524000404395,
+      "scanout": {
+        "active": 0,
+        "desired": 0,
+        "hardware_slot": 0
+      },
+      "timing_ms": {
+        "capture_wait": 45.67741500000011,
+        "compose": 1.3308219999998983,
+        "policy": 0.1152090000005046,
+        "display": 0.15057199999546356
+      }
+    },
+    {
+      "t": 10.695608525000011,
+      "capture_id": 210,
+      "render_source_id": 210,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 439.020907222
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 210,
+        "dma_errors": 0,
+        "camera_vsync": 219,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 3874
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.8125,
+        "smoothed_mean": 51.63426852556968,
+        "p60": 52.4,
+        "dark_fraction": 0.7291666666666666,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 112.0625,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 209,
+        "mean": 52.80557291666667,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.014311133104023,
+      "scanout": {
+        "active": 1,
+        "desired": 1,
+        "hardware_slot": 1
+      },
+      "timing_ms": {
+        "capture_wait": 38.49278399997047,
+        "compose": 1.2699540000085108,
+        "policy": 0.11335400000689333,
+        "display": 0.34519100000807157
+      }
+    },
+    {
+      "t": 11.445032377000018,
+      "capture_id": 225,
+      "render_source_id": 225,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 439.824015913
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 225,
+        "dma_errors": 0,
+        "camera_vsync": 234,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 3919
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.791666666666664,
+        "smoothed_mean": 51.93652605156065,
+        "p60": 52.4,
+        "dark_fraction": 0.7291666666666666,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 111.9375,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 221,
+        "mean": 52.74649197048611,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.016245384916274,
+      "scanout": {
+        "active": 0,
+        "desired": 0,
+        "hardware_slot": 0
+      },
+      "timing_ms": {
+        "capture_wait": 48.207710999975006,
+        "compose": 1.2283689999890157,
+        "policy": 0.10589800001525873,
+        "display": 0.1462959999685154
+      }
+    },
+    {
+      "t": 12.19452738800004,
+      "capture_id": 240,
+      "render_source_id": 240,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 440.629362653
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 240,
+        "dma_errors": 0,
+        "camera_vsync": 249,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 3965
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.854166666666664,
+        "smoothed_mean": 52.22014751696111,
+        "p60": 52.4,
+        "dark_fraction": 0.7291666666666666,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 112.04166666666667,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 237,
+        "mean": 52.83462673611111,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.015118399667543,
+      "scanout": {
+        "active": 1,
+        "desired": 1,
+        "hardware_slot": 1
+      },
+      "timing_ms": {
+        "capture_wait": 48.406803000034415,
+        "compose": 1.2017689999765935,
+        "policy": 2.5360340000020187,
+        "display": 0.38629199997330943
+      }
+    },
+    {
+      "t": 12.944207239000036,
+      "capture_id": 255,
+      "render_source_id": 255,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 441.174539883
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 255,
+        "dma_errors": 0,
+        "camera_vsync": 264,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 4010
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.770833333333336,
+        "smoothed_mean": 52.431370003266316,
+        "p60": 52.4,
+        "dark_fraction": 0.7291666666666666,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 111.89583333333333,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 255,
+        "mean": 52.71548719618056,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.015349030602998,
+      "scanout": {
+        "active": 0,
+        "desired": 0,
+        "hardware_slot": 0
+      },
+      "timing_ms": {
+        "capture_wait": 48.57609200001889,
+        "compose": 1.2092549999920266,
+        "policy": 10.03914799997574,
+        "display": 0.16477899998790235
+      }
+    },
+    {
+      "t": 13.693758591999995,
+      "capture_id": 270,
+      "render_source_id": 270,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 441.982325393
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 270,
+        "dma_errors": 0,
+        "camera_vsync": 279,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 4054
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.833333333333336,
+        "smoothed_mean": 52.52801476511246,
+        "p60": 52.4,
+        "dark_fraction": 0.7291666666666666,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 111.91666666666667,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 267,
+        "mean": 52.79109266493055,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.01297397074037,
+      "scanout": {
+        "active": 1,
+        "desired": 1,
+        "hardware_slot": 1
+      },
+      "timing_ms": {
+        "capture_wait": 48.078390999990006,
+        "compose": 1.2130770000453595,
+        "policy": 0.10672299998759627,
+        "display": 0.15005199998086027
+      }
+    },
+    {
+      "t": 14.543066135000004,
+      "capture_id": 285,
+      "render_source_id": 285,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 442.788038121
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 285,
+        "dma_errors": 0,
+        "camera_vsync": 296,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 4105
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.8125,
+        "smoothed_mean": 52.62653811732705,
+        "p60": 52.4,
+        "dark_fraction": 0.7291666666666666,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 111.91666666666667,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 283,
+        "mean": 52.773311631944445,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 18.01408021942376,
+      "scanout": {
+        "active": 0,
+        "desired": 0,
+        "hardware_slot": 0
+      },
+      "timing_ms": {
+        "capture_wait": 85.12686399996028,
+        "compose": 1.491128999987268,
+        "policy": 0.1316990000077567,
+        "display": 0.16284299999824725
+      }
+    },
+    {
+      "t": 15.292685885000026,
+      "capture_id": 300,
+      "render_source_id": 300,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 443.592604621
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 300,
+        "dma_errors": 0,
+        "camera_vsync": 311,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 4151
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.833333333333336,
+        "smoothed_mean": 52.692497769208074,
+        "p60": 52.4,
+        "dark_fraction": 0.7291666666666666,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 111.89583333333333,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 300,
+        "mean": 52.740029296875,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 19.01339468938468,
+      "scanout": {
+        "active": 1,
+        "desired": 1,
+        "hardware_slot": 1
+      },
+      "timing_ms": {
+        "capture_wait": 48.59088000000611,
+        "compose": 1.1514149999811707,
+        "policy": 9.703160000015032,
+        "display": 0.16565900000387046
+      }
+    },
+    {
+      "t": 16.04209949,
+      "capture_id": 315,
+      "render_source_id": 315,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 444.400777174
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 315,
+        "dma_errors": 0,
+        "camera_vsync": 326,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 4195
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.833333333333336,
+        "smoothed_mean": 52.72634029345861,
+        "p60": 52.4,
+        "dark_fraction": 0.7291666666666666,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 111.91666666666667,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 311,
+        "mean": 52.804836154513886,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.01387672149443,
+      "scanout": {
+        "active": 0,
+        "desired": 0,
+        "hardware_slot": 0
+      },
+      "timing_ms": {
+        "capture_wait": 48.504694999962794,
+        "compose": 1.2759940000250936,
+        "policy": 0.11101799998414208,
+        "display": 0.14700899998842942
+      }
+    },
+    {
+      "t": 16.79147613500004,
+      "capture_id": 330,
+      "render_source_id": 330,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 445.213281404
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 330,
+        "dma_errors": 0,
+        "camera_vsync": 341,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 4240
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.770833333333336,
+        "smoothed_mean": 52.75388815785102,
+        "p60": 52.4,
+        "dark_fraction": 0.7291666666666666,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 111.77083333333333,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 329,
+        "mean": 52.695642361111105,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.01725860012353,
+      "scanout": {
+        "active": 1,
+        "desired": 1,
+        "hardware_slot": 1
+      },
+      "timing_ms": {
+        "capture_wait": 36.79949900003976,
+        "compose": 1.280645999997887,
+        "policy": 2.4581749999583735,
+        "display": 0.18338500001391367
+      }
+    },
+    {
+      "t": 17.54104625100001,
+      "capture_id": 345,
+      "render_source_id": 345,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 445.759759329
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 345,
+        "dma_errors": 0,
+        "camera_vsync": 356,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 4285
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.833333333333336,
+        "smoothed_mean": 52.77087347781687,
+        "p60": 52.4,
+        "dark_fraction": 0.75,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 111.89583333333333,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 340,
+        "mean": 52.7967556423611,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.015119881906287,
+      "scanout": {
+        "active": 0,
+        "desired": 0,
+        "hardware_slot": 0
+      },
+      "timing_ms": {
+        "capture_wait": 48.215979000019615,
+        "compose": 1.247008999996524,
+        "policy": 0.1072250000220265,
+        "display": 0.14755600000171398
+      }
+    },
+    {
+      "t": 18.29050484999999,
+      "capture_id": 360,
+      "render_source_id": 360,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 446.564065617
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 360,
+        "dma_errors": 0,
+        "camera_vsync": 371,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 4330
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.729166666666664,
+        "smoothed_mean": 52.7725721587354,
+        "p60": 52.4,
+        "dark_fraction": 0.75,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 111.6875,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 357,
+        "mean": 52.70068901909722,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.014733145290286,
+      "scanout": {
+        "active": 1,
+        "desired": 1,
+        "hardware_slot": 1
+      },
+      "timing_ms": {
+        "capture_wait": 45.83815399996638,
+        "compose": 1.2853500000460372,
+        "policy": 0.11384999999108913,
+        "display": 0.3400360000114233
+      }
+    },
+    {
+      "t": 19.04008583000001,
+      "capture_id": 375,
+      "render_source_id": 375,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 447.368279668
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 375,
+        "dma_errors": 0,
+        "camera_vsync": 386,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 4376
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.8125,
+        "smoothed_mean": 52.78738025949815,
+        "p60": 52.4,
+        "dark_fraction": 0.75,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 111.89583333333333,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 375,
+        "mean": 52.798129340277775,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.01177669044111,
+      "scanout": {
+        "active": 0,
+        "desired": 0,
+        "hardware_slot": 0
+      },
+      "timing_ms": {
+        "capture_wait": 48.422291999997924,
+        "compose": 1.2529140000197003,
+        "policy": 9.750346999965132,
+        "display": 0.16432400002486247
+      }
+    },
+    {
+      "t": 19.789807955000015,
+      "capture_id": 390,
+      "render_source_id": 390,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 448.177727307
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 390,
+        "dma_errors": 0,
+        "camera_vsync": 401,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 4420
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.770833333333336,
+        "smoothed_mean": 52.785511389833836,
+        "p60": 52.4,
+        "dark_fraction": 0.75,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 111.77083333333333,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 386,
+        "mean": 52.70006293402778,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.012732260365965,
+      "scanout": {
+        "active": 1,
+        "desired": 1,
+        "hardware_slot": 1
+      },
+      "timing_ms": {
+        "capture_wait": 48.2974949999857,
+        "compose": 1.293928999984928,
+        "policy": 0.11860300003263546,
+        "display": 0.35479100000657127
+      }
+    },
+    {
+      "t": 20.53928780000001,
+      "capture_id": 405,
+      "render_source_id": 405,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 448.737761137
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 405,
+        "dma_errors": 0,
+        "camera_vsync": 416,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 4466
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.708333333333336,
+        "smoothed_mean": 52.766498016010885,
+        "p60": 52.4,
+        "dark_fraction": 0.75,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 111.66666666666667,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 404,
+        "mean": 52.64754991319444,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.006935724379517,
+      "scanout": {
+        "active": 0,
+        "desired": 0,
+        "hardware_slot": 0
+      },
+      "timing_ms": {
+        "capture_wait": 37.28474100000767,
+        "compose": 1.5700280000032762,
+        "policy": 3.414726000016799,
+        "display": 0.2149839999674441
+      }
+    },
+    {
+      "t": 21.28870161399999,
+      "capture_id": 420,
+      "render_source_id": 420,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 449.568846511
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 420,
+        "dma_errors": 0,
+        "camera_vsync": 431,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 4510
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.75,
+        "smoothed_mean": 52.7547338166206,
+        "p60": 52.4,
+        "dark_fraction": 0.75,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 111.77083333333333,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 416,
+        "mean": 52.704114583333336,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.013749165484302,
+      "scanout": {
+        "active": 1,
+        "desired": 1,
+        "hardware_slot": 1
+      },
+      "timing_ms": {
+        "capture_wait": 48.35356299997784,
+        "compose": 1.5707360000192239,
+        "policy": 0.1456640000014886,
+        "display": 0.18991700000015044
+      }
+    },
+    {
+      "t": 22.038385763999997,
+      "capture_id": 435,
+      "render_source_id": 435,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 450.411775233
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 435,
+        "dma_errors": 0,
+        "camera_vsync": 446,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 4555
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.75,
+        "smoothed_mean": 52.7552035898149,
+        "p60": 52.4,
+        "dark_fraction": 0.75,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 111.79166666666667,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 433,
+        "mean": 52.71527777777777,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.00738158338376,
+      "scanout": {
+        "active": 0,
+        "desired": 0,
+        "hardware_slot": 0
+      },
+      "timing_ms": {
+        "capture_wait": 45.182830999976886,
+        "compose": 1.4024339999991753,
+        "policy": 0.1225230000159172,
+        "display": 0.16095699999141289
+      }
+    },
+    {
+      "t": 22.787608560000024,
+      "capture_id": 450,
+      "render_source_id": 450,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 451.216240475
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 450,
+        "dma_errors": 0,
+        "camera_vsync": 461,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 4600
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.708333333333336,
+        "smoothed_mean": 52.75055271211373,
+        "p60": 51.6,
+        "dark_fraction": 0.75,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 111.70833333333333,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 445,
+        "mean": 52.66953125,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.018930180643608,
+      "scanout": {
+        "active": 1,
+        "desired": 1,
+        "hardware_slot": 1
+      },
+      "timing_ms": {
+        "capture_wait": 48.44977900000913,
+        "compose": 1.2735569999904328,
+        "policy": 0.1084579999997004,
+        "display": 0.14983699998083466
+      }
+    },
+    {
+      "t": 23.537191666000012,
+      "capture_id": 465,
+      "render_source_id": 465,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 451.753852843
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 465,
+        "dma_errors": 0,
+        "camera_vsync": 476,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 4645
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.8125,
+        "smoothed_mean": 52.76439047914817,
+        "p60": 52.4,
+        "dark_fraction": 0.7291666666666666,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 111.79166666666667,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 463,
+        "mean": 52.77020290798612,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.01228654332331,
+      "scanout": {
+        "active": 0,
+        "desired": 0,
+        "hardware_slot": 0
+      },
+      "timing_ms": {
+        "capture_wait": 45.669707000001836,
+        "compose": 1.3926529999821469,
+        "policy": 0.11676900004431445,
+        "display": 0.15380599995751254
+      }
+    },
+    {
+      "t": 24.286754391000045,
+      "capture_id": 480,
+      "render_source_id": 480,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 452.558160402
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 480,
+        "dma_errors": 0,
+        "camera_vsync": 491,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 4691
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.791666666666664,
+        "smoothed_mean": 52.75228359708388,
+        "p60": 52.4,
+        "dark_fraction": 0.75,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 111.83333333333333,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 480,
+        "mean": 52.74735243055556,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.01056327619499,
+      "scanout": {
+        "active": 1,
+        "desired": 1,
+        "hardware_slot": 1
+      },
+      "timing_ms": {
+        "capture_wait": 48.59981200002039,
+        "compose": 1.1550959999908628,
+        "policy": 9.665751,
+        "display": 0.16490699999849312
+      }
+    },
+    {
+      "t": 25.03629689799999,
+      "capture_id": 495,
+      "render_source_id": 495,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 453.364380496
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 495,
+        "dma_errors": 0,
+        "camera_vsync": 506,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 4735
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.791666666666664,
+        "smoothed_mean": 52.75749452850693,
+        "p60": 52.4,
+        "dark_fraction": 0.7291666666666666,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 111.83333333333333,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 492,
+        "mean": 52.74886935763889,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.010530181318916,
+      "scanout": {
+        "active": 0,
+        "desired": 0,
+        "hardware_slot": 0
+      },
+      "timing_ms": {
+        "capture_wait": 48.179519999962395,
+        "compose": 1.2552150000146867,
+        "policy": 0.10670800003254044,
+        "display": 0.14806799998723363
+      }
+    },
+    {
+      "t": 25.785514995000028,
+      "capture_id": 510,
+      "render_source_id": 510,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 454.186204578
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 510,
+        "dma_errors": 0,
+        "camera_vsync": 521,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 4781
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.8125,
+        "smoothed_mean": 52.77096574050638,
+        "p60": 52.4,
+        "dark_fraction": 0.75,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 111.83333333333333,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 510,
+        "mean": 52.76334418402777,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.018724133262165,
+      "scanout": {
+        "active": 1,
+        "desired": 1,
+        "hardware_slot": 1
+      },
+      "timing_ms": {
+        "capture_wait": 44.870701000036206,
+        "compose": 1.2933300000099734,
+        "policy": 9.689315999992232,
+        "display": 0.1671569999643907
+      }
+    },
+    {
+      "t": 26.535216210000044,
+      "capture_id": 525,
+      "render_source_id": 525,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 454.721343919
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 525,
+        "dma_errors": 0,
+        "camera_vsync": 536,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 4825
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.833333333333336,
+        "smoothed_mean": 52.780838763195874,
+        "p60": 52.4,
+        "dark_fraction": 0.75,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 111.89583333333333,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 521,
+        "mean": 52.81910590277778,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.014163282830363,
+      "scanout": {
+        "active": 0,
+        "desired": 0,
+        "hardware_slot": 0
+      },
+      "timing_ms": {
+        "capture_wait": 47.7456930000244,
+        "compose": 4.068989999950645,
+        "policy": 0.14764300004799225,
+        "display": 0.17741299996032467
+      }
+    },
+    {
+      "t": 27.334677116000023,
+      "capture_id": 540,
+      "render_source_id": 540,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 455.53648389
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 540,
+        "dma_errors": 0,
+        "camera_vsync": 552,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 4873
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.833333333333336,
+        "smoothed_mean": 52.78379102910886,
+        "p60": 52.4,
+        "dark_fraction": 0.7291666666666666,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 111.85416666666667,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 537,
+        "mean": 52.79206271701389,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 19.013988172791215,
+      "scanout": {
+        "active": 1,
+        "desired": 1,
+        "hardware_slot": 1
+      },
+      "timing_ms": {
+        "capture_wait": 48.24586099999806,
+        "compose": 1.2062149999678695,
+        "policy": 0.10647999999946478,
+        "display": 0.14789600004405656
+      }
+    },
+    {
+      "t": 28.084101868999994,
+      "capture_id": 555,
+      "render_source_id": 555,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 456.341835501
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 555,
+        "dma_errors": 0,
+        "camera_vsync": 567,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 4918
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.791666666666664,
+        "smoothed_mean": 52.78333609903345,
+        "p60": 52.4,
+        "dark_fraction": 0.7291666666666666,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 111.83333333333333,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 554,
+        "mean": 52.72617838541667,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.01806518281622,
+      "scanout": {
+        "active": 0,
+        "desired": 0,
+        "hardware_slot": 0
+      },
+      "timing_ms": {
+        "capture_wait": 38.613568999949166,
+        "compose": 1.3249870000322517,
+        "policy": 2.4922100000139835,
+        "display": 0.2449069999670428
+      }
+    },
+    {
+      "t": 28.833633587999998,
+      "capture_id": 570,
+      "render_source_id": 570,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 457.147745355
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 570,
+        "dma_errors": 0,
+        "camera_vsync": 582,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 4963
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.791666666666664,
+        "smoothed_mean": 52.782997380495175,
+        "p60": 52.4,
+        "dark_fraction": 0.7291666666666666,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 111.79166666666667,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 566,
+        "mean": 52.73341796875,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.012907925353776,
+      "scanout": {
+        "active": 1,
+        "desired": 1,
+        "hardware_slot": 1
+      },
+      "timing_ms": {
+        "capture_wait": 48.28415999998015,
+        "compose": 1.1596699999927296,
+        "policy": 0.1021240000227408,
+        "display": 0.142713000002459
+      }
+    },
+    {
+      "t": 29.583045153,
+      "capture_id": 585,
+      "render_source_id": 585,
+      "roi": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "zoom": 1,
+      "config": 3894413356,
+      "quality_config": 209,
+      "frozen": false,
+      "automatic": true,
+      "sensors": {
+        "lux": 86.66666666666667,
+        "distance_mm": null,
+        "errors": {},
+        "sample_time": 457.962961206
+      },
+      "parameters": {
+        "brightness": 0,
+        "sharpness": 4,
+        "denoise": 0,
+        "contrast": 0,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 8,
+        "local_tone": 1,
+        "window31": 1,
+        "binary_c": 8,
+        "selected": "brightness"
+      },
+      "encoder": {
+        "position": 0,
+        "short": 0,
+        "long": 0,
+        "invalid": 0,
+        "status": 3
+      },
+      "counters": {
+        "capture_id": 585,
+        "dma_errors": 0,
+        "camera_vsync": 597,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 5008
+      },
+      "tone": {
+        "profile": "stable",
+        "mean": 52.770833333333336,
+        "smoothed_mean": 52.77609485281234,
+        "p60": 52.4,
+        "dark_fraction": 0.75,
+        "lux": 86.66666666666667,
+        "target_gamma": 0.3639783779143142,
+        "lut_mean_estimate": 111.77083333333333,
+        "estimate_scope": "sampled source ROI through CPU LUT only; not HDMI measurement"
+      },
+      "tile_statistics": {
+        "frame_id": 584,
+        "mean": 52.76187825520833,
+        "roi": [
+          0,
+          0,
+          1280,
+          720
+        ]
+      },
+      "rolling_unique_capture_fps": 20.013510800925978,
+      "scanout": {
+        "active": 0,
+        "desired": 0,
+        "hardware_slot": 0
+      },
+      "timing_ms": {
+        "capture_wait": 36.22707699997818,
+        "compose": 1.3673870000161514,
+        "policy": 0.11910500001022228,
+        "display": 0.15316600001824554
+      }
+    }
+  ],
+  "events": [],
+  "warnings": [],
+  "encoder_connected_verified": false,
+  "quality_preset": "detail",
+  "chroma_denoise": {
+    "enabled": false,
+    "scope": "PL gated spatial 3x3 on enhanced COLOR pane; DN=0 bypasses",
+    "motion_gated": false
+  },
+  "native_neon_composition_available": true,
+  "boot_id": "3c05ed51-1d85-47fc-910a-6c1f4c277972",
+  "uptime_start": "366.52 563.51",
+  "sensor_readings_observed": {
+    "lux": true,
+    "distance_mm": false
+  },
+  "release": {
+    "built_at": "2026-10-28T14:56:58.034473+08:00",
+    "abi": "0x56410400"
+  },
+  "pipeline": "pl",
+  "camera": {
+    "id": 22080,
+    "size": [
+      1280,
+      720
+    ],
+    "profile": "720p_15_candidate",
+    "colorbars": false,
+    "requested_fps": 20,
+    "dvp_polarity": 32,
+    "timing": {
+      "registers": {
+        "0x3034": 26,
+        "0x3035": 65,
+        "0x3036": 105,
+        "0x3037": 19,
+        "0x3108": 1
+      },
+      "hts": 1419,
+      "vts": 740,
+      "nominal_sysclk_hz": 21000000.0,
+      "nominal_fps": 19.998857208159535,
+      "banding_registers": {
+        "0x3a08": 0,
+        "0x3a09": 147,
+        "0x3a0a": 0,
+        "0x3a0b": 123,
+        "0x3a0e": 5,
+        "0x3a0d": 5
+      },
+      "readback_verified": true
+    },
+    "profile_hardware_validated": false
+  },
+  "camera_quality": {
+    "preset": "detail",
+    "registers_before": {
+      "20480": 167,
+      "20481": 131,
+      "21256": 64,
+      "21250": 24,
+      "21259": 4
+    },
+    "registers_after": {
+      "20480": 167,
+      "20481": 131,
+      "21256": 64,
+      "21250": 32,
+      "21259": 4
+    },
+    "resolution": [
+      1280,
+      720
+    ]
+  },
+  "exposure_stability": {
+    "mains_hz": 50,
+    "registers_before": {
+      "14848": 120,
+      "15361": 164,
+      "15360": 4,
+      "14863": 48,
+      "14864": 40,
+      "14875": 48,
+      "14878": 38
+    },
+    "registers_after": {
+      "14848": 120,
+      "15361": 164,
+      "15360": 4,
+      "14863": 48,
+      "14864": 40,
+      "14875": 56,
+      "14878": 32
+    },
+    "aec_agc": "automatic; inner target 40..48, outer hold 32..56",
+    "readback_verified": true
+  },
+  "autofocus": {
+    "status": 32,
+    "command_ack": 0,
+    "clock_3004": 255,
+    "clock_3005": 247,
+    "firmware_focus_reported": false,
+    "optical_focus_observed": false,
+    "firmware_sha256": "439245623bc99f3b0d8c44d47baed3cc17cad01b9191509c89bb8d92a98949c9",
+    "firmware_bytes": 4077,
+    "verified_readback_bytes": 4077,
+    "full_readback_sha256": "439245623bc99f3b0d8c44d47baed3cc17cad01b9191509c89bb8d92a98949c9",
+    "full_readback_verified": true,
+    "upload_block_size": 32,
+    "startup_seconds": 47.464541843000006,
+    "firmware_ready": true,
+    "command_acknowledged": true,
+    "continuous": true
+  },
+  "counters_before": {
+    "capture_id": 0,
+    "dma_errors": 0,
+    "camera_vsync": 4,
+    "overflow_frames": 0,
+    "malformed_frames": 0,
+    "display_sof": 3232
+  },
+  "pl_pipeline": {
+    "cpu_live_frame_copy": false,
+    "source": "PL renders completed DDR frame while next raw capture runs independently",
+    "scaler": "2x2 box downscale, integer nearest upscale",
+    "local_mapping": "8x6 bounded mean-based gains with bilinear interpolation",
+    "statistics": "source ROI tile averages, not a full pixel histogram",
+    "color_denoise": "gated spatial 3x3 in PL, no temporal history"
+  },
+  "pl_rendered_frames": 576,
+  "pl_observed_display_updates": 576,
+  "measured_pl_render_fps": 19.21321704453191,
+  "autofocus_after": {
+    "status": 32,
+    "command_ack": 0,
+    "clock_3004": 255,
+    "clock_3005": 247,
+    "firmware_focus_reported": false,
+    "optical_focus_observed": false
+  },
+  "measured_unique_capture_fps": 19.779748534776044,
+  "counters_after": {
+    "capture_id": 595,
+    "dma_errors": 0,
+    "camera_vsync": 608,
+    "overflow_frames": 0,
+    "malformed_frames": 0,
+    "display_sof": 5042
+  },
+  "capture_geometry": {
+    "raw": "0xc2d0500",
+    "valid": true,
+    "reason": 0,
+    "line": 720,
+    "pixels": 1280
+  },
+  "counter_deltas": {
+    "capture_id": 595,
+    "dma_errors": 0,
+    "camera_vsync": 604,
+    "overflow_frames": 0,
+    "malformed_frames": 0,
+    "display_sof": 1810
+  },
+  "boot_id_after": "3c05ed51-1d85-47fc-910a-6c1f4c277972",
+  "uptime_end": "458.59 685.06",
+  "cleanup_errors": []
+}

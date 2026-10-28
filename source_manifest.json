@@ -1,8 +1,10 @@
 {
-  "release": "2026-10-28",
-  "board_project": "visual_aid_v4_camera_detail_20261028",
-  "previous_main": "e63bf079fac7030c7ddf8bd5ccea3bfb9ce317b1",
-  "runtime_unchanged": true,
+  "release": "2026-10-28-web-control",
+  "board_project": "FPGAvision_Control",
+  "previous_main": "0d714babadcc686f132e2a20179ec2a5c1a22042",
+  "runtime_unchanged": false,
+  "bit_hwh_unchanged": true,
+  "host_tests": 112,
   "files": [
     {
       "path": ".gitattributes",
@@ -198,15 +200,15 @@
     },
     {
       "path": "README.md",
-      "bytes": 3239,
-      "sha256": "dba1754e6c3a5c0ec793af64ea884fb1c5094d044ffac4bdded329dc8b0fc5d5",
-      "git_blob_sha1": "6427ba1d2b6c0f29e9c998fbd8aef8d04481086b"
+      "bytes": 4551,
+      "sha256": "d8aaf55203541a9ccf0edb5bbb1f60302cad751c63a9cc2127e4f38c15f4de8e",
+      "git_blob_sha1": "a3bed9f159f7f6a27e8dc79f164870dc3119eec1"
     },
     {
       "path": "README_zh.md",
-      "bytes": 3239,
-      "sha256": "dba1754e6c3a5c0ec793af64ea884fb1c5094d044ffac4bdded329dc8b0fc5d5",
-      "git_blob_sha1": "6427ba1d2b6c0f29e9c998fbd8aef8d04481086b"
+      "bytes": 4551,
+      "sha256": "d8aaf55203541a9ccf0edb5bbb1f60302cad751c63a9cc2127e4f38c15f4de8e",
+      "git_blob_sha1": "a3bed9f159f7f6a27e8dc79f164870dc3119eec1"
     },
     {
       "path": "reports/arduino_io.rpt",
@@ -1659,6 +1661,420 @@
       "bytes": 2188,
       "sha256": "af6075ce68921da73151ca551833552f698bcdd70c27f54791a8e186afabd5ad",
       "git_blob_sha1": "b11f256d7e505eaf41587d6265aaea20b26e4ac0"
+    },
+    {
+      "path": "web_control/.gitignore",
+      "bytes": 46,
+      "sha256": "70f66c4bf9bac32fb6b362c1d62ec24627a4d4441ada3f101abf5b3df87fb81b",
+      "git_blob_sha1": "049808b4a344ac991b0fe9b715e7f8da7bbc1745"
+    },
+    {
+      "path": "web_control/build_delivery.py",
+      "bytes": 2838,
+      "sha256": "702b57ccb76d2bc31286c0741fd67be7b8587f536140771c810bc2fd2fa6a728",
+      "git_blob_sha1": "6dd1382a4738a558494f3735801b6a9c55d71369"
+    },
+    {
+      "path": "web_control/delivery/board_validation/ACCEPTANCE_zh.md",
+      "bytes": 1861,
+      "sha256": "a2f6ef1d61bd04232c61a34fbd66866b52a50ce44f51c0ff93a138575e750e3d",
+      "git_blob_sha1": "c1296f65c11a7a37fe05bd7036aad60d7eb200b5"
+    },
+    {
+      "path": "web_control/delivery/board_validation/control_test.json",
+      "bytes": 43250,
+      "sha256": "d335f13b02da2b29b112175cb96dc7d64c78116e0570ed41946a95d629760eb4",
+      "git_blob_sha1": "ee8492d303c8590d3d1a4d09886d32666e003d6c"
+    },
+    {
+      "path": "web_control/delivery/board_validation/control_test_previous_164715.json",
+      "bytes": 8878,
+      "sha256": "aa3828ab817158abc8b11d1ad7b43e7f090771ebc840512532cddde2b073c325",
+      "git_blob_sha1": "b7b7047333cfeae88e51779d3de305e04095023c"
+    },
+    {
+      "path": "web_control/delivery/board_validation/jupyter_20190221_101942.json",
+      "bytes": 86528,
+      "sha256": "9a39846b03f2270fdc523046746bf7cdfb173c7ce496af4eb69ad244a787635d",
+      "git_blob_sha1": "ab8c65e6b0f282a94df11b7af275e92878cfc3d8"
+    },
+    {
+      "path": "web_control/delivery/board_validation/jupyter_20190221_102257.json",
+      "bytes": 86762,
+      "sha256": "7e86446a3b9d548c1fe50eaee8d9a4ae1e4466dd153c51f453aa457641640cef",
+      "git_blob_sha1": "6a8aa8f551210ba4c599119806d2d7f394843a4a"
+    },
+    {
+      "path": "web_control/delivery/board_validation/jupyter_20190221_102522.json",
+      "bytes": 207879,
+      "sha256": "02bb032802afd6b6657e2be9a1e968b6905a1b51e02dafea00784cf5bf32fb85",
+      "git_blob_sha1": "c57d5cc992494f8a5accb4be4153fcb05522a28d"
+    },
+    {
+      "path": "web_control/delivery/board_validation/jupyter_control_state.json",
+      "bytes": 596,
+      "sha256": "ef6b95a5075b55aeee9f0e8923cb9dbc5394464cff13046f6447857ca65181e3",
+      "git_blob_sha1": "3cc9ba03327fd1a74e9ac04e020ad7d2b50daf51"
+    },
+    {
+      "path": "web_control/delivery/board_validation/live_control.png",
+      "bytes": 35768,
+      "sha256": "3f54b33e807a7c2ca49eb0510459ffa8154e9ac18bbcd9c245b07d49b4d36548",
+      "git_blob_sha1": "3fed1df0ce25e1c1b36826cf400292525d57eae4"
+    },
+    {
+      "path": "web_control/delivery/board_validation/manual_mode.png",
+      "bytes": 35266,
+      "sha256": "3e6bf62ab2e6082aa2d93e58d8504e0254df1d73e4e86a827890dbb3f7412d1d",
+      "git_blob_sha1": "bc76fca8c237211eb0b9657613090291e8c355a2"
+    },
+    {
+      "path": "web_control/delivery/board_validation/run_summaries.json",
+      "bytes": 13613,
+      "sha256": "4dfd528efa26f2eb902485eee5d296bfae4ecca0a4d2e79f61e7b1ba1861a3f7",
+      "git_blob_sha1": "600fdad5aa9665c466b7993ac2fe82118cc8fca5"
+    },
+    {
+      "path": "web_control/delivery/control_preview.png",
+      "bytes": 35159,
+      "sha256": "23b2556474d22824bc319f394aa9222be13bcbf22d95d4de6e2d87508f15f8e0",
+      "git_blob_sha1": "eb9e5c466409e701030964577376d9f26d4cefd6"
+    },
+    {
+      "path": "web_control/delivery/FPGAvision_Control_board.zip",
+      "bytes": 1057440,
+      "sha256": "2afe760af20da5677457dc8ea52a9b21e3d280fad95ac2f43948aba92a3a8033",
+      "git_blob_sha1": "7cc0f819bc02a88388a35e604306a95b186ac64b"
+    },
+    {
+      "path": "web_control/delivery/FPGAvision_Control_board.zip.sha256",
+      "bytes": 96,
+      "sha256": "3917b2c2a1177f4c9acff0c60ce5fee2bb2de486be2e22d1c136cec942f213e1",
+      "git_blob_sha1": "5bce56e317d25971b0feea5fac1e78855ff0c5cb"
+    },
+    {
+      "path": "web_control/delivery/package_receipt.json",
+      "bytes": 324,
+      "sha256": "0c5cf485826e6e5158c550190183d0073b6c6f75d5f3a19dc427a2a38a503f3c",
+      "git_blob_sha1": "9f0f4bcae2ada53ff3b7caa93bc3c8cd15e2f487"
+    },
+    {
+      "path": "web_control/delivery/validation.json",
+      "bytes": 962,
+      "sha256": "21195e914bd941bfd46b090f9183315bd7c0c620ba20bb2942c93c46136802a5",
+      "git_blob_sha1": "666d6a2810ab792a4140e359afda51ab93ec99d2"
+    },
+    {
+      "path": "web_control/docs/pins.json",
+      "bytes": 943,
+      "sha256": "2bfb2997bef8e279a7743cd4a157fb081c4bbcff12000cd81229756be2b52b00",
+      "git_blob_sha1": "4fad9f9ae1c857b431706279bc01cb5baf166bb0"
+    },
+    {
+      "path": "web_control/README_zh.md",
+      "bytes": 5149,
+      "sha256": "9ea9694610f7a5949e6a430c6aca8bf0299f7d25225ab0fddaee199897155a72",
+      "git_blob_sha1": "23975394314891ae7e274dab20e88dce16867ea6"
+    },
+    {
+      "path": "web_control/runtime/assets/ov5640_720p.json",
+      "bytes": 7679,
+      "sha256": "a88348addb38ab4f8476de2d97f7bb0cdef4d30ecf1ebec34f80f274b5ca5898",
+      "git_blob_sha1": "2c64470df6e48b06bc4f8670aa84836f98950ce1"
+    },
+    {
+      "path": "web_control/runtime/assets/ov5640_af.bin",
+      "bytes": 4077,
+      "sha256": "439245623bc99f3b0d8c44d47baed3cc17cad01b9191509c89bb8d92a98949c9",
+      "git_blob_sha1": "06e4b5adbc39a1058b79faf9cdc0e57445228280"
+    },
+    {
+      "path": "web_control/runtime/board/build_manifest.json",
+      "bytes": 23735,
+      "sha256": "8e625c642be45859068b3749af9ef6b8b510283eee022debe9c67db9f19eca2f",
+      "git_blob_sha1": "763a19571cb5f86f639ee9d374b35e36d76bbcae"
+    },
+    {
+      "path": "web_control/runtime/board/visual_aid_v3.bit",
+      "bytes": 4045678,
+      "sha256": "c47f82f7ad5bf47483d35763e4a73ce6c638dad67d11aade71085c108c3d343f",
+      "git_blob_sha1": "98c74de9a93f6e57a36aa89af3a97b70d6935715"
+    },
+    {
+      "path": "web_control/runtime/board/visual_aid_v3.hwh",
+      "bytes": 554013,
+      "sha256": "45fcd9888bc97d4fc96e810593a9e566eecbe4e1475df04fbe49f9dde89911a9",
+      "git_blob_sha1": "2c6d6b2f4588bd60b895553121609a692b9e6db7"
+    },
+    {
+      "path": "web_control/runtime/board/visual_aid_v3_external_pullup.bit",
+      "bytes": 4045678,
+      "sha256": "1a9040c02523eee9a38e12b8f0d3b0c6577eb3df2916f553c4de61dcf26e2e12",
+      "git_blob_sha1": "023cf3307df453f0b8cb36151135ad7ac11a89cd"
+    },
+    {
+      "path": "web_control/runtime/board/visual_aid_v3_external_pullup.hwh",
+      "bytes": 554013,
+      "sha256": "45fcd9888bc97d4fc96e810593a9e566eecbe4e1475df04fbe49f9dde89911a9",
+      "git_blob_sha1": "2c6d6b2f4588bd60b895553121609a692b9e6db7"
+    },
+    {
+      "path": "web_control/runtime/control_server.py",
+      "bytes": 8821,
+      "sha256": "07a95b0a4803916fe2312b17be5fd4765116f66bf22b8438ad82dd65311c5c78",
+      "git_blob_sha1": "999f69683c8c5c0d07e3697eccd6968f802aa1e1"
+    },
+    {
+      "path": "web_control/runtime/jupyter_gui_guard.py",
+      "bytes": 6372,
+      "sha256": "b53d1b03c90c52674f2c84537c3823e4cfa8a867dc6e3741b882c3c4cc84087c",
+      "git_blob_sha1": "07faa3bbe7de225010f8bd7aaed66aad70ac0767"
+    },
+    {
+      "path": "web_control/runtime/native/compose.c",
+      "bytes": 12841,
+      "sha256": "16bdb8d7d702f9d3ea58f437427618c0129a597f79855c530515e230b4972d82",
+      "git_blob_sha1": "a2297d8c4657c87861c703887b662437a81c9e9d"
+    },
+    {
+      "path": "web_control/runtime/native/libcompose.so",
+      "bytes": 11692,
+      "sha256": "d61129ed5a14cfe7bccb752f87ae06fb0175c17f60a3582e5e4f80491f42ebf6",
+      "git_blob_sha1": "6b290d7505c72b903418e24fa3cd1820dc545198"
+    },
+    {
+      "path": "web_control/runtime/preflight.py",
+      "bytes": 1649,
+      "sha256": "6d7087e03949ff8fa550b0eafeada202501a449155118deab9e537dc81f1639f",
+      "git_blob_sha1": "09a925239704e22e820788f3d9c9bd59148bec0a"
+    },
+    {
+      "path": "web_control/runtime/preview.py",
+      "bytes": 2648,
+      "sha256": "0467f095a6660300d1d1d8fb2abc962bee70db82f076c9f7a36b206074bfa566",
+      "git_blob_sha1": "d09b251b44321eddb42d87c5b0d36e05bfa9557d"
+    },
+    {
+      "path": "web_control/runtime/run_board.py",
+      "bytes": 21556,
+      "sha256": "85f0ab384f63fdb264c7e9d354d8f375591040dfe4deba2a93dcab5b999256e7",
+      "git_blob_sha1": "473c6c4467e70152d1280925427f50c5997435fc"
+    },
+    {
+      "path": "web_control/runtime/visual_aid/__init__.py",
+      "bytes": 90,
+      "sha256": "a376d8cdc63c8dbc96b2a2ec75d610fb2ca55ac419994cd1ca6e3f98cd677f24",
+      "git_blob_sha1": "76c627a76d2046079a0cb86ffacb1ed2a22cf860"
+    },
+    {
+      "path": "web_control/runtime/visual_aid/bus.py",
+      "bytes": 3858,
+      "sha256": "e46315aa0f20a3cdcb736866d3004c42bd91835d65e1547598b2ae190a8bbd48",
+      "git_blob_sha1": "1c5b7db06c165e49785fc1022a5f971c1eb2e5ba"
+    },
+    {
+      "path": "web_control/runtime/visual_aid/camera.py",
+      "bytes": 10997,
+      "sha256": "0c7763bf85f7ccba4c70ff5a70e72679e81aa3b948ca4dee19a08b257b64c7ad",
+      "git_blob_sha1": "437c934ddd19cd75b80a11baf5e360184e88918b"
+    },
+    {
+      "path": "web_control/runtime/visual_aid/chroma.py",
+      "bytes": 3869,
+      "sha256": "291df24a23acb3fa2da603d2b61017ed569c54e3bf8ba465081cdd9bbf72813b",
+      "git_blob_sha1": "7b2b2b68648294aded05ed1ac80c48ed0f947142"
+    },
+    {
+      "path": "web_control/runtime/visual_aid/controls.py",
+      "bytes": 4872,
+      "sha256": "4c87cf498186216bd3d909310a610ac9a5de21ed5a720d1b14b1ceb3471c6a55",
+      "git_blob_sha1": "1b310d0bc1e2e4efa482400c95ba577249ed5453"
+    },
+    {
+      "path": "web_control/runtime/visual_aid/device.py",
+      "bytes": 15328,
+      "sha256": "595e434719c9612093a230e32f7597a3069c0905c0138667d472bddc6af0d484",
+      "git_blob_sha1": "0d005a54ff54c7d713d09fb1f55548f22c1d6aec"
+    },
+    {
+      "path": "web_control/runtime/visual_aid/encoder.py",
+      "bytes": 1623,
+      "sha256": "c04a8b1542b3c012614bbb8a84fb3a0bcb4d4afe74ac990431ff74ecdad6ea91",
+      "git_blob_sha1": "6c62ccbd613092106213eb0187f7a1deed377db2"
+    },
+    {
+      "path": "web_control/runtime/visual_aid/fastcompose.py",
+      "bytes": 4464,
+      "sha256": "d8dd9c01bec5d3d35a3ed67786e8741a1259ef03414c20147194830af7626d79",
+      "git_blob_sha1": "2e70a4783d3f1ea23337ef7885924d0f5b6e3638"
+    },
+    {
+      "path": "web_control/runtime/visual_aid/i2c_device.py",
+      "bytes": 933,
+      "sha256": "a0e1bc933fa83f9627c8903dfd5e78aea72fb3415dd558e0aa2a3dc11316521d",
+      "git_blob_sha1": "33ed8c78535379b2c60b19b5bedbc8324215907e"
+    },
+    {
+      "path": "web_control/runtime/visual_aid/image.py",
+      "bytes": 11162,
+      "sha256": "753f9b01ea8bfece1990f54db7c16e9b9bbc14b736d57637bf23d4ad1e287774",
+      "git_blob_sha1": "ae2115bab9b5f5fa5cd4665ef8cc0a19d19a2db4"
+    },
+    {
+      "path": "web_control/runtime/visual_aid/integrity.py",
+      "bytes": 1528,
+      "sha256": "ee055d89936674e728ca87d9a660040e8f231f2851d11e99cb9e6dfe3930eee7",
+      "git_blob_sha1": "8017035d47f0f0dcc00ce9d4dc57854c29f1350a"
+    },
+    {
+      "path": "web_control/runtime/visual_aid/local.py",
+      "bytes": 2747,
+      "sha256": "cb4289944aaa64d391da90e5692cfff475e074e100631ca72a41ae83a0eb9fc2",
+      "git_blob_sha1": "333310d69adcb5253e7ecbbcd26a4694ac0f6e1a"
+    },
+    {
+      "path": "web_control/runtime/visual_aid/pl_runtime.py",
+      "bytes": 7947,
+      "sha256": "fad7e1be92177b5db8d912f9166f4439e6374ff673605a4df231d7605bfcd466",
+      "git_blob_sha1": "f224bdd004616d98297f53586eb9b319b4c9cc7c"
+    },
+    {
+      "path": "web_control/runtime/visual_aid/remote_control.py",
+      "bytes": 3385,
+      "sha256": "9bc61029590060c3a514361dcb795cff0f1dc50a32921ffee21c552861db9024",
+      "git_blob_sha1": "367edf16bd0a21395f0ccdb0c49f3bbacd3584c7"
+    },
+    {
+      "path": "web_control/runtime/visual_aid/scanout.py",
+      "bytes": 2454,
+      "sha256": "5862e3fd67332d8547e89cdf3ca431ae69bb228e5d952e6bfd59022ead925c0d",
+      "git_blob_sha1": "6c1d48227e7c6ad26a1507d7938e0ea6bece2250"
+    },
+    {
+      "path": "web_control/runtime/visual_aid/sensors.py",
+      "bytes": 3103,
+      "sha256": "6ca088e03f3528c621bf7bb5476506c0161059e6b175a7ce8d99d9d5a673b814",
+      "git_blob_sha1": "ba786fa8edbe4182ee156c5e54ea6092ce3864cd"
+    },
+    {
+      "path": "web_control/runtime/visual_aid/startup.py",
+      "bytes": 1222,
+      "sha256": "4a9838a749bb0591d377a7e662519da16085b5deb9f0bd68c0000ff88b627b2f",
+      "git_blob_sha1": "fa60bf597b73422c4ca967d75977c59f6e4390d2"
+    },
+    {
+      "path": "web_control/runtime/visual_aid/status_panel.py",
+      "bytes": 3235,
+      "sha256": "25483bbf5b764a2e998dc4343d36b1c07aeaec2e40e5904052c2d44e2f607668",
+      "git_blob_sha1": "cdb46ab14615d07176f54699fa306514d1b98eb8"
+    },
+    {
+      "path": "web_control/runtime/visual_aid/vl53l0x_vendor.py",
+      "bytes": 20052,
+      "sha256": "d7a9d105c768ea3023e073915a6f2efb46202463baeca01b8ffe9d296f9c88c6",
+      "git_blob_sha1": "340f50ba7907cb93c1f0f7bf58a582db6fa2d0a5"
+    },
+    {
+      "path": "web_control/runtime/web/app.js",
+      "bytes": 7880,
+      "sha256": "128d1e9262080b931bee63000c85e6a7b4848fe07b5d59e9274fccea653a6d1a",
+      "git_blob_sha1": "cdd19bb8ede8617dc219d9123220d399f9f238b9"
+    },
+    {
+      "path": "web_control/runtime/web/index.html",
+      "bytes": 5630,
+      "sha256": "f0bbf607de989b451bb14f44ff84026b934ae00a83a86106c5ab3a8da902c847",
+      "git_blob_sha1": "a8f90831faf49b3caa959f4cc464d388fa3361b9"
+    },
+    {
+      "path": "web_control/runtime/web/style.css",
+      "bytes": 7445,
+      "sha256": "ada7b64c4b09a74a22cbe56e31bf9a3b9a2d4529148c0a04bb64866454a2b095",
+      "git_blob_sha1": "ee75a324c7fc94eccf7e5246e093648ff0fdd822"
+    },
+    {
+      "path": "web_control/tests/camera_model.py",
+      "bytes": 1502,
+      "sha256": "0a546f8b8778a4b44ac069829342c8ab48130263114d8201c721d0c665f1de14",
+      "git_blob_sha1": "d87c54b6fc39056e9ffc72082f059dd39069a11d"
+    },
+    {
+      "path": "web_control/tests/test_board_ready.py",
+      "bytes": 15120,
+      "sha256": "10219ee9ee51d462eba9445a1e1406cf54be4f66a8de156c4a5f813c700fec69",
+      "git_blob_sha1": "a06b28569e087bbffedba736c97de0d0ff1c7966"
+    },
+    {
+      "path": "web_control/tests/test_chroma.py",
+      "bytes": 3987,
+      "sha256": "f9384d7e9fb387048633efdee8e32180ccd9d449c9cf923462c69ca960034011",
+      "git_blob_sha1": "888a448a3a5e06d5b60132f471bf9e732f1ab1a9"
+    },
+    {
+      "path": "web_control/tests/test_control.py",
+      "bytes": 8352,
+      "sha256": "d319eead97e304acb5aa9ea7e5651a2ee7903598b47a661a8ff5a62b798481a9",
+      "git_blob_sha1": "09ccf837b9dcbac47a4f832f196032eef9b96f74"
+    },
+    {
+      "path": "web_control/tests/test_ec11_upgrade.py",
+      "bytes": 3657,
+      "sha256": "5c4e60c80a08687894088448e113a0412323ac1e04ffb99eb80e396d157a7bc4",
+      "git_blob_sha1": "3a678a9a300ce481cd5a5b839ce30ed9378d4123"
+    },
+    {
+      "path": "web_control/tests/test_light_bus.py",
+      "bytes": 1220,
+      "sha256": "3f2d406029683e478802ce6ba63d7989b041fd8415b22a00f1aaefcf8b337c78",
+      "git_blob_sha1": "8c7c2c0e43f1d6da9be9ba0b3cd7fac4eb6d8894"
+    },
+    {
+      "path": "web_control/tests/test_lowlight.py",
+      "bytes": 5018,
+      "sha256": "ee53c505af722588190ecfe4a5f71ba0593d3f68bb2bb3e58aa254cd15638450",
+      "git_blob_sha1": "03870c7e626396b74a99e221274862c183e1de22"
+    },
+    {
+      "path": "web_control/tests/test_performance.py",
+      "bytes": 3537,
+      "sha256": "74e9516e0d7661beddd1035cd2c037bbffdbfad3240af9ab1177e475f8813437",
+      "git_blob_sha1": "3387fe056da239a4c300e1699ad991385290f835"
+    },
+    {
+      "path": "web_control/tests/test_pl_light_observation.py",
+      "bytes": 1925,
+      "sha256": "47c5f50c28a50b1839b5aa2d32f8a82a9beaa352a2b39030ab83f97f221bf141",
+      "git_blob_sha1": "ff487b0eacdb1e551983be6246a5dac45ab42a8d"
+    },
+    {
+      "path": "web_control/tests/test_pl_upgrade.py",
+      "bytes": 12678,
+      "sha256": "7ca12552726464d506bcbba8cd6c57e6baab3dbf133449e2c87e2807af39e6ec",
+      "git_blob_sha1": "c70d009ece9270e0b1ab5d487902891f704ae671"
+    },
+    {
+      "path": "web_control/tests/test_software.py",
+      "bytes": 11127,
+      "sha256": "6ed17b91f7b94783cf00c95f8f54cefa8f1e0a359b1b09c47fb20dfc268a4458",
+      "git_blob_sha1": "2228ea76c3b21f0dfd38f7fc733ef3862db1fa7c"
+    },
+    {
+      "path": "web_control/tests/test_startup.py",
+      "bytes": 1876,
+      "sha256": "ee9ca331cf9f55108dcd59bf52da3c285e4d0a991e1b6203408f45fb0ca3f12a",
+      "git_blob_sha1": "9256601bee21764b1eea2195b6b4456a5d25f628"
+    },
+    {
+      "path": "web_control/tests/test_status_panel.py",
+      "bytes": 3809,
+      "sha256": "8c22dbdb912f8c5a9fbd7c6cb8fd08608d3630b1934e69c8772235f1b95dd659",
+      "git_blob_sha1": "2e9e6d866f98dc24ac18cdce96d00c9117731188"
+    },
+    {
+      "path": "web_control/启动模拟控制台.cmd",
+      "bytes": 86,
+      "sha256": "0e05a18041becba896441644eeacdcfa2fd99fbec4885d4e1fedd3a022581b62",
+      "git_blob_sha1": "a9793a00ee078331fc4e1d44e4908dac356a70e6"
     }
   ]
 }

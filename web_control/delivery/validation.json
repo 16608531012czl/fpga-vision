@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-28",
+  "host_tests": {"total": 112, "passed": 112, "failed": 0, "baseline": 95, "new_control": 17},
+  "python36_syntax": "passed, not runtime execution on Python 3.6",
+  "javascript_syntax": "passed",
+  "browser_simulation": ["start unlocks controls", "mode selection", "4x zoom", "freeze", "brightness slider", "reset preserves view", "reload restores state", "stop disables controls"],
+  "board_connected": true,
+  "board_control_test": {"commands_passed": 11, "max_ack_ms": 93, "temperature_min_c": 45.16, "temperature_max_c": 47.25, "automatic_stop": "passed", "manual_stop": "passed", "cleanup_errors": []},
+  "user_confirmation": "HDMI picture normal; physical encoder and web parameter synchronized",
+  "final_state": "image program stopped; web service running, no boot autostart configured",
+  "pending": ["strict matched-scene performance comparison", "long-duration stability", "optical validation of every advanced parameter"]
+}

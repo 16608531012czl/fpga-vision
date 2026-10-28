@@ -1,0 +1,8 @@
+{
+  "base_project": "repository root (software/ baseline)",
+  "runtime_payload_count": 36,
+  "bit_hwh_unchanged": true,
+  "archive_sha256": "2afe760af20da5677457dc8ea52a9b21e3d280fad95ac2f43948aba92a3a8033",
+  "archive": "web_control/delivery/FPGAvision_Control_board.zip",
+  "board_connected_by_packaging": false
+}
