@@ -6,10 +6,9 @@ set_property -dict {PACKAGE_PIN B20 IOSTANDARD LVCMOS33} [get_ports {cam_scl}]
 set_property -dict {PACKAGE_PIN B19 IOSTANDARD LVCMOS33} [get_ports {cam_sda}]
 set_property -dict {PACKAGE_PIN A20 IOSTANDARD LVCMOS33} [get_ports {cam_resetn}]
 set_property -dict {PACKAGE_PIN Y9 IOSTANDARD LVCMOS33} [get_ports {cam_pwdn}]
-# PMOD B physical pins 3/4, the pair with board pull-ups suitable for I2C.
-# Original Arduino dedicated SCL/SDA P15/P16 are not used by this variant.
-set_property -dict {PACKAGE_PIN T11 IOSTANDARD LVCMOS33} [get_ports {sensor_scl}]
-set_property -dict {PACKAGE_PIN T10 IOSTANDARD LVCMOS33} [get_ports {sensor_sda}]
+# Original Arduino J3-10 SCL / J3-9 SDA; same connector wiring as V3.
+set_property -dict {PACKAGE_PIN P15 IOSTANDARD LVCMOS33} [get_ports {sensor_scl}]
+set_property -dict {PACKAGE_PIN P16 IOSTANDARD LVCMOS33} [get_ports {sensor_sda}]
 set_property -dict {PACKAGE_PIN L16 IOSTANDARD TMDS_33} [get_ports {hdmi_out_clk_p}]
 set_property -dict {PACKAGE_PIN L17 IOSTANDARD TMDS_33} [get_ports {hdmi_out_clk_n}]
 set_property -dict {PACKAGE_PIN R19 IOSTANDARD LVCMOS33} [get_ports {hdmi_out_hpd[0]}]

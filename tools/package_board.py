@@ -144,6 +144,8 @@ def publish():
                    'gpio_release_bits':[2,3],'io_voltage':3.3}
     if (pinmap['sensor_scl'],pinmap['sensor_sda'])==('T11','T10'):
         sensor_wiring.update(connector='PMOD B',scl_physical_pin=3,sda_physical_pin=4)
+    elif (pinmap['sensor_scl'],pinmap['sensor_sda'])==('P15','P16'):
+        sensor_wiring.update(connector='Arduino J3',scl_physical_pin=10,sda_physical_pin=9)
     manifest={'project':'visual_aid_v3','abi':0x56410400,'built_at':datetime.datetime.now().astimezone().isoformat(),
               'vivado':'2018.3','pynq_target':'2.4','resolution':[1280,720],'timing':timing,
               'full_system_implementation':'passed','hardware_validation':'not_yet_tested_on_board',

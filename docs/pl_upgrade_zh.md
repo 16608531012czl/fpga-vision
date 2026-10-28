@@ -1,3 +1,5 @@
+> 历史阶段文档：当前版本的接线、目录与启动请以 [2026-10-28发布说明](github_release_20261028_zh.md) 为准。
+
 # PL 图像链路升级
 
 本轮源码已加入以下功能。仿真、时序和实板验收分别见 `reports/xsim_*.json`、
@@ -41,9 +43,9 @@ EDGE_VIEW、COLOR、LOCAL_TONE、WINDOW31、BINARY_C。旋转调值，长按恢�
 原有板载模式、冻结、分屏、自动/手动、缩放与方向键保持。
 
 ```bash
-cd /home/xilinx/jupyter_notebooks/visual_aid_v4_ec11
+cd /home/xilinx/jupyter_notebooks/visual_aid_v4_light_arduino_20261028
 sudo /usr/bin/python3 preflight.py
-sudo /usr/bin/python3 run_board.py --stage live --pipeline pl --camera-fps 20 --mode color --quality-preset detail --no-sensors --af continuous --io-confirmed --seconds 120 --report logs/pl_check.json
+sudo /usr/bin/python3 run_board.py --stage live --pipeline pl --camera-fps 20 --mode color --quality-preset detail --no-distance --af continuous --io-confirmed --seconds 120 --report logs/pl_check.json
 ```
 
 默认实时入口为 `--pipeline pl`。`--pipeline cpu` 保留上一版软件合成及颜色时域降噪，

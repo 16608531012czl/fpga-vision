@@ -90,6 +90,8 @@ class BoardReady(unittest.TestCase):
     def test_cli_stages_and_explicit_diagnostic_fallback(self):
         live=app.parse_args(['--io-confirmed'])
         self.assertEqual((live.stage,live.af,live.camera_fps,live.seconds),('live','continuous',20,0))
+        self.assertIsNone(live.camera_isp)
+        self.assertEqual(app.parse_args(['--io-confirmed','--camera-isp','detail']).camera_isp,'detail')
         self.assertEqual((live.mode,live.tone_profile),('gray','stable'))
         compare=app.parse_args(['--io-confirmed','--mode','color','--tone-profile','legacy'])
         self.assertEqual((compare.mode,compare.tone_profile),('color','legacy'))
@@ -100,6 +102,14 @@ class BoardReady(unittest.TestCase):
         for seconds in ('-1','nan','inf'):
             with patch('sys.stderr'),self.assertRaises(SystemExit):
                 app.parse_args(['--io-confirmed','--seconds',seconds])
+
+    def test_live_camera_isp_override_and_default_are_independent_of_pl_preset(self):
+        with patch.object(app,'SensorWorker') as worker:
+            worker.return_value.start.return_value=worker.return_value
+            _,_,_,_,camera=self.run_stage('live',no_sensors=True,af='off',camera_isp='detail')
+            camera.return_value.image_quality.assert_called_once_with('detail')
+            _,_,_,_,camera=self.run_stage('live',no_sensors=True,af='off',camera_isp=None)
+            camera.return_value.image_quality.assert_called_once_with('baseline')
 
     def run_stage(self,stage,**kwargs):
         with tempfile.TemporaryDirectory() as directory:

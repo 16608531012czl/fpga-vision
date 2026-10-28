@@ -1,0 +1,415 @@
+{
+  "temperature_limit_c": 75.0,
+  "wall_timeout_seconds": 240,
+  "samples": [
+    {
+      "elapsed_s": 0.01,
+      "temperature_c": 46.39
+    },
+    {
+      "elapsed_s": 2.01,
+      "temperature_c": 46.51
+    },
+    {
+      "elapsed_s": 4.02,
+      "temperature_c": 46.76
+    },
+    {
+      "elapsed_s": 6.02,
+      "temperature_c": 46.76
+    },
+    {
+      "elapsed_s": 8.03,
+      "temperature_c": 46.39
+    },
+    {
+      "elapsed_s": 10.03,
+      "temperature_c": 46.76
+    },
+    {
+      "elapsed_s": 12.04,
+      "temperature_c": 46.63
+    },
+    {
+      "elapsed_s": 14.04,
+      "temperature_c": 46.88
+    },
+    {
+      "elapsed_s": 16.05,
+      "temperature_c": 47.0
+    },
+    {
+      "elapsed_s": 18.05,
+      "temperature_c": 47.0
+    },
+    {
+      "elapsed_s": 20.05,
+      "temperature_c": 47.49
+    },
+    {
+      "elapsed_s": 22.06,
+      "temperature_c": 47.49
+    },
+    {
+      "elapsed_s": 24.06,
+      "temperature_c": 47.37
+    },
+    {
+      "elapsed_s": 26.07,
+      "temperature_c": 47.37
+    },
+    {
+      "elapsed_s": 28.07,
+      "temperature_c": 47.37
+    },
+    {
+      "elapsed_s": 30.08,
+      "temperature_c": 47.37
+    },
+    {
+      "elapsed_s": 32.08,
+      "temperature_c": 47.25
+    },
+    {
+      "elapsed_s": 34.09,
+      "temperature_c": 47.49
+    },
+    {
+      "elapsed_s": 36.09,
+      "temperature_c": 47.37
+    },
+    {
+      "elapsed_s": 38.09,
+      "temperature_c": 47.49
+    },
+    {
+      "elapsed_s": 40.1,
+      "temperature_c": 47.49
+    },
+    {
+      "elapsed_s": 42.1,
+      "temperature_c": 47.49
+    },
+    {
+      "elapsed_s": 44.11,
+      "temperature_c": 47.86
+    },
+    {
+      "elapsed_s": 46.11,
+      "temperature_c": 47.49
+    },
+    {
+      "elapsed_s": 48.12,
+      "temperature_c": 47.49
+    },
+    {
+      "elapsed_s": 50.12,
+      "temperature_c": 47.62
+    },
+    {
+      "elapsed_s": 52.13,
+      "temperature_c": 47.49
+    },
+    {
+      "elapsed_s": 54.13,
+      "temperature_c": 47.49
+    },
+    {
+      "elapsed_s": 56.14,
+      "temperature_c": 47.37
+    },
+    {
+      "elapsed_s": 58.14,
+      "temperature_c": 47.37
+    },
+    {
+      "elapsed_s": 60.14,
+      "temperature_c": 47.62
+    },
+    {
+      "elapsed_s": 62.15,
+      "temperature_c": 47.49
+    },
+    {
+      "elapsed_s": 64.15,
+      "temperature_c": 47.62
+    },
+    {
+      "elapsed_s": 66.15,
+      "temperature_c": 47.49
+    },
+    {
+      "elapsed_s": 68.16,
+      "temperature_c": 47.62
+    },
+    {
+      "elapsed_s": 70.16,
+      "temperature_c": 47.49
+    },
+    {
+      "elapsed_s": 72.17,
+      "temperature_c": 47.99
+    },
+    {
+      "elapsed_s": 74.17,
+      "temperature_c": 47.86
+    },
+    {
+      "elapsed_s": 76.18,
+      "temperature_c": 47.74
+    },
+    {
+      "elapsed_s": 78.18,
+      "temperature_c": 47.86
+    },
+    {
+      "elapsed_s": 80.19,
+      "temperature_c": 48.11
+    },
+    {
+      "elapsed_s": 82.2,
+      "temperature_c": 47.74
+    },
+    {
+      "elapsed_s": 84.21,
+      "temperature_c": 47.86
+    },
+    {
+      "elapsed_s": 86.21,
+      "temperature_c": 48.11
+    },
+    {
+      "elapsed_s": 88.22,
+      "temperature_c": 47.86
+    },
+    {
+      "elapsed_s": 90.22,
+      "temperature_c": 48.11
+    },
+    {
+      "elapsed_s": 92.24,
+      "temperature_c": 48.11
+    },
+    {
+      "elapsed_s": 94.25,
+      "temperature_c": 47.86
+    },
+    {
+      "elapsed_s": 96.25,
+      "temperature_c": 47.74
+    },
+    {
+      "elapsed_s": 98.25,
+      "temperature_c": 48.11
+    },
+    {
+      "elapsed_s": 100.26,
+      "temperature_c": 47.99
+    },
+    {
+      "elapsed_s": 102.28,
+      "temperature_c": 48.11
+    },
+    {
+      "elapsed_s": 104.29,
+      "temperature_c": 47.99
+    },
+    {
+      "elapsed_s": 106.29,
+      "temperature_c": 47.86
+    },
+    {
+      "elapsed_s": 108.29,
+      "temperature_c": 47.99
+    },
+    {
+      "elapsed_s": 110.3,
+      "temperature_c": 47.99
+    },
+    {
+      "elapsed_s": 112.31,
+      "temperature_c": 48.36
+    },
+    {
+      "elapsed_s": 114.31,
+      "temperature_c": 48.23
+    },
+    {
+      "elapsed_s": 116.32,
+      "temperature_c": 48.36
+    },
+    {
+      "elapsed_s": 118.32,
+      "temperature_c": 48.11
+    },
+    {
+      "elapsed_s": 120.33,
+      "temperature_c": 48.11
+    },
+    {
+      "elapsed_s": 122.35,
+      "temperature_c": 47.99
+    },
+    {
+      "elapsed_s": 124.35,
+      "temperature_c": 48.11
+    },
+    {
+      "elapsed_s": 126.36,
+      "temperature_c": 48.36
+    },
+    {
+      "elapsed_s": 128.36,
+      "temperature_c": 48.23
+    },
+    {
+      "elapsed_s": 130.36,
+      "temperature_c": 48.11
+    },
+    {
+      "elapsed_s": 132.39,
+      "temperature_c": 48.23
+    },
+    {
+      "elapsed_s": 134.39,
+      "temperature_c": 48.23
+    },
+    {
+      "elapsed_s": 136.39,
+      "temperature_c": 48.11
+    },
+    {
+      "elapsed_s": 138.4,
+      "temperature_c": 48.23
+    },
+    {
+      "elapsed_s": 140.4,
+      "temperature_c": 48.23
+    },
+    {
+      "elapsed_s": 142.42,
+      "temperature_c": 48.23
+    },
+    {
+      "elapsed_s": 144.42,
+      "temperature_c": 48.11
+    },
+    {
+      "elapsed_s": 146.43,
+      "temperature_c": 48.48
+    },
+    {
+      "elapsed_s": 148.43,
+      "temperature_c": 48.11
+    },
+    {
+      "elapsed_s": 150.44,
+      "temperature_c": 48.48
+    },
+    {
+      "elapsed_s": 152.46,
+      "temperature_c": 48.23
+    },
+    {
+      "elapsed_s": 154.47,
+      "temperature_c": 48.23
+    },
+    {
+      "elapsed_s": 156.47,
+      "temperature_c": 48.48
+    },
+    {
+      "elapsed_s": 158.48,
+      "temperature_c": 48.36
+    },
+    {
+      "elapsed_s": 160.48,
+      "temperature_c": 47.99
+    },
+    {
+      "elapsed_s": 162.51,
+      "temperature_c": 48.36
+    },
+    {
+      "elapsed_s": 164.51,
+      "temperature_c": 48.36
+    },
+    {
+      "elapsed_s": 166.51,
+      "temperature_c": 48.23
+    },
+    {
+      "elapsed_s": 168.52,
+      "temperature_c": 48.48
+    },
+    {
+      "elapsed_s": 170.52,
+      "temperature_c": 48.36
+    },
+    {
+      "elapsed_s": 172.54,
+      "temperature_c": 48.23
+    },
+    {
+      "elapsed_s": 174.55,
+      "temperature_c": 48.36
+    },
+    {
+      "elapsed_s": 176.55,
+      "temperature_c": 48.36
+    },
+    {
+      "elapsed_s": 178.55,
+      "temperature_c": 48.23
+    },
+    {
+      "elapsed_s": 180.56,
+      "temperature_c": 48.23
+    },
+    {
+      "elapsed_s": 182.58,
+      "temperature_c": 48.11
+    },
+    {
+      "elapsed_s": 184.58,
+      "temperature_c": 48.23
+    },
+    {
+      "elapsed_s": 186.59,
+      "temperature_c": 48.36
+    }
+  ],
+  "boot_id": "3d4dfad2-e41a-45fd-9ee5-8c413b238e8f",
+  "project_report": "/home/xilinx/jupyter_notebooks/visual_aid_v4_camera_detail_20261028/logs/live_light_20261028_145722.json",
+  "abort_reason": null,
+  "command": [
+    "/usr/bin/python3",
+    "-u",
+    "run_board.py",
+    "--stage",
+    "live",
+    "--pipeline",
+    "pl",
+    "--camera-fps",
+    "20",
+    "--mode",
+    "color",
+    "--quality-preset",
+    "detail",
+    "--camera-isp",
+    "detail",
+    "--no-distance",
+    "--af",
+    "continuous",
+    "--io-confirmed",
+    "--seconds",
+    "120",
+    "--report",
+    "/home/xilinx/jupyter_notebooks/visual_aid_v4_camera_detail_20261028/logs/live_light_20261028_145722.json"
+  ],
+  "pid": 4593,
+  "returncode": 0,
+  "elapsed_s": 188.59,
+  "boot_id_after": "3d4dfad2-e41a-45fd-9ee5-8c413b238e8f",
+  "final_temperature_c": 47.74
+}

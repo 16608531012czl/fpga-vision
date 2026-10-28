@@ -1,0 +1,10 @@
+{
+  "archive": "visual_aid_v4_camera_detail_20261028_board.zip",
+  "sha256": "ef436197384686dc20d21a054f59b1d95a11b3911428ec4a698d9ec3d51b9a53",
+  "archive_entries": 70,
+  "runtime_payload_files": 29,
+  "runtime_payload_unchanged": true,
+  "jupyter_guard_included": true,
+  "notebook_included": true,
+  "hardware_loaded_by_packaging": false
+}

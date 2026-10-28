@@ -1,32 +1,45 @@
-# OV5640 时序、帧率、自动对焦与EC11升级
+# FPGA Vision · OV5640 视觉辅助器
 
-独立工作目录：`C:\fpga\visual_aid_v4_ec11_20261022`。
+当前版本：**2026-10-28，Arduino 光照 + 清晰模式 + 流畅状态栏 + Jupyter 自定义时长**。
+PYNQ-Z2 / Vivado 2018.3 / PYNQ 2.4，OV5640 DVP 输入、HDMI OUT 输出。
 
-当前入口：[PL 图像链路、细节优先及稳定亮度说明](docs/pl_upgrade_zh.md)。
-实时缩放、分屏和状态文字已移入 PL，采集与缩放并行；默认 detail / stable，
-采用 DN=0、SH=4、NR=1、CT=0 保留文字细节。当前实板结果以 `reports/PL_UPGRADE_zh.md` 为准。
-本轮导出位置为桌面 `FPGAvision/releases/visual_aid_v4_pl_upgrade_20261023`。
-下文性能与 AF 部分保留上一轮基线信息。
+## 获取与运行
 
-本版新增硬件旋钮解码、USM/Laplacian/边缘引导处理、Sobel诊断、实时调参和状态显示，保留暗光提亮。
-本轮进一步优化流水线与软件缓冲区处理，默认请求20帧，启动连续自动对焦；实际结果见交付状态。
-运行方法及性能边界见[性能与对焦说明](docs/performance_af_zh.md)。光照模块按用户要求暂不参与运行。
+- [下载配套上板包](delivery/visual_aid_v4_camera_detail_20261028_board.zip) · [SHA256](delivery/visual_aid_v4_camera_detail_20261028_board.zip.sha256)
+- [打开一键 Notebook 文件](delivery/FPGAvision_OneClick.ipynb)
+- [Jupyter 安装及日常操作](docs/jupyter_zh.md) · [当前接线](docs/wiring_zh.md) · [旋钮及按键](docs/controls_current_zh.md)
 
-本次光照通信改到PMOD B：SCL接物理第3脚（T11），SDA接物理第4脚（T10）。
-必须加载同一发布包内的FPGA文件；原Arduino SCL/SDA接法不适用于本版本。EC11仍接AR8/AR9/AR10。
-旧版备份在reports/attempts/before_pmod_b及before_performance；本轮导出到桌面releases/visual_aid_v4_performance_af_20261023。
+板端已安装时，打开 `FPGAvision_OneClick.ipynb`，选择 **Cell → Run All**。
+在“运行秒数”输入正整数，再点“按设定时长运行”；300=5分钟，600=10分钟，3600=1小时。
+点击绿色“启动画面（持续）”可一直运行，红色“停止”结束。计时从实时画面开始，约一分钟的相机初始化另计。
+关闭网页不会停止程序；运行中先停止再修改时长。首次安装需要完整项目和 widgets 环境，见上述说明。
 
-上板包：`delivery/visual_aid_v4_ec11_board.zip`。
-安装、接线、控制和验收：见[升级说明](docs/upgrade_ec11_zh.md)。
+## 功能与控制
 
-本轮实际通过项以reports内新生成的记录为准；原工程文档中的历史实板数据不作为本版测试结论。
+原图/灰度/反色/二值化/彩色增强；1×/2×/4×缩放、平移、冻结、左右对比、自动提亮和连续自动对焦。
+EC11短按选参数、旋转调数值、长按约1秒恢复画质预设。左上角 `EDIT` 显示当前项目。
+Jupyter可选择相机清晰/标准模式；标准模式只回退相机ISP，PL仍用detail预设。
 
-构建：`build.ps1 -Step system` 创建独立工程；`-Step test`主机检查；`-Step sim`和`-Step full`运行仿真；`-Step bit`生成并校验配套硬件包。
+BH1750：3.3V供电、共地、ADDR接地；SCL→Arduino SCL/J3-10/P15，SDA→Arduino SDA/J3-9/P16。
+**本版不用旧PMOD B的T11/T10接法。** 距离模块关闭，光照保持启用，启动使用 `--no-distance`。
 
-旧工程保留于 `C:\Users\CHENZHELONG\Desktop\FPGAvision\visual_aid_v3`；本次不更改旧发布物。
-# 当前升级入口
+## 验证
 
-PL 缩放分屏、颜色降噪、保色重建、局部映射和 15/31 窗口操作见
-[PL 图像链路说明](docs/pl_upgrade_zh.md)。本版实测以 `reports/PL_UPGRADE_zh.md`
-和 `reports/pl_upgrade_summary.json` 为准；历史性能报告对应各自发布版本。
+当前版120秒实板运行：2398帧，约19.980FPS；DMA/溢出/坏帧均为0，板温46.39–48.48°C。
+用户确认近景文字清楚、远景正常，LUX遮挡后下降，状态栏操作顺畅。
+自定义5秒自动结束及持续运行手动停止均已实测，无清理错误。
+95项主机软件检查通过；本次上传未重新综合或加载硬件。
+轻度锐化的边缘改善不代表光学分辨率提高，距离模块及所有场景最优效果未验收。
 
+详见 [当前发布说明](docs/github_release_20261028_zh.md)、[相机实测](reports/CAMERA_VALIDATION_zh.md) 和 `reports/jupyter_duration_test/`。
+基础构建清单中的pending字段保留为生成时状态，后续实测以这些记录为准。
+
+## 工程
+
+`rtl/`、`sim/`、`software/`、`vivado/`、`vendor/` 为源码、测试、运行文件、硬件脚本和第三方IP。
+`source_manifest.json` 记录本次快照文件指纹；bit/HWH与软件负载保持已验收版本。
+`docs/`中的旧日期文档与 `reports/historical_20261023/` 为历史资料，当前接线、目录、操作以上述入口为准。
+主机端执行 `python tools/test_software.py` 检查软件；`python tools/package_current.py` 重新生成含Jupyter面板的上板包。
+主机检查需 NumPy、OpenCV；不要向PYNQ 2.4安装主机依赖。Vivado完整重建和checkpoint变体边界见发布说明。
+
+新代码按 [MIT](LICENSE)；第三方来源见 [THIRD_PARTY.md](THIRD_PARTY.md)。

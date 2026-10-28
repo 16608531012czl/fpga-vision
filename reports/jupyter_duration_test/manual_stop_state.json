@@ -1,0 +1,18 @@
+{
+  "phase": "stopped",
+  "guard_pid": 7914,
+  "guard_start_ticks": 330164,
+  "boot_id": "3d4dfad2-e41a-45fd-9ee5-8c413b238e8f",
+  "isp": "detail",
+  "seconds": 0,
+  "temperature_limit_c": 75.0,
+  "log": "/home/xilinx/jupyter_notebooks/visual_aid_v4_camera_detail_20261028/logs/jupyter_20190221_101759.log",
+  "report": "/home/xilinx/jupyter_notebooks/visual_aid_v4_camera_detail_20261028/logs/jupyter_20190221_101759.json",
+  "reason": "user_stop",
+  "temperature_c": 46.88,
+  "child_pid": 7915,
+  "exit_code": 0,
+  "report_outcome": "interrupted",
+  "cleanup_errors": [],
+  "finished_at": "2019-02-21 10:18:33"
+}

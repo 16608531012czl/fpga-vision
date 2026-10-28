@@ -1,4 +1,3 @@
-# Preserve release bytes: published SHA256 metadata also covers text files.
 * -text
 *.bit binary
 *.bin binary

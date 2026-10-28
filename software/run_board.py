@@ -66,7 +66,7 @@ def run(args):
         report['uptime_start']=Path('/proc/uptime').read_text().strip()
     first = last = None
     frozen = frozen_id = None
-    seen_sensors = {'lux': False, 'distance_mm': False}
+    seen_sensors = report['sensor_readings_observed'] = {'lux': False, 'distance_mm': False}
     try:
         manifest = verify_payload(BASE, args.bit)
         report['release'] = {'built_at': manifest.get('built_at'), 'abi': hex(manifest['abi'])}
@@ -84,7 +84,8 @@ def run(args):
             camera = OV5640(I2CBus(gpio, 0, 1), gpio)
             report['camera'] = camera.initialize(args.stage == 'colorbars', args.camera_fps)
             if args.stage=='live':
-                report['camera_quality']=camera.image_quality('baseline' if args.quality_preset=='detail' else args.quality_preset)
+                camera_isp=args.camera_isp or ('baseline' if args.quality_preset=='detail' else args.quality_preset)
+                report['camera_quality']=camera.image_quality(camera_isp)
                 if args.tone_profile=='stable':report['exposure_stability']=camera.stable_exposure()
             if args.af != 'off':
                 last_progress = [-1]
@@ -319,6 +320,8 @@ def parse_args(argv=None):
     ap.add_argument('--sharp-mode',choices=('off','usm','laplacian','guided'),default='guided')
     ap.add_argument('--quality-preset',choices=('baseline','balanced','detail'),default='detail',
                     help='balanced reduces color noise and repeated sharpening; baseline restores previous processing')
+    ap.add_argument('--camera-isp',choices=('baseline','detail','balanced'),default=None,
+                    help='Override camera ISP preset; omit to retain the existing quality-preset mapping')
     ap.add_argument('--pipeline',choices=('pl','cpu'),default='pl',help='PL scales/composes live frames; CPU retains the previous pipeline')
     ap.add_argument('--edge-view',action='store_true',help='Diagnostic Sobel view')
     ap.add_argument('--encoder-reverse',action='store_true',help='Reverse software interpretation of rotation')

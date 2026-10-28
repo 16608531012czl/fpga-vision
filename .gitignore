@@ -1,7 +1,6 @@
 build/
 backups/
 .Xil/
-NA/
 **/__pycache__/
 *.pyc
 *.jou
@@ -12,6 +11,5 @@ NA/
 venv/
 .env
 .env.*
-!.env.example
 software/logs/
 .DS_Store

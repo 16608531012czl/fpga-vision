@@ -5,6 +5,7 @@ import numpy as np
 from .image import compose
 from .local import TilePolicy
 from .encoder import record_event
+from .status_panel import StatusPanel
 
 MODES=('RAW','GRAY','INVERSE','BINARY','COLOR')
 
@@ -12,6 +13,7 @@ MODES=('RAW','GRAY','INVERSE','BINARY','COLOR')
 def run_pl(dev,state,controls,encoder,policy,sensors,args,report,start,af_label,brightness_lut):
     tiles=TilePolicy();times=deque();frozen=None;frozen_id=None;frozen_view=None
     frozen_canvas=None;frozen_split=None;last_update=-1e9;last_text=-1e9
+    panel=StatusPanel();last_text_signature=None;last_text_lines=None
     pending_lut=None;pending_gains=None;tone_key=None;first=last=None;fps=0.
     descriptor={};last_stats=None;last_stats_key=None
     report['pl_pipeline']={'cpu_live_frame_copy':False,'source':'PL renders completed DDR frame while next raw capture runs independently',
@@ -71,6 +73,9 @@ def run_pl(dev,state,controls,encoder,policy,sensors,args,report,start,af_label,
         dev.mmio.write(0x78,state.quality_config())
         composed=time.monotonic()
         readings=sensors.snapshot() if sensors is not None else {'lux':None,'distance_mm':None}
+        seen=report.setdefault('sensor_readings_observed',{'lux':False,'distance_mm':False})
+        for name in seen:
+            seen[name] |= readings[name] is not None
         if now-last_update>=.25:
             stats=dev.tile_statistics()
             if stats is not None and stats['frame_id'] in descriptor:
@@ -91,16 +96,19 @@ def run_pl(dev,state,controls,encoder,policy,sensors,args,report,start,af_label,
         if pending_lut is not None and dev.gamma(pending_lut):pending_lut=None
         if pending_gains is not None and dev.local_gains(pending_gains):pending_gains=None
         adapted=time.monotonic()
-        if now-last_text>=.5:
-            tone=policy.status();mean=tone.get('mean')
-            lines=[
-                '{} {}X {} {} AF {}'.format(MODES[state.mode],state.zoom,'FREEZE' if state.frozen else 'LIVE','AUTO' if state.automatic else 'MANUAL',af_label),
-                'CAM {:.1f} FPS  PL SCALE / COLOR / LOCAL MAP'.format(fps),
-                'B {:+d} SH {} DN {} CT {} NR {}'.format(state.brightness,state.sharpness,state.denoise,state.contrast,state.noise),
-                'COLOR {} LOCAL {} WIN {} C {}'.format(state.color,state.local_tone,31 if state.window31 else 15,state.binary_c),
-                'EDIT {}  EC11 TURN / CLICK / HOLD'.format(state.parameters[state.selected]),
-                'SOURCE TILE Y {}  LUX {}'.format('-' if mean is None else round(mean),'-' if readings['lux'] is None else round(readings['lux']))]
-            if dev.status_text(lines):last_text=now
+        # Display-only smoothing keeps input data and the automatic policy intact.
+        panel.sample(now, fps, readings['lux'])
+        signature=panel.signature(state)
+        changed=signature!=last_text_signature
+        if now-last_text>=.25 or (changed and now-last_text>=.10):
+            lines=panel.lines(state, af_label)
+            if lines==last_text_lines:
+                last_text_signature=signature
+                last_text=now
+            elif dev.status_text(lines):
+                last_text_signature=signature
+                last_text_lines=lines
+                last_text=now
         ended=time.monotonic()
         report['pl_rendered_frames']=dev.render_count
         report['pl_observed_display_updates']=dev.display_count

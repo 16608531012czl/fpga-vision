@@ -1,0 +1,8 @@
+{
+  "base_project": "C:\\fpga\\visual_aid_v4_ec11_20261022",
+  "source_checkpoint": "C:\\fpga\\visual_aid_v4_ec11_20261022\\build\\system\\visual_aid_v3.runs\\impl_1\\visual_aid_wrapper_opt.dcp",
+  "source_checkpoint_sha256": "298996949bbd1e45e574c497e2f550e87ddcaef319ea615b268fdeb86a130949",
+  "base_bit_sha256": "5f2d76f1ba59eabc13743f9e49c62e179daa763ac28b6a876acd53cd14e80b96",
+  "change": "Relocate sensor_scl from T11 to P15 and sensor_sda from T10 to P16; datapath netlist unchanged; rerun placement/routing/timing/DRC.",
+  "base_validation": "C:\\fpga\\tmp\\board_validation_20261028\\validation_summary.json"
+}
