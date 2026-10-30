@@ -1,7 +1,0 @@
-{
-  "configured_seconds": 0,
-  "phase": "stopped",
-  "reason": "user_stop",
-  "report_outcome": "interrupted",
-  "cleanup_errors": []
-}

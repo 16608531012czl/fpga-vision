@@ -1,3 +1,0 @@
-User supplied: C:\Users\CHENZHELONG\Desktop\FPGAvision\ZL0008\ESP32S3_OV5640_WiFi\ov5640_af_firmware.h
-sha256=439245623bc99f3b0d8c44d47baed3cc17cad01b9191509c89bb8d92a98949c9
-bytes=4077
