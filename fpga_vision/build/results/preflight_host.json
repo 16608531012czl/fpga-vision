@@ -1,0 +1,9 @@
+{
+  "overlay_loaded": false,
+  "board_tested": false,
+  "python": "3.13.2",
+  "payload_files": 36,
+  "numpy": "2.5.3",
+  "opencv": "5.0.0",
+  "outcome": "passed"
+}

@@ -1,0 +1,21 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Oct 30 14:32:27 2026
+| Host         : FPGA-PC running 64-bit major release  (build 9200)
+| Command      : report_cdc -file C:/fpga/submission_work/rebuild_native/reports/system_cdc.rpt
+| Design       : visual_aid_wrapper
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.11 2014-09-11
+------------------------------------------------------------------------------------------------
+
+CDC Report
+
+Severity  Source Clock            Destination Clock       CDC Type                 Exceptions               Endpoints  Safe  Unsafe  Unknown  No ASYNC_REG  
+--------  ----------------------  ----------------------  -----------------------  -----------------------  ---------  ----  ------  -------  ------------  
+Critical  clk_fpga_0              camera_pclk             No Common Primary Clock  Asynch Clock Groups             14    13       1        0             0  
+Warning   axi_dynclk_0_PXL_CLK_O  clk_fpga_0              Safely Timed             Max Delay Datapath Only         35    35       0        0             0  
+Warning   camera_pclk             clk_fpga_0              No Common Primary Clock  Asynch Clock Groups            109   109       0        0             0  
+Info      clk_fpga_0              axi_dynclk_0_PXL_CLK_O  Safely Timed             Max Delay Datapath Only         43    43       0        0             0  
+Info      input port clock        clk_fpga_0              No Common Primary Clock  False Path                      16    16       0        0             0  
+

@@ -1,0 +1,5 @@
+Waiting for PYNQ boot overlay to finish before loading this project.
+----------------------------------------------------------------------
+Ran 129 tests in 2.507s
+
+OK

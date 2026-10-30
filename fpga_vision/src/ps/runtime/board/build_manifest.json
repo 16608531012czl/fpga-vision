@@ -1,0 +1,360 @@
+{
+  "project": "visual_aid_v3",
+  "abi": 1447101440,
+  "built_at": "2026-10-28T14:56:58.034473+08:00",
+  "vivado": "2018.3",
+  "pynq_target": "2.4",
+  "resolution": [
+    1280,
+    720
+  ],
+  "timing": {
+    "setup_ns": 0.189,
+    "hold_ns": 0.014,
+    "drc_errors": 0,
+    "bidirectional_pads": 4,
+    "enhancement_present": true,
+    "gray_groups": 5
+  },
+  "full_system_implementation": "passed",
+  "hardware_validation": "not_yet_tested_on_board",
+  "measured_board_camera_fps": null,
+  "metadata": {
+    "control_ip": "assist_core/s_axi",
+    "control_base": "0x43C00000",
+    "vdma_ip": "display_vdma",
+    "vdma_base": "0x43000000"
+  },
+  "simulation": {
+    "quick": {
+      "timestamp": "2026-10-23T18:21:58",
+      "tests": [
+        "reading",
+        "capture",
+        "registers",
+        "gamma",
+        "fifo",
+        "abort",
+        "encoder",
+        "canvas",
+        "kernels"
+      ]
+    },
+    "full": {
+      "timestamp": "2026-10-23T18:27:16",
+      "tests": [
+        "reading",
+        "capture",
+        "registers",
+        "gamma",
+        "fifo",
+        "abort",
+        "encoder",
+        "canvas",
+        "kernels"
+      ]
+    }
+  },
+  "software_tests": {
+    "tests": 95,
+    "timestamp": "2026-10-28T14:56:38"
+  },
+  "sensor_wiring": {
+    "scl_package_pin": "P15",
+    "sda_package_pin": "P16",
+    "gpio_release_bits": [
+      2,
+      3
+    ],
+    "io_voltage": 3.3,
+    "connector": "Arduino J3",
+    "scl_physical_pin": 10,
+    "sda_physical_pin": 9
+  },
+  "capture_diagnostic_register": "0x64",
+  "pl_features": {
+    "signature_register": "0x7c",
+    "signature": "0x504c0002",
+    "canvas_axi_bits": 64,
+    "independent_capture_render": true,
+    "canvas_source_register": "0xc0",
+    "canvas_start_register": "0xc4",
+    "local_mapping": "8x6 bounded tile means with bilinear gains",
+    "binary_windows": [
+      15,
+      31
+    ],
+    "chroma_filter": "spatial gated 3x3",
+    "default_live_pipeline": "pl",
+    "combined_pipeline_pixels": 18432
+  },
+  "native_composition": {
+    "passed": true,
+    "cases": [
+      [
+        1,
+        1
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        17,
+        9
+      ],
+      [
+        640,
+        360
+      ]
+    ],
+    "gamma_guard_checks": true,
+    "source_sha256": "16bdb8d7d702f9d3ea58f437427618c0129a597f79855c530515e230b4972d82",
+    "binary_sha256": "d61129ed5a14cfe7bccb752f87ae06fb0175c17f60a3582e5e4f80491f42ebf6",
+    "compiler": "gcc (Ubuntu/Linaro 7.3.0-16ubuntu3) 7.3.0",
+    "chroma_guard_cases": [
+      [
+        1,
+        1
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        17,
+        9
+      ],
+      [
+        640,
+        360
+      ]
+    ],
+    "chroma_quality": {
+      "chroma_std_before": 7.743410559497773,
+      "chroma_std_after": 5.407149728241354,
+      "temporal_std_before": 7.5299759443903245,
+      "temporal_std_after": 5.1143291073217885,
+      "luma_max_error": 0,
+      "text_stroke_unchanged": true,
+      "scope": "seeded synthetic dark patch, not a physical camera noise measurement",
+      "native_640x360_median_ms": 9.62673750018439
+    }
+  },
+  "protected_projects": {
+    "original_files": 1481,
+    "original_unchanged": true,
+    "raw_protected_files": 98,
+    "raw_baseline_unchanged": true
+  },
+  "continuous_stream_pixels": 15360,
+  "hardware_source_sha256": {
+    "rtl/assist_regs.sv": "d12e905396d32618e57dd7c5b92a36a4027fcd254075c829e4165f9331b3b422",
+    "rtl/async_fifo.sv": "d10ba177db60fa6967d9c01f398599f13a03996d9211336c49130f2fa0d1e0ca",
+    "rtl/canvas_writer.sv": "3913c99449a00d2fad7ae78d6b3e1eb74001bed8d1f3d840b288bcfca5238867",
+    "rtl/chroma_filter.sv": "d0ab6606129697a27753d85616517ffd34ca8c38472d7de2b85adb2713fdc1c1",
+    "rtl/color_reconstruct.sv": "72d417b54d1adb0ed5a8b43d9ea511d86cccb106808a0dd232cd3281215ef881",
+    "rtl/display_slot_decode.sv": "09b3950127cb2daff1c750b9b916ccbdd09f20cef806378f6352d7789771967f",
+    "rtl/dvp_capture.sv": "925f54dbc8b16f70d541d8de499c8ff3613cef42a3252b128d909ad3079fa5ae",
+    "rtl/encoder_input.sv": "70c497f112114caa73d26b059f2f8b73c43e8d25eecf4ba621a559a7bbe02067",
+    "rtl/frame_tiles.sv": "195ecc62aaccede1201261560296ddd6b23b29a2f41df13161333c535fd0cb40",
+    "rtl/frame_writer.sv": "a96f162b4d2c3f06a90f46d9047aeea8a40f17b088065af6e0ccaf9b115b2b22",
+    "rtl/local_tone_map.sv": "56368e046f1d1cee07827f8e85f0ba2f47bd1f15230bf4c28282db368fe21a4d",
+    "rtl/reading_enhance.sv": "75a6a0e44b890c594b8f7761c3082895c87cb72882f52ef5ceb558cb82c32635",
+    "rtl/status_font.sv": "f047cad1119c521d5fcfd57f7856abde47397a4e7cb0c9aac0712ae819021386",
+    "rtl/status_overlay.sv": "03e445ee22ec839451c057ad7487743c689dbbcb8be174dba277efeab6284733",
+    "rtl/visual_aid_core.sv": "96089fe1fa4657c3d3dea98f6bdd265d65c1e339681e2ab9340d980d23d61bf8",
+    "sim/run.tcl": "6218ffa4f2392f3c61113605d4ab2cd023186e11f1da826b920e510a9a797efb",
+    "sim/tb_abort.sv": "596703f8908adfe798df467be97d56208af74c8716a2230de0cc5739c0b05499",
+    "sim/tb_canvas.sv": "fc925dba5eab874aa544328a0048a8a1f59c39d5a24943b820dbd37e8732d489",
+    "sim/tb_capture.sv": "1c11abe965369b9c83caf715ae0174fb719aabc8506dd1ed1834753c320ab601",
+    "sim/tb_encoder.sv": "c7f2d05c210461e88255170f65314430060dea70520123e8dc1b2a76a09807b0",
+    "sim/tb_fifo.sv": "550fa4e1efbb9e25a7297c2d7620a65ff3558c358e9ab9e3207d51c6d3538c0b",
+    "sim/tb_gamma.sv": "cd78009616058e3464c1ba67db55cddc50f5bf717a36589d00366843bfd39d68",
+    "sim/tb_kernels.sv": "43225879925a0a9d8abfd171d5e139de2becf38396572ad3188c94cb1ca71a8e",
+    "sim/tb_reading.sv": "a7e618ac33c15ac286c9f02b1c880fd4542dd6b12b36dbccc248fbce38d07304",
+    "sim/tb_registers.sv": "29000691ab6079bc52aa020236936a55185f175ded9aee34f6bc5a5ed13b89ba",
+    "vivado/cdc.xdc": "1f92ec8c0505f29f6eb38b0f67faf829be2766340153e4f225078ce39023c193",
+    "vivado/clock_tree.tcl": "068b860d998247b9842bdf4ea7ac8e17c77ffc681a9097416173a0f7c270f40b",
+    "vivado/create_sim.tcl": "1d9543003f591dce59dfe46f814eda825ceffe71d60a48e6262a2d0f232664d7",
+    "vivado/create_system.tcl": "04b2bd1f27dd4225f00c01d0b780a89441d33ca2a6b6a2a3a1c8cbfc1f51b344",
+    "vivado/finalize_system.tcl": "5539168c1d43008dfebc5c068edfd0cc88574e346edcb4c19f09a8dee830e91a",
+    "vivado/implement_arduino_variant.tcl": "6d740961a8cccb09f4a4692b845f791b21980a9a06ac053208cc292610080c2b",
+    "vivado/implement_system.tcl": "39b85ffcaab94604aa0b5da6dff5abc8ec16d5ad731860a746d6bd176bc1fef1",
+    "vivado/pins.xdc": "f13bce8247a6553995a96813dc6700854ecd3fa62942a0b66d85876274372727",
+    "vivado/synth_core.tcl": "b84206a307274eebba53c2bf2bd36058ac26ceca4fcdedf4577cc89e889c6c52",
+    "vivado/validate_system.tcl": "af6075ce68921da73151ca551833552f698bcdd70c27f54791a8e186afabd5ad",
+    "vendor/ADAFRUIT_VL53L0X_LICENSE": "24a87cbc79258666c6d72a3729bf11a14a6f01b896a3ed66374e3816c308b08e",
+    "vendor/adafruit_vl53l0x_original.py": "fc355da4fe4263b42229a7cf933c3d22aa1748abb6c566d2c02818aaa42d6f15",
+    "vendor/af_firmware_source.txt": "b85806bba1cac9bd31aa83c708a8b9b38fa3e88699872049b91841fda66d55dc",
+    "vendor/ESP32_CAMERA_LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "vendor/esp32_camera_revision.txt": "ce60c5e14e53417f19924b77c34488d6390726d17a076342ef00a24e1cc74b3d",
+    "vendor/esp_ov5640.c": "df60065649695167db86787d7904b584ec82f73f8c0a686743f93f8d2d5b35ac",
+    "vendor/esp_ov5640_regs.h": "c0c8a2b608300ff0d513b94a60b1587e408312b0051f770d22fb18569ae0f230",
+    "vendor/esp_ov5640_settings.h": "db1930b344a83b084f6fb5c3c3e1dead5922a422c1212355c52ad5af141d3b6f",
+    "vendor/original_LICENSE": "789ef0d2815434c7de246d5f7649719f9bb8be59bd0a8c7c1eb0c78a93483b5d",
+    "vendor/original_THIRD_PARTY.md": "0cf73af07cb7dc785aaf39e339432dadf652640efaceffadb6c3fdd12cd7379e",
+    "vendor/PYNQ_LICENSE": "6d822a20e645291ace79180f0ae94f604b9d5fb81165e302b2c7b8cd7bf83fc3",
+    "vendor/pynq_ps7.tcl": "e0504ef941f00b05911e1e6fa14aaefa2b01befaa4ec9fff31e3fd0d227bfce1",
+    "vendor/PYNQ_THIRD_PARTY_LIC": "0069814a2eeac8b61f1ec767153686402d8b568f02ae7e20704ea7e4a834332e",
+    "vendor/pynq_video_procs.tcl": "ac71a98766d084f3ded8a2785b043646533d0a88f55704215e0ba61943962ad6",
+    "vendor/vl53l0x_revision.txt": "7b50abc5ac03fa0ac2570820076fae932a0d0a5548779d1ec824eaea88a08fbd",
+    "vendor/ip/axi_dynclk_v1_0/component.xml": "21813665c84b1b75d9076f7e772730df199bc3ca71215d2a48a383cb37da38cd",
+    "vendor/ip/color_convert/autoimpl.log": "53ca85aeb32b4e56610dfc3f973ec3aab92678c0fbd5d62f55d0ada3350277cf",
+    "vendor/ip/color_convert/auxiliary.xml": "8da29b87a77b125015085fa0ce57774af17a35c997cd32143318809c19f8584f",
+    "vendor/ip/color_convert/color_convert_info.xml": "01112c78c408f4518fb0baaad554bd0ae1110efd18c1cd3a1f351957ae8b82a4",
+    "vendor/ip/color_convert/component.xml": "9a2ee58e307dcee818b4c85cee0d3a8ea1435c6926532a612be59f9cec5e2e68",
+    "vendor/ip/color_convert/pack.bat": "6d10a055595de019a0585df400b8f7108e70aaea53bffe4b725162f076b94ad2",
+    "vendor/ip/color_convert/run_ippack.tcl": "ff1f7835b566246b5e91399689bce189f2b9ed90805639511913c787682e2e11",
+    "vendor/ip/color_convert/vivado.jou": "d38ec42d71a6f17b20f8c0a770387d93e90a6f5e6f8a2b16eabc5326c397ded8",
+    "vendor/ip/color_convert/vivado.log": "03fdff8db505fc201a1eeaaa8b29eb97722bffef765cf9603f46152e36b46f28",
+    "vendor/ip/color_convert/xilinx_com_hls_color_convert_1_0.zip": "66659cf2a09a2fb6250f173df57461a52c2df3883c86e762c1c8197c80fd97d6",
+    "vendor/ip/color_swap_1.1/color_swap.v": "62706648f324e069e0b9021c569272cbf1d3d69b3b2802ff7c12f4f5e0558224",
+    "vendor/ip/color_swap_1.1/component.xml": "5f903ea49b65bc5b4126d250346139c77788f310a1ce7168e32cb668af92e2d1",
+    "vendor/ip/pixel_unpack/autoimpl.log": "acb8d91ad6c478486ce550067521ca9596798148b27b42cd857b970f7239c32d",
+    "vendor/ip/pixel_unpack/auxiliary.xml": "0b700950bb2f61d6cb8e86a70654c6f3b3912e0616368986802b3adcb92a297a",
+    "vendor/ip/pixel_unpack/component.xml": "43b5faf242f89e97ed4a973e8af6bfc0fd98a6b2abde7b2ed2c867372768db1a",
+    "vendor/ip/pixel_unpack/pack.bat": "d283cd4438af4ee1d8007620aae5bf3afcd0455e36ee87fd09267769fa5ae00e",
+    "vendor/ip/pixel_unpack/pixel_unpack_info.xml": "64d083e26abbdccb6e0c0196e51fdf8dfa86b0f9f86af952a8ab8fcb34947a77",
+    "vendor/ip/pixel_unpack/run_ippack.tcl": "0d75e2ed666f8dc0572319f8356431a4e23ae8e5c734d1e830f8aa5804c71039",
+    "vendor/ip/pixel_unpack/vivado.jou": "47aac17c2cb0b359768bd9c689e44c817ec57ff66af2fdd87ace571b3150fd62",
+    "vendor/ip/pixel_unpack/vivado.log": "3d4ef77ae151725467c45f805f33f6bf27765903e25cd518eb2c3c27f451f231",
+    "vendor/ip/pixel_unpack/xilinx_com_hls_pixel_unpack_1_0.zip": "2be6694fca09b62897f957226dafe415c63942f1a5c278e133b9f5cb3ec87898",
+    "vendor/ip/rgb2dvi_v1_2/component.xml": "1af6fd9c43ab6d824a7a2daff30b2cd12224afae7c8fa1a4982e0c1206e2cb22",
+    "vendor/ip/axi_dynclk_v1_0/src/axi_dynclk.vhd": "2b8d2de5d2731fd0b83c06efb0566f83bd64016e699d067e39dc396de681ecaf",
+    "vendor/ip/axi_dynclk_v1_0/src/axi_dynclk_S00_AXI.vhd": "871c0b0a56ad7caefecc844d23faf5af6ad904019c2cdbbb3ef5edc5048495e0",
+    "vendor/ip/axi_dynclk_v1_0/src/mmcme2_drp.v": "3833e1439bc56a53d682cd4a8c99b6a9d3e6378b9e27667df290f0f8896faeac",
+    "vendor/ip/axi_dynclk_v1_0/xgui/axi_dynclk_v1_0.tcl": "729c79ebdf8c55ede738aa3047c3e26d25926fb14317da1a741e4e10c0c2d7c3",
+    "vendor/ip/color_convert/bd/bd.tcl": "88f35201408ee68abf9d70a7d3891ef17632af8ca434bae9b13c7f6781fda56c",
+    "vendor/ip/color_convert/constraints/color_convert_ooc.xdc": "6b7cc0e478ad95b12d2b9b05d40b67fb0e3bf36f52083fe27f47381e198bf8ba",
+    "vendor/ip/color_convert/doc/ReleaseNotes.txt": "0d67987d6ac9479429a15bb7e6419cded0830cf281bb56d06da8e8e60802a2b5",
+    "vendor/ip/color_convert/example/ipi_example.bat": "4bf9facb926ac2830d1f9177d1501de9f114ef44a6c2b40ba92eac79a3d7ff9f",
+    "vendor/ip/color_convert/example/ipi_example.tcl": "e6152ff129e1fc80d3e2296412b12b85f87d9a8fc9f720a9db2425ed52c969d7",
+    "vendor/ip/color_convert/misc/logo.png": "773f5b82ab513194e413eeadc7eea9ff0ec860b85dd11a92a9d0dbe391b2747a",
+    "vendor/ip/color_convert/xgui/color_convert_v1_0.tcl": "914a120141ba04e7e20bd3379bb512f9312373356e62997538538065339ac8a3",
+    "vendor/ip/color_convert/drivers/color_convert_v1_0/data/color_convert.mdd": "dacca2e46129d553b9a5440c8e7c09ff36e716379c371d72ce23c30374a0577f",
+    "vendor/ip/color_convert/drivers/color_convert_v1_0/data/color_convert.tcl": "0f53844e04a8d8e9ed9371776597b3ddfbf83ab3b64f1e018cc2302035e5a6d0",
+    "vendor/ip/color_convert/drivers/color_convert_v1_0/src/Makefile": "fb9a1308b60de3ceaee8ec4a9aa13b33e2863126d393414abafad1af82d5ef80",
+    "vendor/ip/color_convert/drivers/color_convert_v1_0/src/xcolor_convert.c": "b05793b8cf4b941dbe27b48e6b3109dab7e7fb7060decb5d611a4cb672f3704f",
+    "vendor/ip/color_convert/drivers/color_convert_v1_0/src/xcolor_convert.h": "7646235d9e33bebda5782ccc0a2aa8c5261d964618111701f48f45a830cd3a03",
+    "vendor/ip/color_convert/drivers/color_convert_v1_0/src/xcolor_convert_hw.h": "614629eb79abc2043c3e908071797dad392d96586a6043ce54ce45694c2cb020",
+    "vendor/ip/color_convert/drivers/color_convert_v1_0/src/xcolor_convert_linux.c": "640544a8cbf13279433dbd3c46df56ab4ed7dab52e76ed05ce3b446961b1ac39",
+    "vendor/ip/color_convert/drivers/color_convert_v1_0/src/xcolor_convert_sinit.c": "8a9d06816e17b5bb7052632b220835590287dc542aa2d05b09078a1c0207b7ec",
+    "vendor/ip/color_convert/hdl/verilog/color_convert.v": "bb4c10d893677d67c27494ba1c276b98eb2a0db996c245c49c77c1ce6fc0c91d",
+    "vendor/ip/color_convert/hdl/verilog/color_convert_AXILiteS_s_axi.v": "b9db08efb6ec7ff7a38ce2bce7d47e2c33d3541320d2e1df6d5300d9063c3442",
+    "vendor/ip/color_convert/hdl/verilog/color_convert_macbkb.v": "257f4889da08ebfc0ba0d1b23e9c1b1b1f962d65e3bd6289185f02307ee79dcb",
+    "vendor/ip/color_convert/hdl/verilog/color_convert_maccud.v": "abe5e762a66acf63f6235aff21c5e82e9087a8815e180316ad29cf032fbf44f4",
+    "vendor/ip/color_convert/hdl/vhdl/color_convert.vhd": "d3523ee63177de98bc71e97cf1902b9c035ea91393794b698df2d28e8afd4b2b",
+    "vendor/ip/color_convert/hdl/vhdl/color_convert_AXILiteS_s_axi.vhd": "25d82645900e6e59351ed4e97bc3bec41b1b85b5bd445fd641522cafaf30f516",
+    "vendor/ip/color_convert/hdl/vhdl/color_convert_macbkb.vhd": "22aabbf4a33a5404d61c789314b57bb8e208c69973d4ab6bf27e68ed0f26972d",
+    "vendor/ip/color_convert/hdl/vhdl/color_convert_maccud.vhd": "2f018896e0a41251e27db25f0e869b56121426f4663dfcb928e34a671363f094",
+    "vendor/ip/color_swap_1.1/xgui/color_swap_v1_1.tcl": "18493633870c7f2730edd8785fa12bcc244ccb7b63eb6711011b5e0396e4c49b",
+    "vendor/ip/if/tmds_v1_0/tmds.xml": "c6a3cbcfa3de47ca91a2fbe49de15f1f61c7196039f14381d1598a26233be489",
+    "vendor/ip/if/tmds_v1_0/tmds_rtl.xml": "f79979c9844723343c83a80cc6bb9d1e49bdeb0796729517f5e339965e70d2c1",
+    "vendor/ip/pixel_unpack/bd/bd.tcl": "902aed81d562a4681cfb76a46116edc1d28b9afbc758bee44cbe68cde7bb23a4",
+    "vendor/ip/pixel_unpack/constraints/pixel_unpack_ooc.xdc": "6b7cc0e478ad95b12d2b9b05d40b67fb0e3bf36f52083fe27f47381e198bf8ba",
+    "vendor/ip/pixel_unpack/doc/ReleaseNotes.txt": "57b469cbcba1af26ebd3fac2bb5f3be82b8d1981e83f495a6e739f524b0bebb6",
+    "vendor/ip/pixel_unpack/example/ipi_example.bat": "d540784fd276f4e01e70ad119d6d8625dc9257c7da613e286338cbe5d5cc834f",
+    "vendor/ip/pixel_unpack/example/ipi_example.tcl": "6746c6221af4caf056522662331870ca76c44c1f33e61e587a374e43430f06db",
+    "vendor/ip/pixel_unpack/misc/logo.png": "773f5b82ab513194e413eeadc7eea9ff0ec860b85dd11a92a9d0dbe391b2747a",
+    "vendor/ip/pixel_unpack/xgui/pixel_unpack_v1_0.tcl": "1883c527ecb76d2dc1df1fb56b2b634ddbc6cc2c860c3c9fad8aea303c6e36ee",
+    "vendor/ip/pixel_unpack/drivers/pixel_unpack_v1_0/data/pixel_unpack.mdd": "ea4a01c2b3112c37ceafc23c51dbe3f2b38aa0b324184d539e97282ead7ad1ad",
+    "vendor/ip/pixel_unpack/drivers/pixel_unpack_v1_0/data/pixel_unpack.tcl": "e4a6991bc78fc29fea40437155a21035d5f4e1fda1c6fdc715d1c5fe068e2760",
+    "vendor/ip/pixel_unpack/drivers/pixel_unpack_v1_0/src/Makefile": "6054efc1cedf3c6a407a263f02c773f8653afee2dad0efbc01aa17d96a6bb1f3",
+    "vendor/ip/pixel_unpack/drivers/pixel_unpack_v1_0/src/xpixel_unpack.c": "3599b2309a2bf52be3733b9b18724b85ba40db755b1cc056166da09e27f8565d",
+    "vendor/ip/pixel_unpack/drivers/pixel_unpack_v1_0/src/xpixel_unpack.h": "02b45818d55e2845023480c5e600e7fdf592cf7a767a764c0a6419c1f508784a",
+    "vendor/ip/pixel_unpack/drivers/pixel_unpack_v1_0/src/xpixel_unpack_hw.h": "04b4aa421710ead60c1e5095f3fb8afbe7d0b775687253f0c3c3703e242b3da9",
+    "vendor/ip/pixel_unpack/drivers/pixel_unpack_v1_0/src/xpixel_unpack_linux.c": "97c71508b915c256aabb13b467a597c83ca64a46a69d7c86255e3ed2f180643b",
+    "vendor/ip/pixel_unpack/drivers/pixel_unpack_v1_0/src/xpixel_unpack_sinit.c": "b039e08c4b80ad90a2566e592969fd3bc6f80f76645ed012ae451dcd16ed0f09",
+    "vendor/ip/pixel_unpack/hdl/verilog/pixel_unpack.v": "3310bb00d1231b38bf0cd2f2aeaf163f4db06817377fdc7675133c088644cc58",
+    "vendor/ip/pixel_unpack/hdl/verilog/pixel_unpack_AXILiteS_s_axi.v": "abe8fd9a6d2e043d44e1b5f6e9fe9b5041b0bbfb05331c98e8fdd80dc72daaea",
+    "vendor/ip/pixel_unpack/hdl/vhdl/pixel_unpack.vhd": "fcdf44810707ca01e8d09377c4e660af74bbb3eb2f6f6d5b8ab1b7766f61af80",
+    "vendor/ip/pixel_unpack/hdl/vhdl/pixel_unpack_AXILiteS_s_axi.vhd": "df1c2fd805286ed268b1a2a837fff61acfef1442e978648a339ed231ddb191c0",
+    "vendor/ip/rgb2dvi_v1_2/docs/rgb2dvi_v1_2.pdf": "63325751909f90a731069d81968a2cdf158468ff5019d08d7396c865954f4c39",
+    "vendor/ip/rgb2dvi_v1_2/src/ClockGen.vhd": "a3ac3a940d9455b342d5217b008502ebeef2da35a2b27a4074eb9ab3c58e6b1b",
+    "vendor/ip/rgb2dvi_v1_2/src/DVI_Constants.vhd": "d8dbbbc3c8696d4527ee0d3c4757f1a40d0acebc845899483bc61c2bb8270cde",
+    "vendor/ip/rgb2dvi_v1_2/src/OutputSERDES.vhd": "6205d58405919d4f899a525256e2cafa725408f6644642755cd0de63e69b286e",
+    "vendor/ip/rgb2dvi_v1_2/src/rgb2dvi.vhd": "7268a67d557e36200847d494536733026dc7e2ca0980b6d2138fe9bac735f0cc",
+    "vendor/ip/rgb2dvi_v1_2/src/rgb2dvi.xdc": "51b9ac7f1229a2250cddb1d490e45e536dd836eb5c42851f67359c7a5aef6130",
+    "vendor/ip/rgb2dvi_v1_2/src/rgb2dvi_clocks.xdc": "d39d2f58a6cf74c30eef3c4b7d37c436359ea3fcfaff3ddcc0a1a69388b73ac8",
+    "vendor/ip/rgb2dvi_v1_2/src/rgb2dvi_ooc.xdc": "77f9820235b2c3ce1e99d369db4932a76705633eeb5f950908855183931dc1a2",
+    "vendor/ip/rgb2dvi_v1_2/src/SyncAsync.vhd": "5561ac8099ed13f3114e97387aab5f7f30ad28a8be2fc540004cbee3f19eb3a7",
+    "vendor/ip/rgb2dvi_v1_2/src/SyncAsyncReset.vhd": "3ce7ade3267959da59b4d448cc6641018e4f0ac3de9f8f998d0b9ff84a3794bc",
+    "vendor/ip/rgb2dvi_v1_2/src/TMDS_Encoder.vhd": "b047a257c1172412d1b354a98e3cc77d013d0f3c1af6ff646233abf8b669c196",
+    "vendor/ip/rgb2dvi_v1_2/xgui/rgb2dvi_v1_1.tcl": "44d93693f4a4eac11a86d7ff2be4dc03e2bab44a407c342bd3dd8f1477c55f92",
+    "vendor/ip/rgb2dvi_v1_2/xgui/rgb2dvi_v1_2.tcl": "b5c7922f8ce09ca0022acd406397ec1d1e602914851ea33e38934612344210b2"
+  },
+  "variants": {
+    "default": {
+      "bit": "board/visual_aid_v3.bit",
+      "hwh": "board/visual_aid_v3.hwh",
+      "camera_weak_pullups": true
+    },
+    "external_pullup": {
+      "bit": "board/visual_aid_v3_external_pullup.bit",
+      "hwh": "board/visual_aid_v3_external_pullup.hwh",
+      "camera_weak_pullups": false
+    }
+  },
+  "payload_sha256": {
+    "assets/ov5640_720p.json": "a88348addb38ab4f8476de2d97f7bb0cdef4d30ecf1ebec34f80f274b5ca5898",
+    "assets/ov5640_af.bin": "439245623bc99f3b0d8c44d47baed3cc17cad01b9191509c89bb8d92a98949c9",
+    "board/visual_aid_v3.bit": "c47f82f7ad5bf47483d35763e4a73ce6c638dad67d11aade71085c108c3d343f",
+    "board/visual_aid_v3.hwh": "45fcd9888bc97d4fc96e810593a9e566eecbe4e1475df04fbe49f9dde89911a9",
+    "board/visual_aid_v3_external_pullup.bit": "1a9040c02523eee9a38e12b8f0d3b0c6577eb3df2916f553c4de61dcf26e2e12",
+    "board/visual_aid_v3_external_pullup.hwh": "45fcd9888bc97d4fc96e810593a9e566eecbe4e1475df04fbe49f9dde89911a9",
+    "control_server.py": "07a95b0a4803916fe2312b17be5fd4765116f66bf22b8438ad82dd65311c5c78",
+    "jupyter_gui_guard.py": "b53d1b03c90c52674f2c84537c3823e4cfa8a867dc6e3741b882c3c4cc84087c",
+    "native/compose.c": "16bdb8d7d702f9d3ea58f437427618c0129a597f79855c530515e230b4972d82",
+    "native/libcompose.so": "d61129ed5a14cfe7bccb752f87ae06fb0175c17f60a3582e5e4f80491f42ebf6",
+    "preflight.py": "6d7087e03949ff8fa550b0eafeada202501a449155118deab9e537dc81f1639f",
+    "preview.py": "0467f095a6660300d1d1d8fb2abc962bee70db82f076c9f7a36b206074bfa566",
+    "run_board.py": "188dadb152c4c3b6d432cb96391905ab54a7c1ff145fe686376c96fe40556fbe",
+    "visual_aid/__init__.py": "a376d8cdc63c8dbc96b2a2ec75d610fb2ca55ac419994cd1ca6e3f98cd677f24",
+    "visual_aid/auto_quality.py": "2fbc03a906484f1c625cf27f145f44c82b25020500bcf99a5f9879a71ec36343",
+    "visual_aid/bus.py": "e46315aa0f20a3cdcb736866d3004c42bd91835d65e1547598b2ae190a8bbd48",
+    "visual_aid/camera.py": "0c7763bf85f7ccba4c70ff5a70e72679e81aa3b948ca4dee19a08b257b64c7ad",
+    "visual_aid/chroma.py": "291df24a23acb3fa2da603d2b61017ed569c54e3bf8ba465081cdd9bbf72813b",
+    "visual_aid/controls.py": "573c143ea0386418e170da4388dda86647646c13601c26658e194261f1899ef4",
+    "visual_aid/device.py": "595e434719c9612093a230e32f7597a3069c0905c0138667d472bddc6af0d484",
+    "visual_aid/encoder.py": "c04a8b1542b3c012614bbb8a84fb3a0bcb4d4afe74ac990431ff74ecdad6ea91",
+    "visual_aid/fastcompose.py": "d8dd9c01bec5d3d35a3ed67786e8741a1259ef03414c20147194830af7626d79",
+    "visual_aid/i2c_device.py": "a0e1bc933fa83f9627c8903dfd5e78aea72fb3415dd558e0aa2a3dc11316521d",
+    "visual_aid/image.py": "753f9b01ea8bfece1990f54db7c16e9b9bbc14b736d57637bf23d4ad1e287774",
+    "visual_aid/integrity.py": "ee055d89936674e728ca87d9a660040e8f231f2851d11e99cb9e6dfe3930eee7",
+    "visual_aid/local.py": "cb4289944aaa64d391da90e5692cfff475e074e100631ca72a41ae83a0eb9fc2",
+    "visual_aid/pl_runtime.py": "ceec9d74d3ba2aaf2a60a3af52e63762e3b1cc1f6a1b067b88278e4449515faf",
+    "visual_aid/remote_control.py": "1f251987d95f4cf8218616cd66918df0c36d20403be5fb03bc4b8a97d3827f99",
+    "visual_aid/scanout.py": "5862e3fd67332d8547e89cdf3ca431ae69bb228e5d952e6bfd59022ead925c0d",
+    "visual_aid/sensors.py": "6ca088e03f3528c621bf7bb5476506c0161059e6b175a7ce8d99d9d5a673b814",
+    "visual_aid/startup.py": "4a9838a749bb0591d377a7e662519da16085b5deb9f0bd68c0000ff88b627b2f",
+    "visual_aid/status_panel.py": "25483bbf5b764a2e998dc4343d36b1c07aeaec2e40e5904052c2d44e2f607668",
+    "visual_aid/vl53l0x_vendor.py": "d7a9d105c768ea3023e073915a6f2efb46202463baeca01b8ffe9d296f9c88c6",
+    "web/app.js": "378fcf1c3f4f8ecbe0eeb12ff5a762f25b1d07c8a8dc3a7e050145424d2bfc1d",
+    "web/index.html": "5b4b8abd09ab7b9bc5fd9a92ee60baeac61a64a94d128ea08c1726ff09ae340f",
+    "web/style.css": "ada7b64c4b09a74a22cbe56e31bf9a3b9a2d4529148c0a04bb64866454a2b095"
+  },
+  "ui_software_variant": {
+    "name": "visual_aid_v4_light_ui_20261028",
+    "parent_release": "visual_aid_v4_light_arduino_20261028",
+    "scope": "PL status layout and display-only refresh/smoothing",
+    "bit_hwh_unchanged": true,
+    "host_tests_passed": 94,
+    "board_validation": "passed_120_seconds"
+  },
+  "camera_software_variant": {
+    "name": "visual_aid_v4_camera_detail_20261028",
+    "parent_release": "visual_aid_v4_light_ui_20261028",
+    "scope": "optional camera ISP preset override",
+    "default_behavior": "legacy quality preset mapping; specify --camera-isp detail to opt in",
+    "bit_hwh_unchanged": true,
+    "host_tests_passed": 95,
+    "board_validation": "pending"
+  },
+  "web_control_revision": "2026-10-30-auto-quality-dynamic-v3",
+  "web_control_validation": "multi-parameter AUTO: offline validated; board validation pending"
+}

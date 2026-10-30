@@ -1,0 +1,5 @@
+{
+  "passed": true,
+  "errors": [],
+  "scope": "setup/hold/DRC metrics only; not CDC completeness or board acceptance"
+}

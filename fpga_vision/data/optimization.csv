@@ -1,0 +1,10 @@
+﻿group,metric,before_or_capture,after_or_render,unit,conditions,evidence,limit
+historical_ps,采集 FPS,10.707,16.618,FPS,2026-10-23 优化记录；不同场景/操作/实现,data/history/performance_summary.json,历史趋势，不是严格同场景 A/B
+historical_pl,独立采集/PL 渲染,16.618,19.971,FPS,不同版本及操作条件,data/history/pl_upgrade_summary.json,不以此宣称本次 AUTO 加速
+current_auto,采集/渲染,19.979897,19.622222,FPS,2026-10-30 同一 60 秒运行，包含冻结恢复,board/results/summary.json,两列是采集/渲染，不是优化前后
+hardware_same,Slice LUTs,9957,9957,LUT,10-28 bit 与 10-30 AUTO 复用同一 bit,build/reference_reports/system_utilization.rpt,AUTO 只改 PS；同一硬件资源
+hardware_same,Slice Registers,12443,12443,FF,同一 bit,build/reference_reports/system_utilization.rpt,同一硬件资源
+hardware_same,Block RAM Tile,40,40,tile,同一 bit,build/reference_reports/system_utilization.rpt,同一硬件资源
+hardware_same,DSPs,38,38,DSP,同一 bit,build/reference_reports/system_utilization.rpt,同一硬件资源
+hardware_same,setup/hold,0.189/0.014,0.189/0.014,ns,同一已验收 bit 对应的实现报告,build/reference_reports/system_timing_values.json,不代表新重建 bit 的时序
+pending_ab,AUTO ON/OFF 开销,未测,未测,FPS/%,固定条件 A/B 尚未执行,report/reproduction.md,不得填写估计值

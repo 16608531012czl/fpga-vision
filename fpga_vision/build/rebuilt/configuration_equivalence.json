@@ -1,0 +1,35 @@
+{
+  "configuration_data_identical": true,
+  "configuration_bytes": 4045564,
+  "original_configuration_sha256": "aeff3b901bf1335bc8a569137d850d759f2ff6f93c4aaca0bf02ac52e15a15ea",
+  "rebuilt_configuration_sha256": "aeff3b901bf1335bc8a569137d850d759f2ff6f93c4aaca0bf02ac52e15a15ea",
+  "original_headers": {
+    "a": "visual_aid_wrapper;UserID=0XFFFFFFFF;Version=2018.3",
+    "b": "7z020clg400",
+    "c": "2026/10/28",
+    "d": "14:12:12"
+  },
+  "rebuilt_headers": {
+    "a": "visual_aid_wrapper;UserID=0XFFFFFFFF;Version=2018.3",
+    "b": "7z020clg400",
+    "c": "2026/10/30",
+    "d": "14:32:50"
+  },
+  "rebuilt_bit_sha256": "c33654de858372f173c41787a89aeee96e8f872c8fd5b9ac5305e7a631e572dc",
+  "rebuilt_hwh_sha256": "a5b1eceef31e6262d895e0fdb8d30b13fc0237bd9a1d09f12394fdb0683bf0c1",
+  "scope": "configuration payload equality ignores the bit file header; HWH is separately paired and checked on board",
+  "hwh_tree_equal_ignoring_timestamp_and_child_order": false,
+  "hwh_normalization": "Compare every tag, attribute and text; omit only root TIMESTAMP and sort children recursively",
+  "original_hwh_normalized_sha256": "c1a322894f331d89a1722c58755cef70cdf82766a0fcae47747e0688c437229c",
+  "rebuilt_hwh_normalized_sha256": "5a0bfff41b8b50a525bb727865824897ef9b7c8ffabe8cd3031f85d0b512df4f",
+  "pynq_24_parser_outputs_equal": {
+    "ip_dict": true,
+    "clock_dict": true,
+    "gpio_dict": true,
+    "interrupt_controllers": true,
+    "interrupt_pins": true,
+    "hierarchy_dict": true
+  },
+  "hwh_differences": "Timestamp, child order, documentation source path, and 32 additional unconnected read-channel port/port-map descriptions under memory_bus; PYNQ 2.4 runtime dictionaries are identical",
+  "parser_source_sha256": "c1f6fe3779e67cd9fb6fa6a0bda17d8151f71bbff58771a503e26de67421a3ba"
+}

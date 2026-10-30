@@ -1,0 +1,21 @@
+{
+  "lut": 9957,
+  "lut_percent": 18.72,
+  "ff": 12443,
+  "ff_percent": 11.69,
+  "bram_tiles": 40,
+  "bram_percent": 28.57,
+  "dsp": 38,
+  "dsp_percent": 17.27,
+  "setup_ns": 0.189,
+  "hold_ns": 0.014,
+  "drc_errors": 0,
+  "bus_skew_slack_ns": [
+    8.751,
+    8.837,
+    8.952,
+    8.594,
+    8.228
+  ],
+  "implementation_warnings_retained": true
+}
