@@ -1,0 +1,9 @@
+{
+  "setup_ns": null,
+  "hold_ns": null,
+  "drc_errors": null,
+  "unconstrained_internal_endpoints": null,
+  "source_reports": [],
+  "tool_version": "REPLACE_WITH_BUILD_TOOL",
+  "source_sha256_manifest": "REPLACE_WITH_MANIFEST_PATH"
+}

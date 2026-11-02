@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "configuration_data_identical": true,
+  "configuration_bytes": 4045564,
+  "original_configuration_sha256": "aeff3b901bf1335bc8a569137d850d759f2ff6f93c4aaca0bf02ac52e15a15ea",
+  "rebuilt_configuration_sha256": "aeff3b901bf1335bc8a569137d850d759f2ff6f93c4aaca0bf02ac52e15a15ea",
+  "pynq_24_parser_outputs_equal": {
+    "ip_dict": true,
+    "clock_dict": true,
+    "gpio_dict": true,
+    "interrupt_controllers": true,
+    "interrupt_pins": true,
+    "hierarchy_dict": true
+  },
+  "scope": "Header-independent configuration and runtime metadata comparison; not a new board run"
+}

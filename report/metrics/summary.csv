@@ -1,0 +1,12 @@
+metric,value,unit
+board_run_seconds,60,s
+capture_frames,1199,frames
+render_frames,1176,frames
+capture_fps,19.979896910847224,fps
+render_fps,19.622221803674194,fps
+dma_errors,0,count
+overflow_frames,0,count
+malformed_frames,0,count
+setup_ns,0.189,ns
+hold_ns,0.014,ns
+drc_errors,0,count

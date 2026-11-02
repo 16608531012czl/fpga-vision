@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-02",
+  "host_tests": 129,
+  "host_result": "passed",
+  "skill_tests": 9,
+  "skill_result": "passed",
+  "runtime_preflight": "passed; overlay_loaded=false; board_tested=false",
+  "timing_gate": "passed",
+  "hardware_comparison": "passed",
+  "preserved_source_and_historical_evidence_files": 235,
+  "xsim_source_fingerprints": "verified against retained full-resolution results; no fresh XSim run",
+  "rebuild_source_fingerprints": "verified; no fresh synthesis or implementation",
+  "new_board_run": false,
+  "report_pages": 40,
+  "runtime_zip_crc_and_payload_maps": "passed",
+  "required_directories": [
+    "src",
+    "sim",
+    "build",
+    "board",
+    "data",
+    "skill",
+    "report"
+  ],
+  "checks": [
+    {
+      "check": "skill_tests.txt",
+      "exit_code": 0
+    },
+    {
+      "check": "timing_gate.json",
+      "exit_code": 0
+    },
+    {
+      "check": "hardware_comparison.json",
+      "exit_code": 0
+    }
+  ]
+}

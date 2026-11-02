@@ -1,0 +1,20 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Users/CHENZHELONG/Desktop/diansai/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_encoder -s encoder_snapshot --debug typical 
+Multi-threading is on. Using 14 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.encoder_input(CLOCK_HZ=1000000,A...
+Compiling module work.tb_encoder
+Built simulation snapshot encoder_snapshot
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/fpga/submission_work/fpga_vision/build/work/build/sim_full/xsim.dir/encoder_snapshot/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Fri Oct 30 11:55:57 2026...

@@ -1,0 +1,32 @@
+{
+  "schema": 1,
+  "files": {
+    "check_timing.py": "598590b50d65359485b1971c5cf674ab59105632c6912427c63b988644d48ab4",
+    "compare_words.py": "c4ed05a27371f6a22c610dea4c1ab5c21f6ca7e6b946dc13229e64a55b373680",
+    "evidence/fresh_extract_selftest_20261102.txt": "5c33e03325839c9f631ae0648abc1f9c0e4eab21513001d1bfb487f51bced6bb",
+    "evidence/historical_board_120s.md": "72daea0de80ed1e27c809787688fbd4f3af47a6a28df382d5e3230ff4af2619e",
+    "evidence/historical_collaboration.md": "3013c0ef491a14b60a1d4a4427e43bfeba6a29b68e3c7d475cdb0fdbae321b44",
+    "evidence/historical_host_preflight.json": "50b8db0729f4617a4d9e57883a8962ed52b19cc5ed34442bcd74cd21642cf59d",
+    "evidence/historical_reproduction_status.json": "099c1e5aa06d858df9ea6f621c586472321b2d64ac4ed6d151d0573e2e09291c",
+    "evidence/historical_skill_tests.txt": "b30dc11ba4158d8b0d8cff7e69c7ad4570a17900e483a8696b8b303787f1807e",
+    "evidence/package_qa.json": "562c2b15225a6b33118abfe33bf18a2edd6a51a6b76b9ac95be804a8b611fbbd",
+    "evidence/selftest_20261102.txt": "23ad8a1e11d6d07c3a7d378154874071edb334d58429d086e0fa3bee18f18a8e",
+    "evidence_template.md": "ba8436554da50f39123c977e20e22c9a253020dd533980e77da952adbe43f25a",
+    "pitfalls.md": "aba674235e3a836fba874f0910095324669509f8af07f775fff09e4fabbd710e",
+    "pynq_portability.md": "e8d99775e587b63bd863c723da026deb28d4936218d99b72d4a679baa8325f54",
+    "README.md": "7c5ba222a354534f5a9681a4f1b2f3230319618fde2059c64125e99d424fdc60",
+    "references/bringup.md": "6eda5c0dd2866efb3178e4bd5e3e9ac162444faa06a16c1e9b3fb197d8b90db7",
+    "references/evidence.md": "9b81b962feea08c2e728aa2e107df335683711a50e508c619040c7d96e1171d0",
+    "references/pitfalls.md": "72ddade07b943ff8ffb398c43f0b04f00ef906f1a1fb5386fee67545c7cef119",
+    "references/prompts.md": "dd3b6845e9f3193859acc2c35d1cbaf38370bb51b5b354691e3a942c0fc26e9b",
+    "scripts/pynq_check.py": "3ddd19e128d77879a7f4b8c1b780f426e63fe4619d116f999024e2c8db1b20fb",
+    "skill.md": "2867df8a2094afc12034564574f9658e56e80981f1b6d3658b89cfef0cd65901",
+    "templates/acceptance.md": "8a719f1777aad1f7f3fa4c6f3504f79b3d01fd151b3ad958e4a8b462d4d3168c",
+    "templates/board_profile.json": "6f889a7e71bf2418ea896e50c866602447970fcdc5cc9c69de5de59d20099db8",
+    "templates/timing_metrics.json": "51880cec34ff4483729018dc58c3090232131304d215b62ff3ec7e6ed23c4c07",
+    "test_validators.py": "3d21bd349c4efdee9bb5b2b8cd7235a71efdacf14827766c7da7abcbbe79aa0e",
+    "tests/test_pynq_check.py": "5d7686ea96444c7e4a4974a07f22e671d0609f381dd98a6ac8c7646cf998f3ef",
+    "verify_hashes.py": "c495ddc5bea6e0ed1ce047fd17fd298fecb1e35c2729c97b84cdd67b04afc13c",
+    "workflow.md": "75c65c1bf5b969352f4eb5b634c58f666e4e8c7ea82f0713e9453dc5dcda19c6"
+  }
+}

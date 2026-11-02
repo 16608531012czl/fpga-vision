@@ -130,6 +130,6 @@ test_auto_key_updates_panel_promptly_without_changing_policy_input (test_status_
 test_smoothing_is_display_only_and_missing_lux_is_not_shown_as_zero (test_status_panel.StatusPanelTests.test_smoothing_is_display_only_and_missing_lux_is_not_shown_as_zero) ... ok
 
 ----------------------------------------------------------------------
-Ran 129 tests in 4.249s
+Ran 129 tests in 2.827s
 
 OK

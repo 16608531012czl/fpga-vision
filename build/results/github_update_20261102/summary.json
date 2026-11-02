@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-02",
+  "host_tests": 129,
+  "host_passed": true,
+  "legacy_skill_tests": 9,
+  "legacy_skill_passed": true,
+  "portable_skill_tests": {
+    "total": 24,
+    "passed": 23,
+    "skipped": 1,
+    "failed": 0
+  },
+  "host_preflight": "passed; no overlay loaded",
+  "timing_gate": "passed; existing implementation metrics",
+  "hardware_comparison": "configuration and PYNQ runtime dictionaries match",
+  "report": {
+    "pages": 40,
+    "old_chinese_name_occurrences": 0,
+    "source_and_output_qa_hashes_match": true
+  },
+  "active_markdown_links_checked": 15,
+  "new_xsim_run": false,
+  "new_vivado_implementation": false,
+  "new_board_run": false,
+  "byte_preservation": ".gitattributes disables newline conversion for reproducible hashes"
+}

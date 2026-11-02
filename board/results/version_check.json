@@ -1,0 +1,23 @@
+{
+  "python": "3.6.5",
+  "numpy": "1.13.3",
+  "hashes": {
+    "visual_aid/auto_quality.py": "2fbc03a906484f1c625cf27f145f44c82b25020500bcf99a5f9879a71ec36343",
+    "visual_aid/controls.py": "573c143ea0386418e170da4388dda86647646c13601c26658e194261f1899ef4",
+    "run_board.py": "188dadb152c4c3b6d432cb96391905ab54a7c1ff145fe686376c96fe40556fbe",
+    "control_server.py": "07a95b0a4803916fe2312b17be5fd4765116f66bf22b8438ad82dd65311c5c78",
+    "board/visual_aid_v3.bit": "c47f82f7ad5bf47483d35763e4a73ce6c638dad67d11aade71085c108c3d343f",
+    "board/visual_aid_v3.hwh": "45fcd9888bc97d4fc96e810593a9e566eecbe4e1475df04fbe49f9dde89911a9"
+  },
+  "timestamp": "2026-10-30T11:10:40.066422",
+  "local_root": "C:\\fpga\\visual_aid_auto_dynamic_20261030\\runtime",
+  "remote_root": "/home/xilinx/jupyter_notebooks/FPGAvision_dynamic_AUTO_20261030/FPGAvision_Control",
+  "matches": {
+    "visual_aid/auto_quality.py": true,
+    "visual_aid/controls.py": true,
+    "run_board.py": true,
+    "control_server.py": true,
+    "board/visual_aid_v3.bit": true,
+    "board/visual_aid_v3.hwh": true
+  }
+}

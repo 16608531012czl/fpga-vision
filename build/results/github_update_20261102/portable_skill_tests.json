@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-02",
+  "python": "3.13.2",
+  "command": "python -m unittest discover -s skill/tests -v",
+  "tests": 24,
+  "passed": 23,
+  "skipped": 1,
+  "failed": 0,
+  "skip_reason": "Windows denied creation of symbolic link",
+  "note": "Executed against this merged repository copy; original skill evidence retained separately."
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-02",
+  "timezone": "Asia/Shanghai",
+  "python_runtime": "3.12.7",
+  "unit_tests": {
+    "total": 24,
+    "passed": 23,
+    "skipped": 1,
+    "failed": 0
+  },
+  "fresh_zip_extract_tests": {
+    "total": 24,
+    "passed": 23,
+    "skipped": 1,
+    "failed": 0
+  },
+  "skip_reason": "Windows denied creation of symbolic link; real symlink escape case not exercised",
+  "skill_creator_frontmatter_validation": "passed with python -X utf8",
+  "python_36_grammar": "passed; no Python 3.6 runtime test",
+  "new_document_local_links_checked": 8,
+  "board_connected": false,
+  "bitstream_downloaded": false,
+  "real_pynq_metadata_validation_this_run": false,
+  "second_board_tested": false
+}

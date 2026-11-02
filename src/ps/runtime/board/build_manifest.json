@@ -335,7 +335,7 @@
     "visual_aid/status_panel.py": "25483bbf5b764a2e998dc4343d36b1c07aeaec2e40e5904052c2d44e2f607668",
     "visual_aid/vl53l0x_vendor.py": "d7a9d105c768ea3023e073915a6f2efb46202463baeca01b8ffe9d296f9c88c6",
     "web/app.js": "378fcf1c3f4f8ecbe0eeb12ff5a762f25b1d07c8a8dc3a7e050145424d2bfc1d",
-    "web/index.html": "5b4b8abd09ab7b9bc5fd9a92ee60baeac61a64a94d128ea08c1726ff09ae340f",
+    "web/index.html": "e72cb9824af6ef91cda3f02060b2ef29fe7fbc2ff4108f8d26ef0752f357a42a",
     "web/style.css": "ada7b64c4b09a74a22cbe56e31bf9a3b9a2d4529148c0a04bb64866454a2b095"
   },
   "ui_software_variant": {
@@ -356,5 +356,7 @@
     "board_validation": "pending"
   },
   "web_control_revision": "2026-10-30-auto-quality-dynamic-v3",
-  "web_control_validation": "multi-parameter AUTO: offline validated; board validation pending"
+  "web_control_validation": "multi-parameter AUTO: offline validated; board validation pending",
+  "submission_display_name": "视觉增强器",
+  "submission_label_revision": "2026-11-02; display label only; no new board run"
 }

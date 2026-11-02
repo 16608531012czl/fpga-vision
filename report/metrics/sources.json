@@ -1,0 +1,13 @@
+{
+  "board_run_seconds": "board/results/summary.json#board_run_seconds",
+  "capture_frames": "board/results/summary.json#capture_frames",
+  "render_frames": "board/results/summary.json#render_frames",
+  "capture_fps": "board/results/summary.json#capture_fps",
+  "render_fps": "board/results/summary.json#render_fps",
+  "dma_errors": "board/results/summary.json#counters/dma_errors",
+  "overflow_frames": "board/results/summary.json#counters/overflow_frames",
+  "malformed_frames": "board/results/summary.json#counters/malformed_frames",
+  "setup_ns": "build/rebuilt_reports/system_timing_values.json#setup_ns",
+  "hold_ns": "build/rebuilt_reports/system_timing_values.json#hold_ns",
+  "drc_errors": "build/rebuilt_reports/system_timing_values.json#drc_errors"
+}

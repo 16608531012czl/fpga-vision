@@ -1,0 +1,29 @@
+test_bad_threshold_rejected (test_pynq_check.PortableChecks.test_bad_threshold_rejected) ... ok
+test_changed_ip_type_address_and_range (test_pynq_check.PortableChecks.test_changed_ip_type_address_and_range) ... ok
+test_cli_exit_codes_and_malformed_json (test_pynq_check.PortableChecks.test_cli_exit_codes_and_malformed_json) ... ok
+test_contract_typo_rejected (test_pynq_check.PortableChecks.test_contract_typo_rejected) ... ok
+test_drc_and_unconstrained_rejected (test_pynq_check.PortableChecks.test_drc_and_unconstrained_rejected) ... ok
+test_empty_xz_negative_overwidth_rejected (test_pynq_check.PortableChecks.test_empty_xz_negative_overwidth_rejected) ... ok
+test_env_missing_module (test_pynq_check.PortableChecks.test_env_missing_module) ... ok
+test_first_mismatch (test_pynq_check.PortableChecks.test_first_mismatch) ... ok
+test_invalid_hash_and_empty_manifest (test_pynq_check.PortableChecks.test_invalid_hash_and_empty_manifest) ... ok
+test_manifest_additional_files_are_out_of_scope (test_pynq_check.PortableChecks.test_manifest_additional_files_are_out_of_scope) ... ok
+test_manifest_does_not_overwrite (test_pynq_check.PortableChecks.test_manifest_does_not_overwrite) ... ok
+test_metadata_disables_download (test_pynq_check.PortableChecks.test_metadata_disables_download) ... ok
+test_metadata_wrong_pair (test_pynq_check.PortableChecks.test_metadata_wrong_pair) ... ok
+test_missing_file (test_pynq_check.PortableChecks.test_missing_file) ... ok
+test_missing_ip (test_pynq_check.PortableChecks.test_missing_ip) ... ok
+test_path_escape_and_absolute (test_pynq_check.PortableChecks.test_path_escape_and_absolute) ... ok
+test_payload_pass (test_pynq_check.PortableChecks.test_payload_pass) ... ok
+test_symlink_escape_when_supported (test_pynq_check.PortableChecks.test_symlink_escape_when_supported) ... skipped 'OS does not permit creating symlinks'
+test_tampered_file (test_pynq_check.PortableChecks.test_tampered_file) ... ok
+test_timing_negative_nonfinite_missing_and_bool (test_pynq_check.PortableChecks.test_timing_negative_nonfinite_missing_and_bool) ... ok
+test_timing_pass_and_custom_threshold (test_pynq_check.PortableChecks.test_timing_pass_and_custom_threshold) ... ok
+test_truncated_and_extra_words (test_pynq_check.PortableChecks.test_truncated_and_extra_words) ... ok
+test_two_topic_profiles_same_validator (test_pynq_check.PortableChecks.test_two_topic_profiles_same_validator) ... ok
+test_word_equivalence (test_pynq_check.PortableChecks.test_word_equivalence) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.848s
+
+OK (skipped=1)

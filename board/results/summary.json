@@ -1,0 +1,162 @@
+{
+  "host_date": "2026-10-30",
+  "revision": "2026-10-30-auto-quality-dynamic-v3",
+  "board_run_seconds": 60,
+  "capture_frames": 1199,
+  "render_frames": 1176,
+  "capture_fps": 19.979896910847224,
+  "render_fps": 19.622221803674194,
+  "temperature_range_c": [
+    47.37,
+    48.11
+  ],
+  "lux_range": [
+    74.16666666666667,
+    118.33333333333334
+  ],
+  "counters": {
+    "capture_id": 1200,
+    "dma_errors": 0,
+    "camera_vsync": 1204,
+    "overflow_frames": 0,
+    "malformed_frames": 0,
+    "display_sof": 3611
+  },
+  "checks": {
+    "auto_active": true,
+    "manual_handover_and_hold": true,
+    "auto_resume": true,
+    "freeze_resume": true
+  },
+  "cleanup_errors": [],
+  "hdmi": {
+    "source": "user observation in current conversation",
+    "statement": "画面正常，移动物体会更新",
+    "reported_at_host": "2026-10-30T11:15:51.971814",
+    "scope": "本次限时测试 HDMI 画面和动态更新；非光学对焦或定量画质评价"
+  },
+  "parameters_first": {
+    "brightness": 0,
+    "sharpness": 5,
+    "denoise": 0,
+    "contrast": 1,
+    "algorithm": 3,
+    "noise": 1,
+    "edge_view": false,
+    "color": 9,
+    "local_tone": false,
+    "window31": false,
+    "binary_c": 7,
+    "selected": "brightness",
+    "mode": 4,
+    "zoom": 1,
+    "frozen": false,
+    "split": true,
+    "automatic": true,
+    "center": [
+      0.5,
+      0.5
+    ],
+    "auto_quality": {
+      "status": "active",
+      "reason": "暗场提亮；保留细节",
+      "metrics": {
+        "mean": 77.9930648803711,
+        "dark_fraction": 0.15359760802469136,
+        "highlight_fraction": 0.0,
+        "contrast_range": 36.0283203125,
+        "noise_sigma": 0.7012626306741948,
+        "edge_fraction": 0.06835399449035813,
+        "unevenness": 11.189719200134277,
+        "lux": 118.33333333333334,
+        "sample_pixels": 5184,
+        "scope": "9 raw ROI patches; heuristic estimates"
+      },
+      "targets": {
+        "brightness": 0,
+        "denoise": 0,
+        "sharpness": 5,
+        "noise": 1,
+        "algorithm": 3,
+        "contrast": 2,
+        "local_tone": false,
+        "color": 10,
+        "binary_c": 7,
+        "window31": false
+      },
+      "updated_monotonic": 2769.387446226,
+      "tone_strength": 1.0,
+      "tone_control": "adaptive LUT using image brightness and valid lux"
+    }
+  },
+  "parameters_last": {
+    "brightness": 0,
+    "sharpness": 5,
+    "denoise": 0,
+    "contrast": 2,
+    "algorithm": 3,
+    "noise": 1,
+    "edge_view": false,
+    "color": 10,
+    "local_tone": false,
+    "window31": false,
+    "binary_c": 7,
+    "selected": "brightness",
+    "mode": 4,
+    "zoom": 1,
+    "frozen": false,
+    "split": true,
+    "automatic": true,
+    "center": [
+      0.5,
+      0.5
+    ],
+    "auto_quality": {
+      "status": "active",
+      "reason": "暗场提亮；保留细节",
+      "metrics": {
+        "mean": 63.745088154743144,
+        "dark_fraction": 0.4309365013717342,
+        "highlight_fraction": 0.0,
+        "contrast_range": 40.47253575344863,
+        "noise_sigma": 0.6369933369157454,
+        "edge_fraction": 0.04825009401096693,
+        "unevenness": 11.768960103057424,
+        "lux": 115.83333333333334,
+        "sample_pixels": 5184,
+        "scope": "9 raw ROI patches; heuristic estimates"
+      },
+      "targets": {
+        "brightness": 0,
+        "denoise": 0,
+        "sharpness": 5,
+        "noise": 1,
+        "algorithm": 3,
+        "contrast": 2,
+        "local_tone": false,
+        "color": 10,
+        "binary_c": 7,
+        "window31": false
+      },
+      "updated_monotonic": 2828.698469366,
+      "tone_strength": 1.0,
+      "tone_control": "adaptive LUT using image brightness and valid lux"
+    }
+  },
+  "host_tests_passed": 129,
+  "xsim": {
+    "pixels": 15360,
+    "frames": 20,
+    "cycles": 33527,
+    "resolution": [
+      32,
+      24
+    ],
+    "simulated_end_ns": 335325
+  },
+  "notes": [
+    "Board clock uncalibrated: original log filename is 20190221, use host date.",
+    "Run includes freeze/resume; render FPS difference is not measured AUTO overhead.",
+    "Legacy report flags auto_quality_board_validated=false and display_observed=null are static/unpopulated; current test and separate user observation supply bounded evidence."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-02",
+  "project_display_name": "基于 FPGA 的实时视觉增强器",
+  "input_archive_sha256": "396b7273fae8ed96583b35980822a7967f2b9014979039e54fccb190eeb2044f",
+  "input_report_sha256": "277cff281e73eeabaf73e311d5e4347cabfa949e3c2909440ebb2059f0ad9b12",
+  "source_release": "2026-10-30-auto-quality-dynamic-v3",
+  "local_runtime_files_compared": 37,
+  "local_runtime_equal_before_display_rename": true,
+  "display_rename_files": [
+    "README.md",
+    "src/ps/runtime/web/index.html"
+  ],
+  "new_board_run": false,
+  "new_synthesis_or_implementation": false,
+  "historical_evidence_preserved": true,
+  "runtime_payload_manifest_refreshed": true,
+  "rar_tool_source": "https://www.rarlab.com/rar/winrar-x64-723.exe",
+  "rar_tool_authenticode": "Valid; win.rar GmbH"
+}

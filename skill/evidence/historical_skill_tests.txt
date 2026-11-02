@@ -1,0 +1,14 @@
+test_drc_error (test_validators.Validators.test_drc_error) ... ok
+test_hash_integrity_and_tamper (test_validators.Validators.test_hash_integrity_and_tamper) ... ok
+test_missing_and_nan (test_validators.Validators.test_missing_and_nan) ... ok
+test_negative_slack (test_validators.Validators.test_negative_slack) ... ok
+test_path_escape (test_validators.Validators.test_path_escape) ... ok
+test_pixel_match (test_validators.Validators.test_pixel_match) ... ok
+test_pixel_mismatch (test_validators.Validators.test_pixel_mismatch) ... ok
+test_timing_pass (test_validators.Validators.test_timing_pass) ... ok
+test_truncated_and_empty (test_validators.Validators.test_truncated_and_empty) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.023s
+
+OK

@@ -1,0 +1,48 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/fpga/submission_work/fpga_vision/build/work/rtl/assist_regs.sv" into library work
+INFO: [VRFC 10-311] analyzing module assist_regs
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/fpga/submission_work/fpga_vision/build/work/rtl/async_fifo.sv" into library work
+INFO: [VRFC 10-311] analyzing module async_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/fpga/submission_work/fpga_vision/build/work/rtl/canvas_writer.sv" into library work
+INFO: [VRFC 10-311] analyzing module canvas_writer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/fpga/submission_work/fpga_vision/build/work/rtl/chroma_filter.sv" into library work
+INFO: [VRFC 10-311] analyzing module chroma_filter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/fpga/submission_work/fpga_vision/build/work/rtl/color_reconstruct.sv" into library work
+INFO: [VRFC 10-311] analyzing module color_reconstruct
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/fpga/submission_work/fpga_vision/build/work/rtl/display_slot_decode.sv" into library work
+INFO: [VRFC 10-311] analyzing module display_slot_decode
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/fpga/submission_work/fpga_vision/build/work/rtl/dvp_capture.sv" into library work
+INFO: [VRFC 10-311] analyzing module dvp_capture
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/fpga/submission_work/fpga_vision/build/work/rtl/encoder_input.sv" into library work
+INFO: [VRFC 10-311] analyzing module encoder_input
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/fpga/submission_work/fpga_vision/build/work/rtl/frame_tiles.sv" into library work
+INFO: [VRFC 10-311] analyzing module frame_tiles
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/fpga/submission_work/fpga_vision/build/work/rtl/frame_writer.sv" into library work
+INFO: [VRFC 10-311] analyzing module frame_writer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/fpga/submission_work/fpga_vision/build/work/rtl/local_tone_map.sv" into library work
+INFO: [VRFC 10-311] analyzing module local_tone_map
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/fpga/submission_work/fpga_vision/build/work/rtl/reading_enhance.sv" into library work
+INFO: [VRFC 10-311] analyzing module reading_enhance
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/fpga/submission_work/fpga_vision/build/work/rtl/status_font.sv" into library work
+INFO: [VRFC 10-311] analyzing module status_font
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/fpga/submission_work/fpga_vision/build/work/rtl/status_overlay.sv" into library work
+INFO: [VRFC 10-311] analyzing module status_overlay
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/fpga/submission_work/fpga_vision/build/work/rtl/visual_aid_core.sv" into library work
+INFO: [VRFC 10-311] analyzing module visual_aid_core
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/fpga/submission_work/fpga_vision/build/work/sim/tb_abort.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_abort
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/fpga/submission_work/fpga_vision/build/work/sim/tb_canvas.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_canvas
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/fpga/submission_work/fpga_vision/build/work/sim/tb_capture.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_capture
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/fpga/submission_work/fpga_vision/build/work/sim/tb_encoder.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_encoder
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/fpga/submission_work/fpga_vision/build/work/sim/tb_fifo.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/fpga/submission_work/fpga_vision/build/work/sim/tb_gamma.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_gamma
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/fpga/submission_work/fpga_vision/build/work/sim/tb_kernels.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_kernels
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/fpga/submission_work/fpga_vision/build/work/sim/tb_reading.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_reading
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/fpga/submission_work/fpga_vision/build/work/sim/tb_registers.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_registers

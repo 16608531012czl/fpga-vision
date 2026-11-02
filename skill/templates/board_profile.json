@@ -1,0 +1,15 @@
+{
+  "board_model": "REPLACE_WITH_TARGET_BOARD",
+  "fpga_part": "REPLACE_WITH_TARGET_PART",
+  "pynq_version": "REPLACE_WITH_INSTALLED_VERSION",
+  "vivado_version": "REPLACE_WITH_BUILD_VERSION",
+  "bit": "overlay/design.bit",
+  "hwh": "overlay/design.hwh",
+  "expected_ips": {
+    "REPLACE_WITH_EXACT_HWH_IP_NAME": {
+      "type": "REPLACE_WITH_EXACT_VENDOR_LIBRARY_NAME_VERSION",
+      "phys_addr": "0x40000000",
+      "addr_range": "0x10000"
+    }
+  }
+}

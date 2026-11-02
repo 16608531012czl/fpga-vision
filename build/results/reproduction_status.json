@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-30",
+  "host_tests": {
+    "passed": 129,
+    "log": "build/results/host_tests.txt"
+  },
+  "skill_tests": {
+    "passed": 9,
+    "log": "build/results/skill_tests.txt"
+  },
+  "xsim": {
+    "passed_tests": [
+      "reading",
+      "capture",
+      "registers",
+      "gamma",
+      "fifo",
+      "abort",
+      "encoder",
+      "canvas",
+      "kernels"
+    ],
+    "full_resolution": true,
+    "reading_pixels": 3686400,
+    "reading_frames": 4,
+    "reading_cycles": 7969996,
+    "source_fingerprint": "sim/results/xsim_full.json"
+  },
+  "fresh_hardware_rebuild": {
+    "completed": true,
+    "source_project": "src/pl",
+    "from_empty_work_directory": true,
+    "old_checkpoint_used": false,
+    "tool": "Vivado 2018.3",
+    "completed_at_host": "2026-10-30T14:33:24+08:00",
+    "block_design": "passed",
+    "synthesis": "passed",
+    "implementation": "passed",
+    "bit_and_hwh_generated": true,
+    "setup_ns": 0.189,
+    "hold_ns": 0.014,
+    "drc_errors": 0,
+    "warnings": "retained in raw reports; zero errors does not mean zero warnings",
+    "outputs": "build/rebuilt",
+    "reports": "build/rebuilt_reports",
+    "configuration_equivalence": true,
+    "pynq_24_parser_outputs_equal": {
+      "ip_dict": true,
+      "clock_dict": true,
+      "gpio_dict": true,
+      "interrupt_controllers": true,
+      "interrupt_pins": true,
+      "hierarchy_dict": true
+    },
+    "portable_project_entry": "passed in a second empty directory via build/reproduce.py and build/invoke_vivado.ps1",
+    "fix": "UTF-8 Tcl scripts plus native PowerShell batch launch, with vendor environment preserved"
+  },
+  "delivered_board_payload": {
+    "unchanged": true,
+    "source": "src/ps/runtime/board",
+    "board_validation": "board/results/summary.json",
+    "implementation_reports": "build/reference_reports"
+  },
+  "report_statement": "本次独立副本的 129 项软件测试、9 项技能校验和九组完整分辨率 XSim 已通过。从空目录创建 BD、综合、布局布线及 bit/HWH 生成全部完成；建立裕量 +0.189 ns、保持裕量 +0.014 ns，DRC 错误 0。新旧 bit 配置数据逐字节一致；HWH 文件存在导出元数据差异，但 PYNQ 2.4 解析得到的六类运行时字典一致。按团队要求保留已有实板证据，本轮未重新连接或操作开发板。",
+  "new_board_run": {
+    "performed": false,
+    "reason": "User explicitly requested no reconnection and preservation of existing board evidence",
+    "user_statement": "暂不连接，保留已有实板证据",
+    "existing_evidence": "board/results/summary.json",
+    "hardware_configuration_identical": true
+  }
+}
