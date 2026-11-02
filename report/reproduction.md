@@ -75,3 +75,7 @@ python build/compare_hardware.py src/ps/runtime/board/visual_aid_v3.bit build/re
 ```
 
 预期配置数据完全一致，PYNQ 2.4 的 IP、时钟、GPIO、中断控制器、中断引脚、层次六类字典全相同。bit 文件头有编译日期等差异；HWH 有时间戳、顺序、文档路径和 memory_bus 中额外未连接读通道描述差异，因此不宣称两个文件本身字节相等。该比较不是一次新上板测试。
+
+## 2026-11-02 补测结果复核
+
+原建议 3×60 秒 AUTO 对照协议继续保留，实际新增记录采用缩短的 3×20 秒现场对照。连续运行约 607 秒，含开/关、光照与 EC11 操作，不是 30 分钟稳定性验收。复核已有记录执行 `python data/measurements_20261102/verify.py`，具体来源及未测项见 `measurement_update_20261102.md`。本次仓库更新不启动开发板。

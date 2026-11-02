@@ -1,0 +1,48 @@
+{
+  "name": "quality_baseline_capture_2",
+  "frame_id": 3492,
+  "raw_index": 0,
+  "config": 3894413676,
+  "view": [
+    129,
+    0,
+    [
+      0,
+      0,
+      1280,
+      720
+    ],
+    true
+  ],
+  "capture_monotonic": 2616.66802314,
+  "state": {
+    "brightness": 0,
+    "sharpness": 4,
+    "denoise": 0,
+    "contrast": 1,
+    "algorithm": 3,
+    "noise": 1,
+    "edge_view": false,
+    "color": 10,
+    "local_tone": true,
+    "window31": true,
+    "binary_c": 9,
+    "selected": "brightness",
+    "mode": 4,
+    "zoom": 1,
+    "frozen": false,
+    "split": true,
+    "automatic": false,
+    "center": [
+      0.5,
+      0.5
+    ],
+    "auto_quality": {
+      "status": "manual",
+      "reason": "参数由用户控制"
+    }
+  },
+  "render_count": 3492,
+  "canvas_slot": 1,
+  "render_completed_monotonic": 2617.721530425
+}

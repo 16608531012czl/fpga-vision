@@ -1,0 +1,16 @@
+{
+  "quality_baseline": {
+    "capture_fps": 19.513170890814106,
+    "n_images": 3,
+    "mean_laplacian_variance": 233.88106282552084,
+    "mean_tenengrad": 3637.9376627604165,
+    "mean_contrast_range": 53.0
+  },
+  "quality_detail": {
+    "capture_fps": 19.61297858261459,
+    "n_images": 3,
+    "mean_laplacian_variance": 259.65578206380206,
+    "mean_tenengrad": 3098.9449055989585,
+    "mean_contrast_range": 44.0
+  }
+}

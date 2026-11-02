@@ -1,0 +1,28 @@
+{
+  "configured_video_duration_s": 607,
+  "capture_observation_span_s": 606.9495046440001,
+  "render_observation_span_s": 606.8602899969999,
+  "capture_frames": 12065,
+  "render_frames": 12064,
+  "capture_fps": 19.876447558971176,
+  "render_fps": 19.877721773589165,
+  "temperature_min_c": 46.632452392436,
+  "temperature_max_c": 49.339349365084004,
+  "lux_min": 0.8333333333333334,
+  "lux_max": 4205.833333333334,
+  "counter_deltas": {
+    "capture_id": 12066,
+    "dma_errors": 0,
+    "camera_vsync": 12151,
+    "overflow_frames": 0,
+    "malformed_frames": 0,
+    "display_sof": 36446
+  },
+  "outcome": "completed",
+  "cleanup_errors": [],
+  "boot_unchanged": true,
+  "frozen_states": [
+    false
+  ],
+  "scope": "Whole uninterrupted video run, includes AUTO OFF/ON comparison, light changes and EC11 takeover. Initialization and cleanup excluded from capture span; no extrapolation to hours/days."
+}

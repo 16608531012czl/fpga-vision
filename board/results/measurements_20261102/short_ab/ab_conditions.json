@@ -1,0 +1,16 @@
+{
+  "initial_parameters": {
+    "brightness": 0,
+    "sharpness": 4,
+    "denoise": 0,
+    "contrast": 1,
+    "algorithm": 3,
+    "noise": 1,
+    "local_tone": true,
+    "color": 10,
+    "window31": true,
+    "binary_c": 9
+  },
+  "focus_hold_command_acknowledged": false,
+  "plan": "3 OFF/ON pairs; 5s settle + 20s sample per segment; fixed physical target/lighting; continuous AF unchanged; ISP detail/20fps throughout"
+}

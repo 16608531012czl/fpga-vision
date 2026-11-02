@@ -8,3 +8,6 @@ hardware_same,Block RAM Tile,40,40,tile,同一 bit,build/reference_reports/syste
 hardware_same,DSPs,38,38,DSP,同一 bit,build/reference_reports/system_utilization.rpt,同一硬件资源
 hardware_same,setup/hold,0.189/0.014,0.189/0.014,ns,同一已验收 bit 对应的实现报告,build/reference_reports/system_timing_values.json,不代表新重建 bit 的时序
 pending_ab,AUTO ON/OFF 开销,未测,未测,FPS/%,固定条件 A/B 尚未执行,report/reproduction.md,不得填写估计值
+auto_ab_20s,采集及渲染 FPS,19.896556001911414,19.88870222173128,FPS,3 对约20秒；5秒预热；连续AF；照度波动,board/results/measurements_20261102/short_ab/results.json,现场短测，不是严格因果开销
+auto_ab_20s,进程 CPU 单核占用,43.91986912123381,48.49901617160981,percent,OFF/ON；单核=100%,board/results/measurements_20261102/short_ab/results.json,增加百分点与相对百分比区分
+continuous_20261102,采集/渲染 FPS,19.876447558971176,19.877721773589165,FPS,606.950秒；含光照/EC11操作,board/results/measurements_20261102/continuous/ten_minute_stability.json,两类计数不是优化前后，非长期稳定性

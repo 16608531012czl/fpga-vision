@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "ab_pairs": 3,
+  "ab_sample_seconds": "about 20",
+  "continuous_capture_span_s": 606.9495046440001,
+  "source_hashes_checked": 27,
+  "board_connected": false,
+  "new_measurement_performed": false,
+  "date": "2026-11-02",
+  "scope": "Imported existing measurements only; no hardware or implementation rerun",
+  "existing_source_build_skill_sim_board_evidence_files_preserved": 356,
+  "report_pages": 41,
+  "report_sha256": "3737569677ea5bb341705652ad8b0ca9211d0e8524e99a939936f3619d4af450"
+}

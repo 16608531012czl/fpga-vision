@@ -1,0 +1,863 @@
+{
+  "ab_0_start": {
+    "monotonic": 360.494932847,
+    "elapsed_s": 5.020154186999946,
+    "capture_count": 100,
+    "render_count": 99,
+    "display_updates": 99,
+    "cpu_seconds": 50.495426,
+    "maxrss_kb": 105000,
+    "temperature_c": 47.001574706888,
+    "fps": 20.008061688231106,
+    "lux": 25.0,
+    "counters": {
+      "capture_id": 100,
+      "dma_errors": 0,
+      "camera_vsync": 107,
+      "overflow_frames": 0,
+      "malformed_frames": 0,
+      "display_sof": 3510
+    },
+    "state": {
+      "brightness": 0,
+      "sharpness": 4,
+      "denoise": 0,
+      "contrast": 1,
+      "algorithm": 3,
+      "noise": 1,
+      "edge_view": false,
+      "color": 9,
+      "local_tone": true,
+      "window31": true,
+      "binary_c": 8,
+      "selected": "brightness",
+      "mode": 4,
+      "zoom": 1,
+      "frozen": false,
+      "split": true,
+      "automatic": false,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "auto_quality": {
+        "status": "manual",
+        "reason": "参数由用户控制"
+      }
+    },
+    "planned_elapsed_s": 5
+  },
+  "ab_0_end": {
+    "monotonic": 385.478365376,
+    "elapsed_s": 30.003586715999973,
+    "capture_count": 597,
+    "render_count": 596,
+    "display_updates": 596,
+    "cpu_seconds": 59.784813,
+    "maxrss_kb": 105000,
+    "temperature_c": 46.87853393540401,
+    "fps": 20.01430125899275,
+    "lux": 24.166666666666668,
+    "counters": {
+      "capture_id": 597,
+      "dma_errors": 0,
+      "camera_vsync": 607,
+      "overflow_frames": 0,
+      "malformed_frames": 0,
+      "display_sof": 5009
+    },
+    "state": {
+      "brightness": 0,
+      "sharpness": 4,
+      "denoise": 0,
+      "contrast": 1,
+      "algorithm": 3,
+      "noise": 1,
+      "edge_view": false,
+      "color": 9,
+      "local_tone": true,
+      "window31": true,
+      "binary_c": 8,
+      "selected": "brightness",
+      "mode": 4,
+      "zoom": 1,
+      "frozen": false,
+      "split": true,
+      "automatic": false,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "auto_quality": {
+        "status": "manual",
+        "reason": "参数由用户控制"
+      }
+    },
+    "planned_elapsed_s": 30
+  },
+  "ab_1_start": {
+    "monotonic": 390.503008282,
+    "elapsed_s": 35.02822962199997,
+    "capture_count": 697,
+    "render_count": 696,
+    "display_updates": 696,
+    "cpu_seconds": 61.899119999999996,
+    "maxrss_kb": 105000,
+    "temperature_c": 46.75549316392,
+    "fps": 20.016261791550047,
+    "lux": 25.0,
+    "counters": {
+      "capture_id": 697,
+      "dma_errors": 0,
+      "camera_vsync": 707,
+      "overflow_frames": 0,
+      "malformed_frames": 0,
+      "display_sof": 5311
+    },
+    "state": {
+      "brightness": 0,
+      "sharpness": 4,
+      "denoise": 0,
+      "contrast": 1,
+      "algorithm": 3,
+      "noise": 1,
+      "edge_view": false,
+      "color": 10,
+      "local_tone": true,
+      "window31": true,
+      "binary_c": 8,
+      "selected": "brightness",
+      "mode": 4,
+      "zoom": 1,
+      "frozen": false,
+      "split": true,
+      "automatic": true,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "auto_quality": {
+        "status": "active",
+        "reason": "暗场提亮；保留细节；补偿局部明暗",
+        "metrics": {
+          "mean": 43.39056939055445,
+          "dark_fraction": 0.8717718624774322,
+          "highlight_fraction": 0.0,
+          "contrast_range": 69.65218123197553,
+          "noise_sigma": 0.3291556691527633,
+          "edge_fraction": 0.006866871927504806,
+          "unevenness": 25.785837704650476,
+          "lux": 25.0,
+          "sample_pixels": 5184,
+          "scope": "9 raw ROI patches; heuristic estimates"
+        },
+        "targets": {
+          "brightness": 0,
+          "denoise": 0,
+          "sharpness": 4,
+          "noise": 1,
+          "algorithm": 3,
+          "contrast": 1,
+          "local_tone": true,
+          "color": 10,
+          "binary_c": 8,
+          "window31": true
+        },
+        "updated_monotonic": 390.474039654,
+        "tone_strength": 1.0,
+        "tone_control": "adaptive LUT using image brightness and valid lux"
+      }
+    },
+    "planned_elapsed_s": 35
+  },
+  "ab_1_end": {
+    "monotonic": 415.508345731,
+    "elapsed_s": 60.03356707099999,
+    "capture_count": 1193,
+    "render_count": 1192,
+    "display_updates": 1192,
+    "cpu_seconds": 72.614572,
+    "maxrss_kb": 105000,
+    "temperature_c": 47.12461547837201,
+    "fps": 20.014565960639846,
+    "lux": 29.166666666666668,
+    "counters": {
+      "capture_id": 1193,
+      "dma_errors": 0,
+      "camera_vsync": 1208,
+      "overflow_frames": 0,
+      "malformed_frames": 0,
+      "display_sof": 6812
+    },
+    "state": {
+      "brightness": 0,
+      "sharpness": 4,
+      "denoise": 0,
+      "contrast": 1,
+      "algorithm": 3,
+      "noise": 1,
+      "edge_view": false,
+      "color": 10,
+      "local_tone": true,
+      "window31": true,
+      "binary_c": 8,
+      "selected": "brightness",
+      "mode": 4,
+      "zoom": 1,
+      "frozen": false,
+      "split": true,
+      "automatic": true,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "auto_quality": {
+        "status": "active",
+        "reason": "暗场提亮；保留细节；补偿局部明暗",
+        "metrics": {
+          "mean": 44.289962554650614,
+          "dark_fraction": 0.7772867634761798,
+          "highlight_fraction": 0.0,
+          "contrast_range": 69.9249549863432,
+          "noise_sigma": 0.3243743989571418,
+          "edge_fraction": 0.0076318256397532175,
+          "unevenness": 26.155875307445616,
+          "lux": 29.166666666666668,
+          "sample_pixels": 5184,
+          "scope": "9 raw ROI patches; heuristic estimates"
+        },
+        "targets": {
+          "brightness": 0,
+          "denoise": 0,
+          "sharpness": 4,
+          "noise": 1,
+          "algorithm": 3,
+          "contrast": 1,
+          "local_tone": true,
+          "color": 10,
+          "binary_c": 8,
+          "window31": true
+        },
+        "updated_monotonic": 415.207812107,
+        "tone_strength": 1.0,
+        "tone_control": "adaptive LUT using image brightness and valid lux"
+      }
+    },
+    "planned_elapsed_s": 60
+  },
+  "ab_2_start": {
+    "monotonic": 420.505191914,
+    "elapsed_s": 65.030413254,
+    "capture_count": 1293,
+    "render_count": 1292,
+    "display_updates": 1292,
+    "cpu_seconds": 74.571434,
+    "maxrss_kb": 105000,
+    "temperature_c": 47.247656249856,
+    "fps": 20.01487569609431,
+    "lux": 26.666666666666668,
+    "counters": {
+      "capture_id": 1293,
+      "dma_errors": 0,
+      "camera_vsync": 1308,
+      "overflow_frames": 0,
+      "malformed_frames": 0,
+      "display_sof": 7112
+    },
+    "state": {
+      "brightness": 0,
+      "sharpness": 4,
+      "denoise": 0,
+      "contrast": 1,
+      "algorithm": 3,
+      "noise": 1,
+      "edge_view": false,
+      "color": 10,
+      "local_tone": true,
+      "window31": true,
+      "binary_c": 8,
+      "selected": "brightness",
+      "mode": 4,
+      "zoom": 1,
+      "frozen": false,
+      "split": true,
+      "automatic": false,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "auto_quality": {
+        "status": "manual",
+        "reason": "参数由用户控制"
+      }
+    },
+    "planned_elapsed_s": 65
+  },
+  "ab_2_end": {
+    "monotonic": 445.488531655,
+    "elapsed_s": 90.01375299499995,
+    "capture_count": 1792,
+    "render_count": 1791,
+    "display_updates": 1791,
+    "cpu_seconds": 84.440315,
+    "maxrss_kb": 105000,
+    "temperature_c": 47.12461547837201,
+    "fps": 20.017052266604445,
+    "lux": 23.333333333333336,
+    "counters": {
+      "capture_id": 1792,
+      "dma_errors": 0,
+      "camera_vsync": 1808,
+      "overflow_frames": 0,
+      "malformed_frames": 0,
+      "display_sof": 8612
+    },
+    "state": {
+      "brightness": 0,
+      "sharpness": 4,
+      "denoise": 0,
+      "contrast": 1,
+      "algorithm": 3,
+      "noise": 1,
+      "edge_view": false,
+      "color": 10,
+      "local_tone": true,
+      "window31": true,
+      "binary_c": 8,
+      "selected": "brightness",
+      "mode": 4,
+      "zoom": 1,
+      "frozen": false,
+      "split": true,
+      "automatic": false,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "auto_quality": {
+        "status": "manual",
+        "reason": "参数由用户控制"
+      }
+    },
+    "planned_elapsed_s": 90
+  },
+  "ab_3_start": {
+    "monotonic": 450.51103614,
+    "elapsed_s": 95.03625747999996,
+    "capture_count": 1892,
+    "render_count": 1891,
+    "display_updates": 1891,
+    "cpu_seconds": 86.59016700000001,
+    "maxrss_kb": 105000,
+    "temperature_c": 46.87853393540401,
+    "fps": 20.008165272222907,
+    "lux": 30.0,
+    "counters": {
+      "capture_id": 1892,
+      "dma_errors": 0,
+      "camera_vsync": 1908,
+      "overflow_frames": 0,
+      "malformed_frames": 0,
+      "display_sof": 8913
+    },
+    "state": {
+      "brightness": 0,
+      "sharpness": 2,
+      "denoise": 0,
+      "contrast": 1,
+      "algorithm": 3,
+      "noise": 1,
+      "edge_view": false,
+      "color": 10,
+      "local_tone": true,
+      "window31": true,
+      "binary_c": 8,
+      "selected": "brightness",
+      "mode": 4,
+      "zoom": 1,
+      "frozen": false,
+      "split": true,
+      "automatic": true,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "auto_quality": {
+        "status": "active",
+        "reason": "暗场提亮；保留细节；补偿局部明暗",
+        "metrics": {
+          "mean": 49.94181222686166,
+          "dark_fraction": 0.567850328521964,
+          "highlight_fraction": 0.0,
+          "contrast_range": 73.81350255012512,
+          "noise_sigma": 0.5032742878925288,
+          "edge_fraction": 0.004726402030503453,
+          "unevenness": 23.043957895577478,
+          "lux": 30.0,
+          "sample_pixels": 5184,
+          "scope": "9 raw ROI patches; heuristic estimates"
+        },
+        "targets": {
+          "brightness": 0,
+          "denoise": 0,
+          "sharpness": 2,
+          "noise": 1,
+          "algorithm": 3,
+          "contrast": 1,
+          "local_tone": true,
+          "color": 10,
+          "binary_c": 8,
+          "window31": true
+        },
+        "updated_monotonic": 450.484529943,
+        "tone_strength": 1.0,
+        "tone_control": "adaptive LUT using image brightness and valid lux"
+      }
+    },
+    "planned_elapsed_s": 95
+  },
+  "ab_3_end": {
+    "monotonic": 475.518902008,
+    "elapsed_s": 120.04412334799997,
+    "capture_count": 2388,
+    "render_count": 2387,
+    "display_updates": 2387,
+    "cpu_seconds": 96.99086,
+    "maxrss_kb": 105000,
+    "temperature_c": 47.493737792824,
+    "fps": 20.015285052720525,
+    "lux": 24.166666666666668,
+    "counters": {
+      "capture_id": 2388,
+      "dma_errors": 0,
+      "camera_vsync": 2409,
+      "overflow_frames": 0,
+      "malformed_frames": 0,
+      "display_sof": 10414
+    },
+    "state": {
+      "brightness": 0,
+      "sharpness": 5,
+      "denoise": 0,
+      "contrast": 2,
+      "algorithm": 3,
+      "noise": 1,
+      "edge_view": false,
+      "color": 10,
+      "local_tone": false,
+      "window31": false,
+      "binary_c": 6,
+      "selected": "brightness",
+      "mode": 4,
+      "zoom": 1,
+      "frozen": false,
+      "split": true,
+      "automatic": true,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "auto_quality": {
+        "status": "active",
+        "reason": "暗场提亮；保留细节",
+        "metrics": {
+          "mean": 52.2444209663244,
+          "dark_fraction": 0.7809848558608685,
+          "highlight_fraction": 0.0,
+          "contrast_range": 28.75359636272201,
+          "noise_sigma": 0.5532217640526296,
+          "edge_fraction": 0.011578385602505795,
+          "unevenness": 8.948280089444996,
+          "lux": 26.666666666666668,
+          "sample_pixels": 5184,
+          "scope": "9 raw ROI patches; heuristic estimates"
+        },
+        "targets": {
+          "brightness": 0,
+          "denoise": 0,
+          "sharpness": 5,
+          "noise": 1,
+          "algorithm": 3,
+          "contrast": 2,
+          "local_tone": false,
+          "color": 10,
+          "binary_c": 6,
+          "window31": false
+        },
+        "updated_monotonic": 475.118026387,
+        "tone_strength": 1.0,
+        "tone_control": "adaptive LUT using image brightness and valid lux"
+      }
+    },
+    "planned_elapsed_s": 120
+  },
+  "ab_4_start": {
+    "monotonic": 480.515568071,
+    "elapsed_s": 125.04078941099999,
+    "capture_count": 2488,
+    "render_count": 2487,
+    "display_updates": 2487,
+    "cpu_seconds": 98.894807,
+    "maxrss_kb": 105000,
+    "temperature_c": 47.12461547837201,
+    "fps": 20.00777960493548,
+    "lux": 26.666666666666668,
+    "counters": {
+      "capture_id": 2488,
+      "dma_errors": 0,
+      "camera_vsync": 2509,
+      "overflow_frames": 0,
+      "malformed_frames": 0,
+      "display_sof": 10714
+    },
+    "state": {
+      "brightness": 0,
+      "sharpness": 5,
+      "denoise": 0,
+      "contrast": 2,
+      "algorithm": 3,
+      "noise": 1,
+      "edge_view": false,
+      "color": 10,
+      "local_tone": false,
+      "window31": false,
+      "binary_c": 6,
+      "selected": "brightness",
+      "mode": 4,
+      "zoom": 1,
+      "frozen": false,
+      "split": true,
+      "automatic": false,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "auto_quality": {
+        "status": "manual",
+        "reason": "参数由用户控制"
+      }
+    },
+    "planned_elapsed_s": 125
+  },
+  "ab_4_end": {
+    "monotonic": 505.499016769,
+    "elapsed_s": 150.02423810899995,
+    "capture_count": 2987,
+    "render_count": 2986,
+    "display_updates": 2986,
+    "cpu_seconds": 108.4216,
+    "maxrss_kb": 105000,
+    "temperature_c": 47.12461547837201,
+    "fps": 20.010089487322077,
+    "lux": 30.833333333333336,
+    "counters": {
+      "capture_id": 2987,
+      "dma_errors": 0,
+      "camera_vsync": 3009,
+      "overflow_frames": 0,
+      "malformed_frames": 0,
+      "display_sof": 12214
+    },
+    "state": {
+      "brightness": 0,
+      "sharpness": 5,
+      "denoise": 0,
+      "contrast": 2,
+      "algorithm": 3,
+      "noise": 1,
+      "edge_view": false,
+      "color": 10,
+      "local_tone": false,
+      "window31": false,
+      "binary_c": 6,
+      "selected": "brightness",
+      "mode": 4,
+      "zoom": 1,
+      "frozen": false,
+      "split": true,
+      "automatic": false,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "auto_quality": {
+        "status": "manual",
+        "reason": "参数由用户控制"
+      }
+    },
+    "planned_elapsed_s": 150
+  },
+  "ab_5_start": {
+    "monotonic": 510.527703008,
+    "elapsed_s": 155.05292434799998,
+    "capture_count": 3086,
+    "render_count": 3085,
+    "display_updates": 3085,
+    "cpu_seconds": 110.60447099999999,
+    "maxrss_kb": 105000,
+    "temperature_c": 47.37069702134,
+    "fps": 20.012173645374506,
+    "lux": 30.833333333333336,
+    "counters": {
+      "capture_id": 3086,
+      "dma_errors": 0,
+      "camera_vsync": 3109,
+      "overflow_frames": 0,
+      "malformed_frames": 0,
+      "display_sof": 12516
+    },
+    "state": {
+      "brightness": 0,
+      "sharpness": 5,
+      "denoise": 0,
+      "contrast": 2,
+      "algorithm": 3,
+      "noise": 1,
+      "edge_view": false,
+      "color": 10,
+      "local_tone": false,
+      "window31": false,
+      "binary_c": 7,
+      "selected": "brightness",
+      "mode": 4,
+      "zoom": 1,
+      "frozen": false,
+      "split": true,
+      "automatic": true,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "auto_quality": {
+        "status": "active",
+        "reason": "暗场提亮；保留细节",
+        "metrics": {
+          "mean": 50.91806583436846,
+          "dark_fraction": 0.7948716658133047,
+          "highlight_fraction": 0.0,
+          "contrast_range": 40.58003134578464,
+          "noise_sigma": 0.772360598454535,
+          "edge_fraction": 0.13536447729946166,
+          "unevenness": 8.877671003210708,
+          "lux": 30.833333333333336,
+          "sample_pixels": 5184,
+          "scope": "9 raw ROI patches; heuristic estimates"
+        },
+        "targets": {
+          "brightness": 0,
+          "denoise": 0,
+          "sharpness": 5,
+          "noise": 1,
+          "algorithm": 3,
+          "contrast": 2,
+          "local_tone": false,
+          "color": 10,
+          "binary_c": 7,
+          "window31": false
+        },
+        "updated_monotonic": 510.494786805,
+        "tone_strength": 1.0,
+        "tone_control": "adaptive LUT using image brightness and valid lux"
+      }
+    },
+    "planned_elapsed_s": 155
+  },
+  "ab_5_end": {
+    "monotonic": 535.479046001,
+    "elapsed_s": 180.004267341,
+    "capture_count": 3581,
+    "render_count": 3580,
+    "display_updates": 3580,
+    "cpu_seconds": 121.44788199999999,
+    "maxrss_kb": 105000,
+    "temperature_c": 47.616778564308,
+    "fps": 20.019217748365666,
+    "lux": 31.666666666666668,
+    "counters": {
+      "capture_id": 3581,
+      "dma_errors": 0,
+      "camera_vsync": 3609,
+      "overflow_frames": 0,
+      "malformed_frames": 0,
+      "display_sof": 14014
+    },
+    "state": {
+      "brightness": 0,
+      "sharpness": 5,
+      "denoise": 0,
+      "contrast": 2,
+      "algorithm": 3,
+      "noise": 1,
+      "edge_view": false,
+      "color": 10,
+      "local_tone": false,
+      "window31": false,
+      "binary_c": 7,
+      "selected": "brightness",
+      "mode": 4,
+      "zoom": 1,
+      "frozen": false,
+      "split": true,
+      "automatic": true,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "auto_quality": {
+        "status": "active",
+        "reason": "暗场提亮；保留细节",
+        "metrics": {
+          "mean": 51.418530387148834,
+          "dark_fraction": 0.7748660157912006,
+          "highlight_fraction": 0.0,
+          "contrast_range": 39.871018816140705,
+          "noise_sigma": 0.6633996271606608,
+          "edge_fraction": 0.13181598317007243,
+          "unevenness": 8.894561068418785,
+          "lux": 31.666666666666668,
+          "sample_pixels": 5184,
+          "scope": "9 raw ROI patches; heuristic estimates"
+        },
+        "targets": {
+          "brightness": 0,
+          "denoise": 0,
+          "sharpness": 5,
+          "noise": 1,
+          "algorithm": 3,
+          "contrast": 2,
+          "local_tone": false,
+          "color": 10,
+          "binary_c": 7,
+          "window31": false
+        },
+        "updated_monotonic": 535.17847174,
+        "tone_strength": 1.0,
+        "tone_control": "adaptive LUT using image brightness and valid lux"
+      }
+    },
+    "planned_elapsed_s": 180
+  },
+  "stability_start": {
+    "monotonic": 540.475919449,
+    "elapsed_s": 185.00114078899998,
+    "capture_count": 3681,
+    "render_count": 3680,
+    "display_updates": 3680,
+    "cpu_seconds": 123.657793,
+    "maxrss_kb": 105000,
+    "temperature_c": 47.37069702134,
+    "fps": 20.011536951223846,
+    "lux": 27.5,
+    "counters": {
+      "capture_id": 3681,
+      "dma_errors": 0,
+      "camera_vsync": 3709,
+      "overflow_frames": 0,
+      "malformed_frames": 0,
+      "display_sof": 14314
+    },
+    "state": {
+      "brightness": 0,
+      "sharpness": 5,
+      "denoise": 0,
+      "contrast": 2,
+      "algorithm": 3,
+      "noise": 1,
+      "edge_view": false,
+      "color": 10,
+      "local_tone": false,
+      "window31": false,
+      "binary_c": 7,
+      "selected": "brightness",
+      "mode": 4,
+      "zoom": 1,
+      "frozen": false,
+      "split": true,
+      "automatic": true,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "auto_quality": {
+        "status": "active",
+        "reason": "暗场提亮；保留细节",
+        "metrics": {
+          "mean": 51.03840003157275,
+          "dark_fraction": 0.8050765082403712,
+          "highlight_fraction": 0.0,
+          "contrast_range": 39.01907679169882,
+          "noise_sigma": 0.744101586455316,
+          "edge_fraction": 0.132236463276838,
+          "unevenness": 8.792845828062003,
+          "lux": 28.333333333333336,
+          "sample_pixels": 5184,
+          "scope": "9 raw ROI patches; heuristic estimates"
+        },
+        "targets": {
+          "brightness": 0,
+          "denoise": 0,
+          "sharpness": 5,
+          "noise": 1,
+          "algorithm": 3,
+          "contrast": 2,
+          "local_tone": false,
+          "color": 10,
+          "binary_c": 7,
+          "window31": false
+        },
+        "updated_monotonic": 540.125257745,
+        "tone_strength": 1.0,
+        "tone_control": "adaptive LUT using image brightness and valid lux"
+      }
+    },
+    "planned_elapsed_s": 185
+  },
+  "stability_end": {
+    "monotonic": 960.499037543,
+    "elapsed_s": 605.0242588829999,
+    "capture_count": 12028,
+    "render_count": 12027,
+    "display_updates": 12027,
+    "cpu_seconds": 295.560023,
+    "maxrss_kb": 105000,
+    "temperature_c": 49.093267822116005,
+    "fps": 20.009814333697044,
+    "lux": 30.833333333333336,
+    "counters": {
+      "capture_id": 12028,
+      "dma_errors": 0,
+      "camera_vsync": 12115,
+      "overflow_frames": 0,
+      "malformed_frames": 0,
+      "display_sof": 39527
+    },
+    "state": {
+      "brightness": 5,
+      "sharpness": 5,
+      "denoise": 0,
+      "contrast": 2,
+      "algorithm": 3,
+      "noise": 1,
+      "edge_view": false,
+      "color": 10,
+      "local_tone": false,
+      "window31": false,
+      "binary_c": 7,
+      "selected": "brightness",
+      "mode": 4,
+      "zoom": 1,
+      "frozen": false,
+      "split": true,
+      "automatic": false,
+      "center": [
+        0.5,
+        0.5
+      ],
+      "auto_quality": {
+        "status": "manual",
+        "reason": "参数由用户控制"
+      }
+    },
+    "planned_elapsed_s": 605
+  }
+}

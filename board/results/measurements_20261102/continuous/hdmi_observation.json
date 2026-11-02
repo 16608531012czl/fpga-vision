@@ -1,0 +1,10 @@
+{
+  "client_time": "2026-11-02T21:57:19.312389",
+  "timezone": "Asia/Shanghai",
+  "observer": "user",
+  "verbatim": "画面正常，移动会更新",
+  "source": "User chat reply during this run",
+  "latest_fetched_measurement_elapsed_s": 155.92067004799998,
+  "actual_movement_time": "unknown; no synchronized event marker",
+  "caution": "Motion confirmation was requested during AB. Treat full AB as a field comparison, not rigorously controlled causal overhead evidence."
+}

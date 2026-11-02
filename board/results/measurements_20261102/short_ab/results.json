@@ -1,0 +1,290 @@
+{
+  "ab": [
+    {
+      "seconds": 19.986745621999944,
+      "capture_frames": 396,
+      "render_frames": 396,
+      "capture_fps": 19.81313053607448,
+      "render_fps": 19.81313053607448,
+      "cpu_one_core_percent": 43.19531635253836,
+      "lux_min": 24.166666666666668,
+      "lux_max": 35.0,
+      "automatic_states": [
+        false
+      ],
+      "error_deltas": {
+        "dma_errors": 0,
+        "overflow_frames": 0,
+        "malformed_frames": 0
+      },
+      "pair": 1,
+      "automatic": false
+    },
+    {
+      "seconds": 20.01148961700028,
+      "capture_frames": 397,
+      "render_frames": 397,
+      "capture_fps": 19.838603102426628,
+      "render_fps": 19.838603102426628,
+      "cpu_one_core_percent": 48.68487647078226,
+      "lux_min": 25.833333333333336,
+      "lux_max": 30.0,
+      "automatic_states": [
+        true
+      ],
+      "error_deltas": {
+        "dma_errors": 0,
+        "overflow_frames": 0,
+        "malformed_frames": 0
+      },
+      "pair": 1,
+      "automatic": true
+    },
+    {
+      "seconds": 20.036955755000236,
+      "capture_frames": 399,
+      "render_frames": 399,
+      "capture_fps": 19.913204624431497,
+      "render_fps": 19.913204624431497,
+      "cpu_one_core_percent": 45.065064326184604,
+      "lux_min": 31.666666666666668,
+      "lux_max": 34.16666666666667,
+      "automatic_states": [
+        false
+      ],
+      "error_deltas": {
+        "dma_errors": 0,
+        "overflow_frames": 0,
+        "malformed_frames": 0
+      },
+      "pair": 2,
+      "automatic": false
+    },
+    {
+      "seconds": 19.961018781999883,
+      "capture_frames": 398,
+      "render_frames": 398,
+      "capture_fps": 19.93886205642479,
+      "render_fps": 19.93886205642479,
+      "cpu_one_core_percent": 48.39837638303194,
+      "lux_min": 20.0,
+      "lux_max": 39.16666666666667,
+      "automatic_states": [
+        true
+      ],
+      "error_deltas": {
+        "dma_errors": 0,
+        "overflow_frames": 0,
+        "malformed_frames": 0
+      },
+      "pair": 2,
+      "automatic": true
+    },
+    {
+      "seconds": 19.98664266600008,
+      "capture_frames": 399,
+      "render_frames": 399,
+      "capture_fps": 19.963332845228265,
+      "render_fps": 19.963332845228265,
+      "cpu_one_core_percent": 43.49922668497847,
+      "lux_min": 27.5,
+      "lux_max": 42.5,
+      "automatic_states": [
+        false
+      ],
+      "error_deltas": {
+        "dma_errors": 0,
+        "overflow_frames": 0,
+        "malformed_frames": 0
+      },
+      "pair": 3,
+      "automatic": false
+    },
+    {
+      "seconds": 20.011422090999986,
+      "capture_frames": 398,
+      "render_frames": 398,
+      "capture_fps": 19.888641506342424,
+      "render_fps": 19.888641506342424,
+      "cpu_one_core_percent": 48.41379566101524,
+      "lux_min": 29.166666666666668,
+      "lux_max": 35.833333333333336,
+      "automatic_states": [
+        true
+      ],
+      "error_deltas": {
+        "dma_errors": 0,
+        "overflow_frames": 0,
+        "malformed_frames": 0
+      },
+      "pair": 3,
+      "automatic": true
+    }
+  ],
+  "quality": {
+    "quality_baseline": {
+      "throughput": {
+        "seconds": 9.99325025600001,
+        "capture_frames": 195,
+        "render_frames": 195,
+        "capture_fps": 19.513170890814106,
+        "render_fps": 19.513170890814106,
+        "cpu_one_core_percent": 45.23031930763664,
+        "lux_min": 35.0,
+        "lux_max": 35.833333333333336,
+        "automatic_states": [
+          false
+        ],
+        "error_deltas": {
+          "dma_errors": 0,
+          "overflow_frames": 0,
+          "malformed_frames": 0
+        }
+      },
+      "images": [
+        {
+          "file": "quality_baseline_capture_0_raw.png",
+          "metrics": {
+            "mean_luma": 52.29368591308594,
+            "p10": 16.0,
+            "p90": 69.0,
+            "p90_minus_p10": 53.0,
+            "michelson_p10_p90": 0.6235294117647059,
+            "tenengrad": 3629.00048828125,
+            "laplacian_variance": 233.00582885742188,
+            "flat_residual_mad": 0.22222137451171875,
+            "clipped_dark_fraction": 0.05555952844456098,
+            "clipped_highlight_fraction": 0.0,
+            "scope": "central 64% x 64% ROI, descriptive image statistics; not calibrated optical quality or a perceptual quality score"
+          }
+        },
+        {
+          "file": "quality_baseline_capture_1_raw.png",
+          "metrics": {
+            "mean_luma": 52.05390930175781,
+            "p10": 16.0,
+            "p90": 69.0,
+            "p90_minus_p10": 53.0,
+            "michelson_p10_p90": 0.6235294117647059,
+            "tenengrad": 3620.812744140625,
+            "laplacian_variance": 233.34715270996094,
+            "flat_residual_mad": 0.22222137451171875,
+            "clipped_dark_fraction": 0.05554628548120956,
+            "clipped_highlight_fraction": 0.0,
+            "scope": "central 64% x 64% ROI, descriptive image statistics; not calibrated optical quality or a perceptual quality score"
+          }
+        },
+        {
+          "file": "quality_baseline_capture_2_raw.png",
+          "metrics": {
+            "mean_luma": 52.177276611328125,
+            "p10": 16.0,
+            "p90": 69.0,
+            "p90_minus_p10": 53.0,
+            "michelson_p10_p90": 0.6235294117647059,
+            "tenengrad": 3663.999755859375,
+            "laplacian_variance": 235.2902069091797,
+            "flat_residual_mad": 0.22222137451171875,
+            "clipped_dark_fraction": 0.05608659838594763,
+            "clipped_highlight_fraction": 0.0,
+            "scope": "central 64% x 64% ROI, descriptive image statistics; not calibrated optical quality or a perceptual quality score"
+          }
+        }
+      ]
+    },
+    "quality_detail": {
+      "throughput": {
+        "seconds": 9.993382655999994,
+        "capture_frames": 196,
+        "render_frames": 196,
+        "capture_fps": 19.61297858261459,
+        "render_fps": 19.61297858261459,
+        "cpu_one_core_percent": 45.97830542635429,
+        "lux_min": 13.333333333333334,
+        "lux_max": 35.0,
+        "automatic_states": [
+          false
+        ],
+        "error_deltas": {
+          "dma_errors": 0,
+          "overflow_frames": 0,
+          "malformed_frames": 0
+        }
+      },
+      "images": [
+        {
+          "file": "quality_detail_capture_0_raw.png",
+          "metrics": {
+            "mean_luma": 57.59073257446289,
+            "p10": 28.0,
+            "p90": 71.0,
+            "p90_minus_p10": 43.0,
+            "michelson_p10_p90": 0.43434343434343436,
+            "tenengrad": 3108.74560546875,
+            "laplacian_variance": 264.6348876953125,
+            "flat_residual_mad": 0.22222137451171875,
+            "clipped_dark_fraction": 0.006391054113396847,
+            "clipped_highlight_fraction": 0.0,
+            "scope": "central 64% x 64% ROI, descriptive image statistics; not calibrated optical quality or a perceptual quality score"
+          }
+        },
+        {
+          "file": "quality_detail_capture_1_raw.png",
+          "metrics": {
+            "mean_luma": 61.42495346069336,
+            "p10": 31.0,
+            "p90": 75.0,
+            "p90_minus_p10": 44.0,
+            "michelson_p10_p90": 0.41509433962264153,
+            "tenengrad": 2999.625244140625,
+            "laplacian_variance": 256.2192077636719,
+            "flat_residual_mad": 0.22222137451171875,
+            "clipped_dark_fraction": 0.002963775198048517,
+            "clipped_highlight_fraction": 0.0,
+            "scope": "central 64% x 64% ROI, descriptive image statistics; not calibrated optical quality or a perceptual quality score"
+          }
+        },
+        {
+          "file": "quality_detail_capture_2_raw.png",
+          "metrics": {
+            "mean_luma": 52.22262954711914,
+            "p10": 21.0,
+            "p90": 66.0,
+            "p90_minus_p10": 45.0,
+            "michelson_p10_p90": 0.5172413793103449,
+            "tenengrad": 3188.4638671875,
+            "laplacian_variance": 258.1132507324219,
+            "flat_residual_mad": 0.3333320617675781,
+            "clipped_dark_fraction": 0.01280859415349654,
+            "clipped_highlight_fraction": 0.0,
+            "scope": "central 64% x 64% ROI, descriptive image statistics; not calibrated optical quality or a perceptual quality score"
+          }
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Accelerated plan: 3 OFF/ON pairs, approximately 20s sample after 5s settling. Not the previous proposed 3x60s plan.",
+    "Continuous autofocus remains enabled in both modes. No focus lock command was used in this retry.",
+    "Fixed-target operator instruction does not prove perfectly fixed lighting. Report observed lux and parameter ranges.",
+    "ISP baseline/detail raw-image metrics describe measured sensor output, not HDMI enhanced pixels.",
+    "DDR canvas sits before streaming enhancement. Files named *_enhanced.png by the adapter are pre-enhancement right canvases and MUST NOT be treated as processed HDMI output.",
+    "Power measurement excluded by the user."
+  ],
+  "ab_means": {
+    "off": {
+      "capture_fps": 19.896556001911414,
+      "render_fps": 19.896556001911414,
+      "cpu_one_core_percent": 43.91986912123381
+    },
+    "on": {
+      "capture_fps": 19.88870222173128,
+      "render_fps": 19.88870222173128,
+      "cpu_one_core_percent": 48.49901617160981
+    }
+  },
+  "ab_change_percent": {
+    "capture_fps": -0.03947306347581015,
+    "render_fps": -0.03947306347581015
+  }
+}

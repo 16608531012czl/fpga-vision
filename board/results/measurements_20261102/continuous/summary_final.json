@@ -1,0 +1,709 @@
+{
+  "date": "2026-11-02",
+  "timezone": "Asia/Shanghai",
+  "report_pdf_source": "C:\\Users\\CHENZHELONG\\Desktop\\fpga_vision_design_report(1).pdf",
+  "method": "Capture/render throughput: differences of observed frame counts divided by monotonic boundary duration. CPU: process user+system time, one core=100%.",
+  "instrumentation": "Read-only telemetry at 1 Hz in existing capture-loop mailbox publish; same adapter for ON and OFF. Policy enable changes at segment boundaries. Production payload hashes unchanged.",
+  "ab_rounds": [
+    {
+      "duration_s": 24.983432529000027,
+      "capture_frames": 497,
+      "render_frames": 497,
+      "capture_fps": 19.893183189423517,
+      "render_fps": 19.893183189423517,
+      "cpu_seconds": 9.289386999999998,
+      "cpu_one_core_percent": 37.18218859324936,
+      "temperature_min_c": 46.632452392436,
+      "temperature_max_c": 47.247656249856,
+      "counter_deltas": {
+        "capture_id": 497,
+        "dma_errors": 0,
+        "camera_vsync": 500,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 1499
+      },
+      "sampled_auto_states": [
+        false
+      ],
+      "sampled_frozen_states": [
+        false
+      ],
+      "lux_min": 18.333333333333336,
+      "lux_max": 25.833333333333336,
+      "pair": 1,
+      "automatic": false
+    },
+    {
+      "duration_s": 25.005337449000024,
+      "capture_frames": 496,
+      "render_frames": 496,
+      "capture_fps": 19.835765104615106,
+      "render_fps": 19.835765104615106,
+      "cpu_seconds": 10.715451999999999,
+      "cpu_one_core_percent": 42.85265904471334,
+      "temperature_min_c": 46.632452392436,
+      "temperature_max_c": 47.493737792824,
+      "counter_deltas": {
+        "capture_id": 496,
+        "dma_errors": 0,
+        "camera_vsync": 501,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 1501
+      },
+      "sampled_auto_states": [
+        true
+      ],
+      "sampled_frozen_states": [
+        false
+      ],
+      "lux_min": 25.0,
+      "lux_max": 29.166666666666668,
+      "pair": 1,
+      "automatic": true
+    },
+    {
+      "duration_s": 24.983339740999952,
+      "capture_frames": 499,
+      "render_frames": 499,
+      "capture_fps": 19.97331042098808,
+      "render_fps": 19.97331042098808,
+      "cpu_seconds": 9.868881000000002,
+      "cpu_one_core_percent": 39.50184844104034,
+      "temperature_min_c": 46.75549316392,
+      "temperature_max_c": 47.247656249856,
+      "counter_deltas": {
+        "capture_id": 499,
+        "dma_errors": 0,
+        "camera_vsync": 500,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 1500
+      },
+      "sampled_auto_states": [
+        false
+      ],
+      "sampled_frozen_states": [
+        false
+      ],
+      "lux_min": 10.0,
+      "lux_max": 31.666666666666668,
+      "pair": 2,
+      "automatic": false
+    },
+    {
+      "duration_s": 25.00786586800001,
+      "capture_frames": 496,
+      "render_frames": 496,
+      "capture_fps": 19.833759610598364,
+      "render_fps": 19.833759610598364,
+      "cpu_seconds": 10.40069299999999,
+      "cpu_one_core_percent": 41.589686440651796,
+      "temperature_min_c": 46.87853393540401,
+      "temperature_max_c": 47.493737792824,
+      "counter_deltas": {
+        "capture_id": 496,
+        "dma_errors": 0,
+        "camera_vsync": 501,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 1501
+      },
+      "sampled_auto_states": [
+        true
+      ],
+      "sampled_frozen_states": [
+        false
+      ],
+      "lux_min": 21.666666666666668,
+      "lux_max": 42.5,
+      "pair": 2,
+      "automatic": true
+    },
+    {
+      "duration_s": 24.98344869799996,
+      "capture_frames": 499,
+      "render_frames": 499,
+      "capture_fps": 19.973223314039394,
+      "render_fps": 19.973223314039394,
+      "cpu_seconds": 9.526792999999998,
+      "cpu_one_core_percent": 38.13241764641829,
+      "temperature_min_c": 46.87853393540401,
+      "temperature_max_c": 47.37069702134,
+      "counter_deltas": {
+        "capture_id": 499,
+        "dma_errors": 0,
+        "camera_vsync": 500,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 1500
+      },
+      "sampled_auto_states": [
+        false
+      ],
+      "sampled_frozen_states": [
+        false
+      ],
+      "lux_min": 15.833333333333334,
+      "lux_max": 30.833333333333336,
+      "pair": 3,
+      "automatic": false
+    },
+    {
+      "duration_s": 24.951342993000026,
+      "capture_frames": 495,
+      "render_frames": 495,
+      "capture_fps": 19.838611498341784,
+      "render_fps": 19.838611498341784,
+      "cpu_seconds": 10.843411000000003,
+      "cpu_one_core_percent": 43.45822588804967,
+      "temperature_min_c": 47.001574706888,
+      "temperature_max_c": 47.616778564308,
+      "counter_deltas": {
+        "capture_id": 495,
+        "dma_errors": 0,
+        "camera_vsync": 500,
+        "overflow_frames": 0,
+        "malformed_frames": 0,
+        "display_sof": 1498
+      },
+      "sampled_auto_states": [
+        true
+      ],
+      "sampled_frozen_states": [
+        false
+      ],
+      "lux_min": 27.5,
+      "lux_max": 31.666666666666668,
+      "pair": 3,
+      "automatic": true
+    }
+  ],
+  "ab_mean": {
+    "off": {
+      "capture_fps": 19.94657230815033,
+      "render_fps": 19.94657230815033,
+      "cpu_one_core_percent": 38.272151560236
+    },
+    "on": {
+      "capture_fps": 19.83604540451842,
+      "render_fps": 19.83604540451842,
+      "cpu_one_core_percent": 42.633523791138266
+    }
+  },
+  "ab_on_minus_off": {
+    "capture_fps": -0.11052690363191076,
+    "render_fps": -0.11052690363191076,
+    "cpu_one_core_percent": 4.361372230902269
+  },
+  "ab_fps_change_percent": {
+    "capture_fps": -0.5541147718234705,
+    "render_fps": -0.5541147718234705
+  },
+  "stability": {
+    "duration_s": 420.023118094,
+    "capture_frames": 8347,
+    "render_frames": 8347,
+    "capture_fps": 19.87271566831225,
+    "render_fps": 19.87271566831225,
+    "cpu_seconds": 171.90223,
+    "cpu_one_core_percent": 40.92684964105447,
+    "temperature_min_c": 47.247656249856,
+    "temperature_max_c": 49.339349365084004,
+    "counter_deltas": {
+      "capture_id": 8347,
+      "dma_errors": 0,
+      "camera_vsync": 8406,
+      "overflow_frames": 0,
+      "malformed_frames": 0,
+      "display_sof": 25213
+    },
+    "sampled_auto_states": [
+      false,
+      true
+    ],
+    "sampled_frozen_states": [
+      false
+    ],
+    "lux_min": 0.8333333333333334,
+    "lux_max": 4205.833333333334
+  },
+  "guard_total_wall_seconds": 677.95442158,
+  "encoder_rotate_events": [
+    {
+      "t": 451.367645558,
+      "encoder_event": "rotate",
+      "value": 1,
+      "parameters": {
+        "brightness": 1,
+        "sharpness": 5,
+        "denoise": 0,
+        "contrast": 2,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 10,
+        "local_tone": false,
+        "window31": false,
+        "binary_c": 7,
+        "selected": "brightness"
+      }
+    },
+    {
+      "t": 451.56743907799995,
+      "encoder_event": "rotate",
+      "value": 1,
+      "parameters": {
+        "brightness": 2,
+        "sharpness": 5,
+        "denoise": 0,
+        "contrast": 2,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 10,
+        "local_tone": false,
+        "window31": false,
+        "binary_c": 7,
+        "selected": "brightness"
+      }
+    },
+    {
+      "t": 451.76747913,
+      "encoder_event": "rotate",
+      "value": 1,
+      "parameters": {
+        "brightness": 3,
+        "sharpness": 5,
+        "denoise": 0,
+        "contrast": 2,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 10,
+        "local_tone": false,
+        "window31": false,
+        "binary_c": 7,
+        "selected": "brightness"
+      }
+    },
+    {
+      "t": 452.067326683,
+      "encoder_event": "rotate",
+      "value": 1,
+      "parameters": {
+        "brightness": 4,
+        "sharpness": 5,
+        "denoise": 0,
+        "contrast": 2,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 10,
+        "local_tone": false,
+        "window31": false,
+        "binary_c": 7,
+        "selected": "brightness"
+      }
+    },
+    {
+      "t": 452.266852077,
+      "encoder_event": "rotate",
+      "value": 1,
+      "parameters": {
+        "brightness": 5,
+        "sharpness": 5,
+        "denoise": 0,
+        "contrast": 2,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 10,
+        "local_tone": false,
+        "window31": false,
+        "binary_c": 7,
+        "selected": "brightness"
+      }
+    },
+    {
+      "t": 452.466735732,
+      "encoder_event": "rotate",
+      "value": 1,
+      "parameters": {
+        "brightness": 6,
+        "sharpness": 5,
+        "denoise": 0,
+        "contrast": 2,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 10,
+        "local_tone": false,
+        "window31": false,
+        "binary_c": 7,
+        "selected": "brightness"
+      }
+    },
+    {
+      "t": 452.716878882,
+      "encoder_event": "rotate",
+      "value": 1,
+      "parameters": {
+        "brightness": 7,
+        "sharpness": 5,
+        "denoise": 0,
+        "contrast": 2,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 10,
+        "local_tone": false,
+        "window31": false,
+        "binary_c": 7,
+        "selected": "brightness"
+      }
+    },
+    {
+      "t": 467.15718302399995,
+      "encoder_event": "rotate",
+      "value": -1,
+      "parameters": {
+        "brightness": 6,
+        "sharpness": 5,
+        "denoise": 0,
+        "contrast": 2,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 10,
+        "local_tone": false,
+        "window31": false,
+        "binary_c": 7,
+        "selected": "brightness"
+      }
+    },
+    {
+      "t": 467.406912269,
+      "encoder_event": "rotate",
+      "value": -1,
+      "parameters": {
+        "brightness": 5,
+        "sharpness": 5,
+        "denoise": 0,
+        "contrast": 2,
+        "algorithm": 3,
+        "noise": 1,
+        "edge_view": false,
+        "color": 10,
+        "local_tone": false,
+        "window31": false,
+        "binary_c": 7,
+        "selected": "brightness"
+      }
+    }
+  ],
+  "physical_checks": {
+    "light": {
+      "low_lux_observed": true,
+      "low_lux_min": 0.8333333333333334,
+      "maximum_lux": 4205.833333333334,
+      "low_first_elapsed_s": 309.46907816699996,
+      "low_last_elapsed_s": 340.798289529,
+      "pre_cover_lux": 28.333333333333336,
+      "recovered_lux": 29.166666666666668
+    },
+    "encoder": {
+      "rotate_event_count": 9,
+      "manual_hold_s": 137.35943507799993,
+      "final_brightness": 5,
+      "manual_takeover_and_hold_verified": true
+    }
+  },
+  "illumination_operator_record": {
+    "client_time": "2026-11-02T22:00:08.371949",
+    "instructions": "Cover BH1750 8s, restore 8s; brighten paper with lamp 10s then restore; no EC11 yet.",
+    "operator_execution": "user confirms requested sequence completed",
+    "phase": "continuous run; after AB",
+    "user_reply": "完成",
+    "client_reply_time": "2026-11-02T22:00:25.548678"
+  },
+  "encoder_operator_record": {
+    "client_requested_at": "2026-11-02T22:02:12.297084",
+    "latest_fetched_elapsed_s": 436.935442949,
+    "instructions": "Rotate EC11 2-3 detents, leave untouched; observe MANUAL and changed brightness.",
+    "user_reply": "改变了，一切正常",
+    "client_reply_time": "2026-11-02T22:03:00.655589"
+  },
+  "application": {
+    "outcome": "completed",
+    "unique_camera_frames": 12065,
+    "measured_unique_capture_fps": 19.876447558971176,
+    "pl_rendered_frames": 12064,
+    "measured_pl_render_fps": 19.877721773589165,
+    "counter_deltas": {
+      "capture_id": 12066,
+      "dma_errors": 0,
+      "camera_vsync": 12151,
+      "overflow_frames": 0,
+      "malformed_frames": 0,
+      "display_sof": 36446
+    },
+    "cleanup_errors": [],
+    "warnings": [],
+    "autofocus": {
+      "status": 16,
+      "command_ack": 0,
+      "clock_3004": 255,
+      "clock_3005": 247,
+      "firmware_focus_reported": true,
+      "optical_focus_observed": false,
+      "firmware_sha256": "439245623bc99f3b0d8c44d47baed3cc17cad01b9191509c89bb8d92a98949c9",
+      "firmware_bytes": 4077,
+      "verified_readback_bytes": 4077,
+      "full_readback_sha256": "439245623bc99f3b0d8c44d47baed3cc17cad01b9191509c89bb8d92a98949c9",
+      "full_readback_verified": true,
+      "upload_block_size": 32,
+      "startup_seconds": 46.992662027999984,
+      "firmware_ready": true,
+      "command_acknowledged": true,
+      "continuous": true
+    },
+    "autofocus_after": {
+      "status": 32,
+      "command_ack": 0,
+      "clock_3004": 255,
+      "clock_3005": 247,
+      "firmware_focus_reported": false,
+      "optical_focus_observed": false
+    },
+    "events": [
+      {
+        "t": 451.367645558,
+        "encoder_event": "rotate",
+        "value": 1,
+        "parameters": {
+          "brightness": 1,
+          "sharpness": 5,
+          "denoise": 0,
+          "contrast": 2,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 10,
+          "local_tone": false,
+          "window31": false,
+          "binary_c": 7,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 451.56743907799995,
+        "encoder_event": "rotate",
+        "value": 1,
+        "parameters": {
+          "brightness": 2,
+          "sharpness": 5,
+          "denoise": 0,
+          "contrast": 2,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 10,
+          "local_tone": false,
+          "window31": false,
+          "binary_c": 7,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 451.76747913,
+        "encoder_event": "rotate",
+        "value": 1,
+        "parameters": {
+          "brightness": 3,
+          "sharpness": 5,
+          "denoise": 0,
+          "contrast": 2,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 10,
+          "local_tone": false,
+          "window31": false,
+          "binary_c": 7,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 452.067326683,
+        "encoder_event": "rotate",
+        "value": 1,
+        "parameters": {
+          "brightness": 4,
+          "sharpness": 5,
+          "denoise": 0,
+          "contrast": 2,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 10,
+          "local_tone": false,
+          "window31": false,
+          "binary_c": 7,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 452.266852077,
+        "encoder_event": "rotate",
+        "value": 1,
+        "parameters": {
+          "brightness": 5,
+          "sharpness": 5,
+          "denoise": 0,
+          "contrast": 2,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 10,
+          "local_tone": false,
+          "window31": false,
+          "binary_c": 7,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 452.466735732,
+        "encoder_event": "rotate",
+        "value": 1,
+        "parameters": {
+          "brightness": 6,
+          "sharpness": 5,
+          "denoise": 0,
+          "contrast": 2,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 10,
+          "local_tone": false,
+          "window31": false,
+          "binary_c": 7,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 452.716878882,
+        "encoder_event": "rotate",
+        "value": 1,
+        "parameters": {
+          "brightness": 7,
+          "sharpness": 5,
+          "denoise": 0,
+          "contrast": 2,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 10,
+          "local_tone": false,
+          "window31": false,
+          "binary_c": 7,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 467.15718302399995,
+        "encoder_event": "rotate",
+        "value": -1,
+        "parameters": {
+          "brightness": 6,
+          "sharpness": 5,
+          "denoise": 0,
+          "contrast": 2,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 10,
+          "local_tone": false,
+          "window31": false,
+          "binary_c": 7,
+          "selected": "brightness"
+        }
+      },
+      {
+        "t": 467.406912269,
+        "encoder_event": "rotate",
+        "value": -1,
+        "parameters": {
+          "brightness": 5,
+          "sharpness": 5,
+          "denoise": 0,
+          "contrast": 2,
+          "algorithm": 3,
+          "noise": 1,
+          "edge_view": false,
+          "color": 10,
+          "local_tone": false,
+          "window31": false,
+          "binary_c": 7,
+          "selected": "brightness"
+        }
+      }
+    ]
+  },
+  "source_version": {
+    "bit_sha256": "c47f82f7ad5bf47483d35763e4a73ce6c638dad67d11aade71085c108c3d343f",
+    "hwh_sha256": "45fcd9888bc97d4fc96e810593a9e566eecbe4e1475df04fbe49f9dde89911a9"
+  },
+  "validation_errors": [],
+  "measurement_valid": true,
+  "hdmi_observation": {
+    "client_time": "2026-11-02T21:57:19.312389",
+    "timezone": "Asia/Shanghai",
+    "observer": "user",
+    "verbatim": "画面正常，移动会更新",
+    "source": "User chat reply during this run",
+    "latest_fetched_measurement_elapsed_s": 155.92067004799998,
+    "actual_movement_time": "unknown; no synchronized event marker",
+    "caution": "Motion confirmation was requested during AB. Treat full AB as a field comparison, not rigorously controlled causal overhead evidence."
+  },
+  "limitations": [
+    "User confirmed HDMI normal and movement updates during this run. No optical quality score was measured.",
+    "Continuous run includes operator-controlled light changes and, if recorded, EC11 takeover. The full ten-minute run is not a fixed-scene unperturbed AUTO trial.",
+    "Scene illuminance is sampled by BH1750; target distance is unmeasured. AUTO changes processing parameters by design.",
+    "Motion confirmation was requested during AB and its exact time is unknown. Treat AB as a short field comparison; strictly controlled causal AUTO overhead remains unverified.",
+    "Three approximately 25-second pairs are a shortened performance test; FPS differences are observations, not causal confidence bounds or per-call CPU timings.",
+    "Full video run spans 606.950 seconds; this is the measured stability interval, not an extrapolation to hours/days.",
+    "No input power meter: whole-board input power remains unmeasured.",
+    "No synchronized event/HDMI recording or human transcription ground truth: end-to-end latency and readability accuracy remain unmeasured.",
+    "Resource counts come from the 2026-10-30 implementation reports, not a new build."
+  ],
+  "ten_minute_stability": {
+    "configured_video_duration_s": 607,
+    "capture_observation_span_s": 606.9495046440001,
+    "render_observation_span_s": 606.8602899969999,
+    "capture_frames": 12065,
+    "render_frames": 12064,
+    "capture_fps": 19.876447558971176,
+    "render_fps": 19.877721773589165,
+    "temperature_min_c": 46.632452392436,
+    "temperature_max_c": 49.339349365084004,
+    "lux_min": 0.8333333333333334,
+    "lux_max": 4205.833333333334,
+    "counter_deltas": {
+      "capture_id": 12066,
+      "dma_errors": 0,
+      "camera_vsync": 12151,
+      "overflow_frames": 0,
+      "malformed_frames": 0,
+      "display_sof": 36446
+    },
+    "outcome": "completed",
+    "cleanup_errors": [],
+    "boot_unchanged": true,
+    "frozen_states": [
+      false
+    ],
+    "scope": "Whole uninterrupted video run, includes AUTO OFF/ON comparison, light changes and EC11 takeover. Initialization and cleanup excluded from capture span; no extrapolation to hours/days."
+  }
+}

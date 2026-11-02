@@ -9,5 +9,17 @@
   "malformed_frames": "board/results/summary.json#counters/malformed_frames",
   "setup_ns": "build/rebuilt_reports/system_timing_values.json#setup_ns",
   "hold_ns": "build/rebuilt_reports/system_timing_values.json#hold_ns",
-  "drc_errors": "build/rebuilt_reports/system_timing_values.json#drc_errors"
+  "drc_errors": "build/rebuilt_reports/system_timing_values.json#drc_errors",
+  "ab20_off_capture_fps": "data/measurements_20261102/summary.json#short_ab/off/capture_fps",
+  "ab20_on_capture_fps": "data/measurements_20261102/summary.json#short_ab/on/capture_fps",
+  "ab20_off_cpu_percent": "data/measurements_20261102/summary.json#short_ab/off/cpu_one_core_percent",
+  "ab20_on_cpu_percent": "data/measurements_20261102/summary.json#short_ab/on/cpu_one_core_percent",
+  "continuous20261102_seconds": "data/measurements_20261102/summary.json#continuous_run/capture_observation_span_s",
+  "continuous20261102_capture_fps": "data/measurements_20261102/summary.json#continuous_run/capture_fps",
+  "continuous20261102_render_fps": "data/measurements_20261102/summary.json#continuous_run/render_fps",
+  "continuous20261102_temperature_min": "data/measurements_20261102/summary.json#continuous_run/temperature_min_c",
+  "continuous20261102_temperature_max": "data/measurements_20261102/summary.json#continuous_run/temperature_max_c",
+  "light20261102_lux_min": "data/measurements_20261102/summary.json#continuous_run/lux_min",
+  "light20261102_lux_max": "data/measurements_20261102/summary.json#continuous_run/lux_max",
+  "ec11_manual_hold_seconds": "data/measurements_20261102/summary.json#physical_checks/encoder/manual_hold_s"
 }

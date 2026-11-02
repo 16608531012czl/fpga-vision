@@ -1,0 +1,33 @@
+{
+  "report_sha256": "3737569677ea5bb341705652ad8b0ca9211d0e8524e99a939936f3619d4af450",
+  "files": {
+    "board/results/measurements_20261102/continuous/board_run.json": "45f81a80e408b9a914837065e7aea8c89f92bdb739e5888954fafd417ebeec04",
+    "board/results/measurements_20261102/continuous/boundaries.json": "041f70ed0662b9c9bf4b861429491f92ae8d9d4903135067b09bfbda42027c33",
+    "board/results/measurements_20261102/continuous/guard.json": "684745b9cefea302fdbd8197dab7d31f2344e48904c827a34122900a97797faa",
+    "board/results/measurements_20261102/continuous/hdmi_observation.json": "5a0b0a561790420f5797a45f00e9b742010cfdeb7ecdb5b679c5b4a237d0b0ed",
+    "board/results/measurements_20261102/continuous/postcheck.json": "54ddcbd27cc60e20581a70cb82957275f23e9d60d1c5e52a265562f5bb853556",
+    "board/results/measurements_20261102/continuous/summary_final.json": "8efbd622f3d048b3e172044832416ba3f28a3a24b47cbc0a29a7d9ad2ae049c8",
+    "board/results/measurements_20261102/continuous/telemetry.jsonl": "f1d9102a20abcb8d70458ead38a0df60d2d4812d9e6cbfd1df36297f32406364",
+    "board/results/measurements_20261102/continuous/ten_minute_stability.json": "f735c618bb768237b2449b9156fa68185648293a6803a3de603aee28ba438e4c",
+    "board/results/measurements_20261102/README.md": "74b4324cc5bf2189ef338c7b636843c9c3bcc54785b6bfa21c69251c0b00f93d",
+    "board/results/measurements_20261102/short_ab/ab_conditions.json": "5e7e6a64c1d36630bbcca0629f258e9bc5ba892a125bd3a1739352cbceba92b1",
+    "board/results/measurements_20261102/short_ab/boundaries.json": "a4e8ade92df278d26cc218001e619edeb6d4eade6064068ae913c61afe76df2c",
+    "board/results/measurements_20261102/short_ab/quality_baseline_registers.json": "0c78f2dca8550c1a78ef4fc30a826542662e3b6e31633f99ded12b4d78897d6a",
+    "board/results/measurements_20261102/short_ab/quality_statistics.json": "f332a30b98a7fed0ee2c950f4043fbfef38898bac0a4a97908f6599afbf6354b",
+    "board/results/measurements_20261102/short_ab/results.json": "f95d9c63ad12188131163770031b48e3007c536feb72dff6cded6251d15177f6",
+    "board/results/measurements_20261102/short_ab/telemetry.jsonl": "34d875fd96514340cc2e7a7be246f7d0e14d2379ad087bbf5a520b83697ebc57",
+    "data/measurements_20261102/images/quality_baseline_capture_0_capture.json": "cbf74fcbac852706d8cd3ace18e9e3fb2be11e51463d57b80eba6dca5870f2b6",
+    "data/measurements_20261102/images/quality_baseline_capture_0_raw.png": "ffe466d8fe5056d3cafa9bd65213a695d4a9d4897056d99be7c4d6d12d5c4862",
+    "data/measurements_20261102/images/quality_baseline_capture_1_capture.json": "ee8c7d044f90a68f1576f070f996259ea3d402508e3420b368406083fd7ac295",
+    "data/measurements_20261102/images/quality_baseline_capture_1_raw.png": "ff3ce18c682aa3f93ccac5028d82e84adde630c7a5f2efcf4be4cddaa392c62f",
+    "data/measurements_20261102/images/quality_baseline_capture_2_capture.json": "cb63a144c7a1400bd75749b1567de786b1cc151b3fd74dec0ad8b6147b67f525",
+    "data/measurements_20261102/images/quality_baseline_capture_2_raw.png": "0ff0c34441c55701449692c87741f5c94308ad7d120edce1608ed3db5f987292",
+    "data/measurements_20261102/images/quality_detail_capture_0_capture.json": "efd872e372e8999d4ef843da1df70234d057aa54e385e88889084c426958b002",
+    "data/measurements_20261102/images/quality_detail_capture_0_raw.png": "e406b3ac0f5eba8658e8ee1604f1b05d455870930fea35a5da81e359d8223501",
+    "data/measurements_20261102/images/quality_detail_capture_1_capture.json": "8b773e2e4c6eb3c6236b20ea0d7ca3450aaf0f2d6053db81e7be886cec315e59",
+    "data/measurements_20261102/images/quality_detail_capture_1_raw.png": "9461b22919147c64179cfd7239ee4a71862564cd86695ff83d0adfdfa0754f68",
+    "data/measurements_20261102/images/quality_detail_capture_2_capture.json": "37a507388f21880c6bb8a9ec03a9dc72853e0cff5447607f724214c080a0c906",
+    "data/measurements_20261102/images/quality_detail_capture_2_raw.png": "cf72b5ed636c951966a8be8b19998269d1c0780a3e3d226e24d653b16271247b"
+  },
+  "preserved_src_skill_sim_files": 276
+}
